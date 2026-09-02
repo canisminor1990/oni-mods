@@ -1,0 +1,16 @@
+---
+description: ONI SDK csproj and Klei yaml packaging
+globs: "**/*.csproj,**/mod.yaml,**/mod_info.yaml"
+alwaysApply: false
+---
+
+# Project files
+
+- SDK-style, `netstandard2.1`, `HarmonyLib`, game refs `Private=false`.
+- `GameLibs` = `E:\Steam\steamapps\common\OxygenNotIncluded\OxygenNotIncluded_Data\Managed`
+- `OutputPath` = `$(MSBuildProjectDirectory)\..\..\local\<ModName>\`
+- AfterBuild: copy `packaging/mod.yaml`, `mod_info.yaml`, `translations/`, extra assets.
+- `mod.yaml`: `title`, `description`, `staticID` like `DarrenLee.<Name>`
+- `mod_info.yaml`: `supportedContent: ALL`, `APIVersion: 2`, `minimumSupportedBuild` from current game (not 449549-era)
+- Ignore MSB3277 on `System.IO.Compression` / `System.Net.Http` unless the build fails
+- Add Unity `*Module` refs only when the compiler asks

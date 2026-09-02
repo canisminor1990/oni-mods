@@ -1,0 +1,59 @@
+[h1]Duplicant Portraits[/h1]
+
+Duplicant Portraits adds a masterpiece painting of every loaded duplicant personality to the vanilla 2x2 Blank Canvas.
+
+[img]https://raw.githubusercontent.com/Sgt-Imalas/Sgt_Imalas-Oni-Mods/refs/heads/master/Compat_All.png[/img]
+
+[h3]Features[/h3]
+[list]
+[*]No new building. Portraits hang on the smallest vanilla canvas.
+[*]One Looking Great artwork per personality, using that duplicant's headshot.
+[*]After an artist finishes a masterpiece, pick the portrait with the vanilla artwork selector.
+[*]Includes personalities from subscribed DLCs.
+[/list]
+
+[h3]How to use[/h3]
+[olist]
+[*]Build a Blank Canvas.
+[*]Have a duplicant with Masterworks decorate it.
+[*]Select the painting and choose "Portrait of {Name}".
+[/olist]
+
+[h3]Notes[/h3]
+[list]
+[*]Decor matches vanilla masterpiece paintings.
+[*]Chinese and English UI.
+[*]Headshots come from the built-in personality portraits, not a live photo of colony outfits.
+[/list]
+
+[hr][/hr]
+
+[h1]复制人头像画 / Duplicant Portraits[/h1]
+
+[i]给原版 2x2 空白画布加上每个复制人性格的杰作肖像画。[/i]
+
+这是一个 Oxygen Not Included 装饰画模组。
+
+[img]https://raw.githubusercontent.com/Sgt-Imalas/Sgt_Imalas-Oni-Mods/refs/heads/master/Compat_All.png[/img]
+
+[h3]功能[/h3]
+[list]
+[*]不新增建筑。肖像挂在原版最小的装饰画（空白画布，2x2）上。
+[*]为当前已加载的每个复制人性格生成一幅杰作级画作，画框里是该小人的头像。
+[*]由艺术家画成杰作之后，用原版的选画界面切换想挂的头像。
+[*]包含当前启用的 DLC 性格。未订阅的 DLC 性格不会出现。
+[/list]
+
+[h3]用法[/h3]
+[olist]
+[*]建造空白画布。
+[*]让有「杰作」技能的复制人完成装饰。
+[*]选中画作，点选画按钮，挑选「某某的肖像」。
+[/olist]
+
+[h3]说明[/h3]
+[list]
+[*]装饰值和原版杰作画相同。
+[*]界面提供中文 / English。
+[*]头像来自游戏自带的小人肖像，不是实时拍照；服装染色不会反映在画上。
+[/list]

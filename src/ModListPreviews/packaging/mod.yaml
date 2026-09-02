@@ -1,0 +1,3 @@
+title: "Mod List Previews"
+description: "Shows Steam Workshop cover images in the in-game Mods list. Local and Dev mods use preview.png if present."
+staticID: "DarrenLee.ModListPreviews"

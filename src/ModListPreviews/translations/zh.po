@@ -1,0 +1,48 @@
+msgid ""
+msgstr ""
+"Project-Id-Version: ModListPreviews\n"
+"POT-Creation-Date: \n"
+"PO-Revision-Date: \n"
+"Language-Team: \n"
+"Language: zh\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Application: Oxygen Not Included\n"
+"POT Version: 2.0\n"
+
+msgctxt "ModListPreviews.STRINGS.UI.MODLISTPREVIEWS.SETTINGS_BUTTON"
+msgid "Settings"
+msgstr "设置"
+
+msgctxt "ModListPreviews.STRINGS.UI.MODLISTPREVIEWS.SETTINGS_TITLE"
+msgid "Mod List Previews"
+msgstr "模组列表封面预览"
+
+msgctxt "ModListPreviews.STRINGS.UI.MODLISTPREVIEWS.SETTINGS_HINT"
+msgid "Cover size and cache for the Mods list."
+msgstr "调整模组列表封面尺寸，或刷新封面缓存。"
+
+msgctxt "ModListPreviews.STRINGS.UI.MODLISTPREVIEWS.SIZE_VALUE"
+msgid "{0} px"
+msgstr "{0} 像素"
+
+msgctxt "ModListPreviews.STRINGS.UI.MODLISTPREVIEWS.MINUS"
+msgid "−"
+msgstr "−"
+
+msgctxt "ModListPreviews.STRINGS.UI.MODLISTPREVIEWS.PLUS"
+msgid "+"
+msgstr "+"
+
+msgctxt "ModListPreviews.STRINGS.UI.MODLISTPREVIEWS.REFRESH_COVERS"
+msgid "Refresh covers"
+msgstr "刷新封面"
+
+msgctxt "ModListPreviews.STRINGS.UI.MODLISTPREVIEWS.REFRESH_HINT"
+msgid "Clear cached images and download workshop covers again."
+msgstr "清除本地缓存，并重新下载创意工坊封面。"
+
+msgctxt "ModListPreviews.STRINGS.UI.MODLISTPREVIEWS.REFRESH_STARTED"
+msgid "Refreshing covers..."
+msgstr "正在重新下载封面…"

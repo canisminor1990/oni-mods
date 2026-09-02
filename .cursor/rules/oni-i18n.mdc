@@ -1,0 +1,16 @@
+---
+description: Chinese LocString/.po loading when game locale code is en
+globs: "**/STRINGS.cs,**/I18n.cs,**/translations/*.po"
+alwaysApply: false
+---
+
+# I18n
+
+This player’s UI is Chinese while `Localization.GetCurrentLanguageCode()` is often `"en"`. Loading only `en.po` leaves mod text English.
+
+- Keep English `LocString` msgid; put Chinese in `translations/zh.po` with matching `msgctxt`.
+- Hook `Localization.Initialize` Postfix: `RegisterForTranslation` → `LoadStringsFile` → `OverloadStrings` → `CreateLocStringKeys`.
+- Locale list must include `zh` when `Application.systemLanguage` is Chinese* or vanilla strings contain CJK. Also map `schinese` → `zh`.
+- Log folder, codes, and whether a `.po` loaded. `codes=en` + Chinese UI is a bug.
+- `BuildingFacades.Add` / `PermitResource` snapshot strings. Resolve `STRINGS.*` at register time, after the `.po` load.
+- AfterBuild must copy `translations/` into `local/<Mod>/translations/`.

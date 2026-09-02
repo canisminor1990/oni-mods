@@ -1,0 +1,17 @@
+---
+description: ONI mods workspace layout and load path. Always apply in this repo.
+alwaysApply: true
+---
+
+# Workspace
+
+- Edit **source** under `src/<Mod>/`. The game loads **`local/<Mod>/`** from csproj `OutputPath`.
+- Klei also scans `mods/Dev/`. Keep that folder empty or absent so the game never loads source as a mod.
+- `packaging/mod.yaml` and `mod_info.yaml` must AfterBuild-copy into `local/<Mod>/`. Missing yaml → mod will not load.
+- DLL/PNG changes need a **full game quit**, not hot reload.
+- Player.log: `AppData\LocalLow\Klei\Oxygen Not Included\Player.log`. Grep `[ModName]`.
+- Game API excerpts: `ref/oni-api/INDEX.md`. Prefer those files over `%TEMP%\oni-dump`.
+- Deep playbook: `.cursor/skills/oni-modding/SKILL.md`
+- Single repo: all mods under `src/<ModName>/` (not one GitHub repo per mod). Only the workspace root has `.git`.
+- GitHub: root `README.md` + `src/<Mod>/README.md` (Markdown). Workshop: `src/<Mod>/Description.txt` (BBCode).
+- Git: allowlist `.gitignore` (`/*`, then `!src/` `!.cursor/` `!ref/oni-api/`). New top-level folders stay ignored.

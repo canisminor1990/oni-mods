@@ -1,0 +1,30 @@
+---
+description: Steam Workshop Description.txt uses BBCode; GitHub README.md uses Markdown
+globs: "**/src/*/Description.txt,**/src/*/README.md,README.md"
+alwaysApply: false
+---
+
+# Workshop vs GitHub copy
+
+This is a **single repo** of all mods (`src/<ModName>/`), like [aki-art/ONI-Mods](https://github.com/aki-art/ONI-Mods). Do not split each mod into its own GitHub repository.
+
+| File | Audience | Syntax |
+|------|----------|--------|
+| `src/<Mod>/Description.txt` | Steam Workshop item description (paste as-is) | BBCode |
+| `src/<Mod>/README.md` | GitHub | Markdown |
+| root `README.md` | GitHub index of every mod | Markdown |
+
+## Description.txt (BBCode)
+
+Steam renders [BBCode](https://steamcommunity.com/comment/WorkshopItem/formattinghelp). Markdown preview will mangle `[tags]`.
+
+- English first (`[h1]English Name[/h1]` + plain pitch), then `[hr][/hr]`, then Chinese (`[h1]中文名 / English Name[/h1]`).
+- After each language’s intro, include `[img]https://raw.githubusercontent.com/Sgt-Imalas/Sgt_Imalas-Oni-Mods/refs/heads/master/Compat_All.png[/img]`.
+- Chinese pitch in `[i]…[/i]`, then a one-line “这是一个 Oxygen Not Included …” intro.
+- Sections: `[h3]Features[/h3]` / `[h3]功能[/h3]`. No `[h2]`.
+- `[list][*]…[/list]`, `[olist][*]…[/olist]`, `[b]`, `[i]path[/i]`, `[code]`, `[url=https://…]label[/url]`.
+- Do not use Markdown in this file. Skip `[table]`, `[color]`, `[size]`, `[spoiler]`, `[previewyoutube]`.
+
+## README.md (Markdown)
+
+Same facts as `Description.txt`, written as Markdown (`#`, `- ` lists, `1.` steps, `` `path` ``, `![ALL DLC](Compat_All.png url)`). Link to `Description.txt`. Adding a mod: add a row to the root `README.md` table.

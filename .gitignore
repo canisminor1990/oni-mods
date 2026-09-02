@@ -1,0 +1,28 @@
+# Allowlist: ignore every top-level path, then un-ignore what belongs in this repo.
+# New folders at the Klei mods root (Steam, local, config, …) stay out until listed here.
+
+/*
+
+!.gitignore
+!README.md
+!AGENTS.md
+
+!.cursor/
+!.cursor/**
+
+!src/
+!src/**
+
+!ref/
+!ref/oni-api/
+!ref/oni-api/**
+
+# Build / IDE inside allowed trees
+[Bb]in/
+[Oo]bj/
+.vs/
+*.user
+*.suo
+
+# API scan scratch
+ref/oni-api/_scans/

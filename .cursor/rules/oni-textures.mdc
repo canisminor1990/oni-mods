@@ -1,0 +1,15 @@
+---
+description: Runtime textures and cloned kanims must match vanilla filtering
+globs: "**/KAnimFactory.cs,**/TextureUtil.cs,**/WallpaperUi.cs"
+alwaysApply: false
+---
+
+# Textures
+
+Vanilla kanims here: Trilinear + mipmaps. This player rejects nearest/pixel-art upscaling and notices minify shimmer.
+
+- `new Texture2D(..., mipChain: true)` then `Apply(true, false)`; `FilterMode.Trilinear`
+- Magnify: bilinear. Minify: area/box, not 4-tap bilinear
+- Do not stamp 2048 CPU atlases per skin; 512 (2× 256) is the current cap
+- Clone kanim: keep template UVs (0–1), `maxGroupSize = 1`, copy wrap/aniso from vanilla
+- Hide drywall caps via symbol visibility; crop 9-slice interiors (~1/6 inset)

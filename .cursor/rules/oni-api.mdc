@@ -1,0 +1,12 @@
+---
+description: Where to look up decompiled ONI game APIs
+globs: "ref/oni-api/**,**/KAnimFactory.cs,**/FacadeRegistrar.cs,**/Patches.cs"
+alwaysApply: false
+---
+
+# Game API lookup
+
+- Excerpts: `ref/oni-api/` — start at `INDEX.md`.
+- DLL: `E:\Steam\steamapps\common\OxygenNotIncluded\OxygenNotIncluded_Data\Managed\Assembly-CSharp.dll`
+- Missing type: `python ref/oni-api/scan_dll.py TypeName`, then save a focused snippet into `ref/oni-api/` and update `INDEX.md`.
+- Do not write new dumps to `%TEMP%\oni-dump`. Do not check in a full Assembly-CSharp decompile.

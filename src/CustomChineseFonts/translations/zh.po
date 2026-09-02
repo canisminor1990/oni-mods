@@ -1,0 +1,56 @@
+msgid ""
+msgstr ""
+"Project-Id-Version: CustomChineseFonts\n"
+"POT-Creation-Date: \n"
+"PO-Revision-Date: \n"
+"Language-Team: \n"
+"Language: zh\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Application: Oxygen Not Included\n"
+"POT Version: 2.0\n"
+
+msgctxt "CustomChineseFonts.STRINGS.CUSTOM_CHINESE_FONTS.SETTINGS_BUTTON"
+msgid "Settings"
+msgstr "设置"
+
+msgctxt "CustomChineseFonts.STRINGS.CUSTOM_CHINESE_FONTS.SETTINGS_TITLE"
+msgid "Custom Chinese Fonts"
+msgstr "自定义中文字体"
+
+msgctxt "CustomChineseFonts.STRINGS.CUSTOM_CHINESE_FONTS.SETTINGS_HINT"
+msgid "Chinese body text uses HarmonyOS Sans SC Regular unless you add body.ttf. Restart after turning English replacement off, or after adding custom fonts."
+msgstr "正文默认 HarmonyOS Sans SC Regular，放入 body.ttf 可替换。关闭英文替换或增减自定义字体后需要完全重启游戏。"
+
+msgctxt "CustomChineseFonts.STRINGS.CUSTOM_CHINESE_FONTS.SECTION_ENGLISH"
+msgid "Replace English fonts"
+msgstr "替换英文字体"
+
+msgctxt "CustomChineseFonts.STRINGS.CUSTOM_CHINESE_FONTS.ENGLISH_OFF"
+msgid "Off"
+msgstr "关"
+
+msgctxt "CustomChineseFonts.STRINGS.CUSTOM_CHINESE_FONTS.ENGLISH_ON"
+msgid "On"
+msgstr "开"
+
+msgctxt "CustomChineseFonts.STRINGS.CUSTOM_CHINESE_FONTS.SECTION_TITLE"
+msgid "Chinese title font"
+msgstr "中文标题字体"
+
+msgctxt "CustomChineseFonts.STRINGS.CUSTOM_CHINESE_FONTS.TITLE_HARMONYOS"
+msgid "HarmonyOS Sans SC Bold"
+msgstr "HarmonyOS Sans SC Bold"
+
+msgctxt "CustomChineseFonts.STRINGS.CUSTOM_CHINESE_FONTS.TITLE_JINZISHE"
+msgid "Jinzishe Dezheng"
+msgstr "金字社得正体"
+
+msgctxt "CustomChineseFonts.STRINGS.CUSTOM_CHINESE_FONTS.TITLE_CUSTOM"
+msgid "Custom"
+msgstr "自定义"
+
+msgctxt "CustomChineseFonts.STRINGS.CUSTOM_CHINESE_FONTS.CUSTOM_FONTS_HINT"
+msgid "Optional own fonts: put body.ttf / title.ttf (or .otf) in Documents/Klei/OxygenNotIncluded/mods/config/CustomChineseFonts/custom_fonts/ then fully restart."
+msgstr "用自己的字体：把 body.ttf / title.ttf（或 .otf）放到 Documents/Klei/OxygenNotIncluded/mods/config/CustomChineseFonts/custom_fonts/，然后完全重启游戏。"

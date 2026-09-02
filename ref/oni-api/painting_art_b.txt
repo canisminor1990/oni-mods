@@ -1,0 +1,9 @@
+painting_art_b (2x2 masterpiece kanim)
+
+World clip `art_b` draws 4 symbols (first listed is back):
+  backing, canvas (the artwork, scale 1.153), stretch_marks, frame (hollow wood/gold)
+
+Preview is NOT a runtime composite. `Def.GetUISpriteFromMultiObjectAnim`
+crops the baked `ui` symbol UV from the atlas (`GetSpriteFromKAnimFile`,
+symbol name = "ui"). Stamp only the inner art of that sprite; leave frame
+and drop-shadow alpha alone.

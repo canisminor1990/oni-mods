@@ -1,0 +1,132 @@
+msgid ""
+msgstr ""
+"Project-Id-Version: DrywallTileSkins\n"
+"POT-Creation-Date: \n"
+"PO-Revision-Date: \n"
+"Language-Team: \n"
+"Language: zh\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Application: Oxygen Not Included\n"
+"POT Version: 2.0\n"
+
+msgctxt "DrywallTileSkins.STRINGS.DRYWALL_TILE_SKINS.FACADE_DESC"
+msgid "Applies this tile's interior cell to Drywall, without tile borders."
+msgstr "将此瓷砖的中间格纹理铺在干板墙上，无瓷砖边框。"
+
+msgctxt "DrywallTileSkins.STRINGS.DRYWALL_TILE_SKINS.CUSTOM_DESC"
+msgid "Custom Drywall wallpaper. Repeats the interior cell only."
+msgstr "自定义干板墙贴图，按中间格重复，无边框。"
+
+msgctxt "DrywallTileSkins.STRINGS.DRYWALL_TILE_SKINS.BUILTIN_DESC"
+msgid "Built-in cartoon wallpaper in the vanilla Drywall print style."
+msgstr "内置卡通墙纸，风格贴近原版干板墙花纹。"
+
+msgctxt "DrywallTileSkins.STRINGS.DRYWALL_TILE_SKINS.GROUP_BUILTIN"
+msgid "Cartoon Prints"
+msgstr "卡通墙纸"
+
+msgctxt "DrywallTileSkins.STRINGS.DRYWALL_TILE_SKINS.GROUP_STAINED_GLASS"
+msgid "Stained Glass"
+msgstr "琉璃砖"
+
+msgctxt "DrywallTileSkins.STRINGS.DRYWALL_TILE_SKINS.GROUP_CUSTOM"
+msgid "Custom Prints"
+msgstr "自定义贴图"
+
+msgctxt "DrywallTileSkins.STRINGS.DRYWALL_TILE_SKINS.SETTINGS_BUTTON"
+msgid "Settings"
+msgstr "设置"
+
+msgctxt "DrywallTileSkins.STRINGS.DRYWALL_TILE_SKINS.SETTINGS_TITLE"
+msgid "Drywall Tile Skins"
+msgstr "干板墙瓷砖皮肤"
+
+msgctxt "DrywallTileSkins.STRINGS.DRYWALL_TILE_SKINS.SETTINGS_HINT"
+msgid "Choose which tile types to load as Drywall wallpapers. Restart the game to apply."
+msgstr "勾选要加载的砖块类型。取消后对应贴图不会生成墙纸。需重启游戏生效。"
+
+msgctxt "DrywallTileSkins.STRINGS.DRYWALL_TILE_SKINS.SETTINGS_ALL_ON"
+msgid "Enable All"
+msgstr "全选"
+
+msgctxt "DrywallTileSkins.STRINGS.DRYWALL_TILE_SKINS.SETTINGS_ALL_OFF"
+msgid "Disable All"
+msgstr "全不选"
+
+msgctxt "DrywallTileSkins.STRINGS.DRYWALL_TILE_SKINS.SETTINGS_CLOSE"
+msgid "Close"
+msgstr "关闭"
+
+msgctxt "DrywallTileSkins.STRINGS.DRYWALL_TILE_SKINS.BUILTIN.PASTEL_DOTS"
+msgid "Pastel Dots"
+msgstr "奶油波点"
+
+msgctxt "DrywallTileSkins.STRINGS.DRYWALL_TILE_SKINS.BUILTIN.CITRUS_SLICES"
+msgid "Citrus Slices"
+msgstr "柠檬片"
+
+msgctxt "DrywallTileSkins.STRINGS.DRYWALL_TILE_SKINS.BUILTIN.COLONY_STARS"
+msgid "Colony Stars"
+msgstr "星空"
+
+msgctxt "DrywallTileSkins.STRINGS.DRYWALL_TILE_SKINS.BUILTIN.MUSH_CAPS"
+msgid "Mushroom Caps"
+msgstr "蘑菇点"
+
+msgctxt "DrywallTileSkins.STRINGS.DRYWALL_TILE_SKINS.BUILTIN.RAIN_DROPS"
+msgid "Raindrops"
+msgstr "雨滴"
+
+msgctxt "DrywallTileSkins.STRINGS.DRYWALL_TILE_SKINS.BUILTIN.PUFFY_CLOUDS"
+msgid "Puffy Clouds"
+msgstr "云朵"
+
+msgctxt "DrywallTileSkins.STRINGS.DRYWALL_TILE_SKINS.BUILTIN.LEAF_SCATTER"
+msgid "Scattered Leaves"
+msgstr "绿叶"
+
+msgctxt "DrywallTileSkins.STRINGS.DRYWALL_TILE_SKINS.BUILTIN.HONEYCOMB"
+msgid "Honeycomb"
+msgstr "蜂巢"
+
+msgctxt "DrywallTileSkins.STRINGS.DRYWALL_TILE_SKINS.BUILTIN.WAVY_SEA"
+msgid "Wavy Sea"
+msgstr "海浪"
+
+msgctxt "DrywallTileSkins.STRINGS.DRYWALL_TILE_SKINS.BUILTIN.CANDY_HEARTS"
+msgid "Candy Hearts"
+msgstr "爱心"
+
+msgctxt "DrywallTileSkins.STRINGS.DRYWALL_TILE_SKINS.BUILTIN.CARTOON_BRICKS"
+msgid "Cartoon Bricks"
+msgstr "卡通砖"
+
+msgctxt "DrywallTileSkins.STRINGS.DRYWALL_TILE_SKINS.BUILTIN.PLUS_GRID"
+msgid "Plus Grid"
+msgstr "十字格"
+
+msgctxt "DrywallTileSkins.STRINGS.DRYWALL_TILE_SKINS.BUILTIN.LITTLE_FISH"
+msgid "Little Fish"
+msgstr "小鱼"
+
+msgctxt "DrywallTileSkins.STRINGS.DRYWALL_TILE_SKINS.BUILTIN.TINY_FLOWERS"
+msgid "Tiny Flowers"
+msgstr "小花"
+
+msgctxt "DrywallTileSkins.STRINGS.DRYWALL_TILE_SKINS.BUILTIN.AQUA_BUBBLES"
+msgid "Aqua Bubbles"
+msgstr "气泡"
+
+msgctxt "DrywallTileSkins.STRINGS.DRYWALL_TILE_SKINS.BUILTIN.SOFT_CHECKERS"
+msgid "Soft Checkers"
+msgstr "软格子"
+
+msgctxt "DrywallTileSkins.STRINGS.DRYWALL_TILE_SKINS.BUILTIN.LITTLE_SUNS"
+msgid "Little Suns"
+msgstr "小太阳"
+
+msgctxt "DrywallTileSkins.STRINGS.DRYWALL_TILE_SKINS.BUILTIN.CANDY_DIAMONDS"
+msgid "Candy Diamonds"
+msgstr "菱形糖"
