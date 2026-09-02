@@ -4,7 +4,7 @@ Adds a masterpiece painting of every loaded duplicant personality to the vanilla
 
 ![ALL DLC](https://raw.githubusercontent.com/Sgt-Imalas/Sgt_Imalas-Oni-Mods/refs/heads/master/Compat_All.png)
 
-Steam Workshop description (BBCode): [Description.txt](Description.txt)
+Steam Workshop: [Duplicant Portraits](https://steamcommunity.com/sharedfiles/filedetails/?id=3794390677) · [Description.txt](Description.txt) (BBCode)
 
 ### Features
 

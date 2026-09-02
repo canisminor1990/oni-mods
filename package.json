@@ -1,0 +1,36 @@
+{
+  "name": "oni-mods",
+  "private": true,
+  "type": "module",
+  "description": "Oxygen Not Included mods monorepo",
+  "scripts": {
+    "build": "node scripts/build.mjs",
+    "desc": "node scripts/convert-docs.mjs desc",
+    "readme": "node scripts/convert-docs.mjs readme",
+    "docs": "node scripts/convert-docs.mjs desc",
+    "steam-ids": "node scripts/steam-ids.mjs",
+    "package": "node scripts/build.mjs && node scripts/convert-docs.mjs desc"
+  },
+  "steam": {
+    "vanity": "canisminor",
+    "appId": 457140
+  },
+  "oniMods": {
+    "CustomChineseFonts": {
+      "steamId": "3794395157",
+      "workshopTitle": "自定义中文字体"
+    },
+    "DrywallTileSkins": {
+      "steamId": "3794025758",
+      "workshopTitle": "Drywall Tile Skins"
+    },
+    "DuplicantPortraits": {
+      "steamId": "3794390677",
+      "workshopTitle": "Duplicant Portraits"
+    },
+    "ModListPreviews": {
+      "steamId": "3794018361",
+      "workshopTitle": "Mod List Previews"
+    }
+  }
+}

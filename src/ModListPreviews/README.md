@@ -4,7 +4,7 @@ Shows Steam Workshop cover thumbnails in the in-game Mods list.
 
 ![ALL DLC](https://raw.githubusercontent.com/Sgt-Imalas/Sgt_Imalas-Oni-Mods/refs/heads/master/Compat_All.png)
 
-Steam Workshop description (BBCode): [Description.txt](Description.txt)
+Steam Workshop: [Mod List Previews](https://steamcommunity.com/sharedfiles/filedetails/?id=3794018361) · [Description.txt](Description.txt) (BBCode)
 
 ### Features
 
@@ -14,6 +14,13 @@ Steam Workshop description (BBCode): [Description.txt](Description.txt)
 - Covers that fail due to network errors are retried the next time the list opens or the game launches.
 - Compatible with Mod Profile Manager pin / tag buttons.
 - No new buildings, resources, recipes, or balance changes.
+
+### Recommended
+
+Optional. This mod runs on its own.
+
+- [Mod Updater](https://steamcommunity.com/workshop/filedetails/?id=2018291283)
+- [Mod Profile Manager (MPM)](https://steamcommunity.com/workshop/filedetails/?id=2854869130)
 
 ### Settings
 
@@ -46,6 +53,13 @@ Steam Workshop description (BBCode): [Description.txt](Description.txt)
 - 网络失败的封面会记下来，下次打开列表或下次启动时自动重试。
 - 与 Mod Profile Manager 的钉选 / 标签按钮并存。
 - 不新增建筑、不新增资源、不改配方、不改变游戏平衡。
+
+### 建议订阅
+
+可选。本模组可以单独运行。
+
+- [Mod Updater](https://steamcommunity.com/workshop/filedetails/?id=2018291283)
+- [Mod Profile Manager (MPM)](https://steamcommunity.com/workshop/filedetails/?id=2854869130)
 
 ### 设置
 

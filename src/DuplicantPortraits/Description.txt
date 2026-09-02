@@ -1,10 +1,11 @@
 [h1]Duplicant Portraits[/h1]
 
-Duplicant Portraits adds a masterpiece painting of every loaded duplicant personality to the vanilla 2x2 Blank Canvas.
+Adds a masterpiece painting of every loaded duplicant personality to the vanilla 2x2 Blank Canvas.
 
 [img]https://raw.githubusercontent.com/Sgt-Imalas/Sgt_Imalas-Oni-Mods/refs/heads/master/Compat_All.png[/img]
 
 [h3]Features[/h3]
+
 [list]
 [*]No new building. Portraits hang on the smallest vanilla canvas.
 [*]One Looking Great artwork per personality, using that duplicant's headshot.
@@ -13,6 +14,7 @@ Duplicant Portraits adds a masterpiece painting of every loaded duplicant person
 [/list]
 
 [h3]How to use[/h3]
+
 [olist]
 [*]Build a Blank Canvas.
 [*]Have a duplicant with Masterworks decorate it.
@@ -20,6 +22,7 @@ Duplicant Portraits adds a masterpiece painting of every loaded duplicant person
 [/olist]
 
 [h3]Notes[/h3]
+
 [list]
 [*]Decor matches vanilla masterpiece paintings.
 [*]Chinese and English UI.
@@ -37,6 +40,7 @@ Duplicant Portraits adds a masterpiece painting of every loaded duplicant person
 [img]https://raw.githubusercontent.com/Sgt-Imalas/Sgt_Imalas-Oni-Mods/refs/heads/master/Compat_All.png[/img]
 
 [h3]功能[/h3]
+
 [list]
 [*]不新增建筑。肖像挂在原版最小的装饰画（空白画布，2x2）上。
 [*]为当前已加载的每个复制人性格生成一幅杰作级画作，画框里是该小人的头像。
@@ -45,6 +49,7 @@ Duplicant Portraits adds a masterpiece painting of every loaded duplicant person
 [/list]
 
 [h3]用法[/h3]
+
 [olist]
 [*]建造空白画布。
 [*]让有「杰作」技能的复制人完成装饰。
@@ -52,6 +57,7 @@ Duplicant Portraits adds a masterpiece painting of every loaded duplicant person
 [/olist]
 
 [h3]说明[/h3]
+
 [list]
 [*]装饰值和原版杰作画相同。
 [*]界面提供中文 / English。

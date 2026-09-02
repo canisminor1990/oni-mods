@@ -1,10 +1,11 @@
 [h1]Drywall Tile Skins[/h1]
 
-Drywall Tile Skins turns loaded tile textures into blueprint skins for vanilla Drywall.
+Turns loaded tile textures into blueprint skins for vanilla Drywall.
 
 [img]https://raw.githubusercontent.com/Sgt-Imalas/Sgt_Imalas-Oni-Mods/refs/heads/master/Compat_All.png[/img]
 
 [h3]Features[/h3]
+
 [list]
 [*]No new building. Skins hang on vanilla Drywall and use the built-in blueprint picker.
 [*]Repeats the tile interior cell only and hides 9-slice caps, so the wall reads as wallpaper instead of tiled bricks.
@@ -14,15 +15,27 @@ Drywall Tile Skins turns loaded tile textures into blueprint skins for vanilla D
 [*]Blueprint inventory is grouped by tile type.
 [/list]
 
+[h3]Recommended[/h3]
+
+Optional. This mod runs on its own.
+
+[list]
+[*][url=https://steamcommunity.com/workshop/filedetails/?id=2815406414]True Tiles (texture mod)[/url]
+[*][url=https://steamcommunity.com/workshop/filedetails/?id=2660131829]Decor Pack I - Classy Glass[/url]
+[/list]
+
 [h3]Custom prints[/h3]
+
 [list]
 [*]Drop square PNG files into [i]Documents/Klei/OxygenNotIncluded/mods/config/drywall_tile_skins/custom_walls/[/i]
 [*]Backwalls custom folder is also scanned: [i]mods/config/backwalls/custom_walls/[/i]
 [*]Optional sidecar [i]filename.metadata.json[/i]:
 [/list]
+
 [code]{ "Name": "Display Name" }[/code]
 
 [h3]Settings[/h3]
+
 [list]
 [*]Open the Mods list from the main menu or pause menu, then click Settings on this mod's row.
 [*]Enable or disable wallpaper groups by tile type. Disabled groups are not registered as blueprints.
@@ -30,6 +43,7 @@ Drywall Tile Skins turns loaded tile textures into blueprint skins for vanilla D
 [/list]
 
 [h3]Notes[/h3]
+
 [list]
 [*]No new buildings, resources, recipes, or balance changes.
 [*]Chinese and English UI.
@@ -47,6 +61,7 @@ Drywall Tile Skins turns loaded tile textures into blueprint skins for vanilla D
 [img]https://raw.githubusercontent.com/Sgt-Imalas/Sgt_Imalas-Oni-Mods/refs/heads/master/Compat_All.png[/img]
 
 [h3]功能[/h3]
+
 [list]
 [*]不新增建筑。皮肤挂在原版干板墙上，用游戏自带的蓝图选择器切换。
 [*]墙面按瓷砖中间格重复铺贴，会藏掉九宫格边框，看起来像一整面墙纸。
@@ -56,15 +71,27 @@ Drywall Tile Skins turns loaded tile textures into blueprint skins for vanilla D
 [*]蓝图库存按砖块类型分组，方便查找。
 [/list]
 
+[h3]建议订阅[/h3]
+
+可选。本模组可以单独运行。
+
+[list]
+[*][url=https://steamcommunity.com/workshop/filedetails/?id=2815406414]True Tiles (texture mod)[/url]
+[*][url=https://steamcommunity.com/workshop/filedetails/?id=2660131829]Decor Pack I - Classy Glass[/url]
+[/list]
+
 [h3]自定义贴图[/h3]
+
 [list]
 [*]把正方形 PNG 放到 [i]Documents/Klei/OxygenNotIncluded/mods/config/drywall_tile_skins/custom_walls/[/i]
 [*]也兼容 Backwalls 的自定义目录：[i]mods/config/backwalls/custom_walls/[/i]
 [*]可选同名 [i]文件名.metadata.json[/i]，格式：
 [/list]
+
 [code]{ "Name": "显示名称" }[/code]
 
 [h3]设置[/h3]
+
 [list]
 [*]主菜单或暂停菜单打开模组列表，在本模组那一行点「设置」。
 [*]可按类型勾选要加载的墙纸。取消勾选后对应贴图不会生成蓝图。
@@ -72,6 +99,7 @@ Drywall Tile Skins turns loaded tile textures into blueprint skins for vanilla D
 [/list]
 
 [h3]说明[/h3]
+
 [list]
 [*]本模组不新增建筑、不新增资源、不改配方、不改变游戏平衡。
 [*]界面提供中文 / English。

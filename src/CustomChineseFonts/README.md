@@ -4,7 +4,7 @@ Custom Simplified Chinese UI fonts for Oxygen Not Included. Body text defaults t
 
 ![ALL DLC](https://raw.githubusercontent.com/Sgt-Imalas/Sgt_Imalas-Oni-Mods/refs/heads/master/Compat_All.png)
 
-Steam Workshop description (BBCode): [Description.txt](Description.txt)
+Steam Workshop: [自定义中文字体](https://steamcommunity.com/sharedfiles/filedetails/?id=3794395157) · [Description.txt](Description.txt) (BBCode)
 
 ### Features
 

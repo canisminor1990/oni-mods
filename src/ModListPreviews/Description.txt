@@ -1,10 +1,11 @@
 [h1]Mod List Previews[/h1]
 
-Mod List Previews shows Steam Workshop cover thumbnails in the in-game Mods list.
+Shows Steam Workshop cover thumbnails in the in-game Mods list.
 
 [img]https://raw.githubusercontent.com/Sgt-Imalas/Sgt_Imalas-Oni-Mods/refs/heads/master/Compat_All.png[/img]
 
 [h3]Features[/h3]
+
 [list]
 [*]Adds a cover thumbnail on the left of each Mods list row. A placeholder is shown when no image is available.
 [*]Covers come from Steam's already-downloaded preview, then the local cache, then a Workshop fetch.
@@ -14,7 +15,17 @@ Mod List Previews shows Steam Workshop cover thumbnails in the in-game Mods list
 [*]No new buildings, resources, recipes, or balance changes.
 [/list]
 
+[h3]Recommended[/h3]
+
+Optional. This mod runs on its own.
+
+[list]
+[*][url=https://steamcommunity.com/workshop/filedetails/?id=2018291283]Mod Updater[/url]
+[*][url=https://steamcommunity.com/workshop/filedetails/?id=2854869130]Mod Profile Manager (MPM)[/url]
+[/list]
+
 [h3]Settings[/h3]
+
 [list]
 [*]Open the Mods list from the main menu or pause menu, then click Settings on this mod's row.
 [*]Cover size: 32–128 px, default 56.
@@ -22,6 +33,7 @@ Mod List Previews shows Steam Workshop cover thumbnails in the in-game Mods list
 [/list]
 
 [h3]Notes[/h3]
+
 [list]
 [*]Fully quit and relaunch the game after enabling or updating this mod.
 [*]Chinese and English UI.
@@ -40,6 +52,7 @@ Mod List Previews shows Steam Workshop cover thumbnails in the in-game Mods list
 [img]https://raw.githubusercontent.com/Sgt-Imalas/Sgt_Imalas-Oni-Mods/refs/heads/master/Compat_All.png[/img]
 
 [h3]功能[/h3]
+
 [list]
 [*]在模组列表每一行左侧显示创意工坊封面。没有封面时显示占位图。
 [*]封面优先用 Steam 已下载的预览图，其次用本地缓存，再向创意工坊拉取。
@@ -49,7 +62,17 @@ Mod List Previews shows Steam Workshop cover thumbnails in the in-game Mods list
 [*]不新增建筑、不新增资源、不改配方、不改变游戏平衡。
 [/list]
 
+[h3]建议订阅[/h3]
+
+可选。本模组可以单独运行。
+
+[list]
+[*][url=https://steamcommunity.com/workshop/filedetails/?id=2018291283]Mod Updater[/url]
+[*][url=https://steamcommunity.com/workshop/filedetails/?id=2854869130]Mod Profile Manager (MPM)[/url]
+[/list]
+
 [h3]设置[/h3]
+
 [list]
 [*]主菜单或暂停菜单打开模组列表，在本模组那一行点「设置」。
 [*]封面尺寸：32–128 像素，默认 56。
@@ -57,6 +80,7 @@ Mod List Previews shows Steam Workshop cover thumbnails in the in-game Mods list
 [/list]
 
 [h3]说明[/h3]
+
 [list]
 [*]启用或更新本模组后，需要完全退出游戏再启动。
 [*]界面提供中文 / English。

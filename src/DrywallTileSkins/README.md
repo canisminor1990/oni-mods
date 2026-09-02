@@ -4,7 +4,7 @@ Turns loaded tile textures into blueprint skins for vanilla Drywall.
 
 ![ALL DLC](https://raw.githubusercontent.com/Sgt-Imalas/Sgt_Imalas-Oni-Mods/refs/heads/master/Compat_All.png)
 
-Steam Workshop description (BBCode): [Description.txt](Description.txt)
+Steam Workshop: [Drywall Tile Skins](https://steamcommunity.com/sharedfiles/filedetails/?id=3794025758) · [Description.txt](Description.txt) (BBCode)
 
 ### Features
 
@@ -14,6 +14,13 @@ Steam Workshop description (BBCode): [Description.txt](Description.txt)
 - Includes a set of cartoon prints: Pastel Dots, Citrus Slices, Colony Stars, Mushroom Caps, Raindrops, Puffy Clouds, Scattered Leaves, Honeycomb, Wavy Sea, Candy Hearts, Cartoon Bricks, Plus Grid, Little Fish, Tiny Flowers, Aqua Bubbles, Soft Checkers, Little Suns, Candy Diamonds.
 - Decor Pack stained-glass tiles are merged into one group so the picker is not flooded with near-identical prints.
 - Blueprint inventory is grouped by tile type.
+
+### Recommended
+
+Optional. This mod runs on its own.
+
+- [True Tiles (texture mod)](https://steamcommunity.com/workshop/filedetails/?id=2815406414)
+- [Decor Pack I - Classy Glass](https://steamcommunity.com/workshop/filedetails/?id=2660131829)
 
 ### Custom prints
 
@@ -55,6 +62,13 @@ Steam Workshop description (BBCode): [Description.txt](Description.txt)
 - 自带一批卡通墙纸：奶油波点、柠檬片、星空、蘑菇点、雨滴、云朵、绿叶、蜂巢、海浪、爱心、卡通砖、十字格、小鱼、小花、气泡、软格子、小太阳、菱形糖。
 - Decor Pack 琉璃砖会合并成同一组，避免蓝图列表被同款花纹刷屏。
 - 蓝图库存按砖块类型分组，方便查找。
+
+### 建议订阅
+
+可选。本模组可以单独运行。
+
+- [True Tiles (texture mod)](https://steamcommunity.com/workshop/filedetails/?id=2815406414)
+- [Decor Pack I - Classy Glass](https://steamcommunity.com/workshop/filedetails/?id=2660131829)
 
 ### 自定义贴图
 

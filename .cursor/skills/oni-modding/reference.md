@@ -59,7 +59,7 @@ Vanilla `walls_kanim` on this install: 256×256, `filter=Trilinear`, `mips=9`, `
 
 `mod.yaml`: `title`, `description`, `staticID`. `description` is a short in-game blurb, not the Workshop page.
 
-GitHub: root `README.md` lists every mod; each `src/<Mod>/README.md` is Markdown. Workshop item description is `src/<Mod>/Description.txt`, written in Steam BBCode (not Markdown). English `[h1]Name[/h1]` first, `[hr][/hr]`, then Chinese `[h1]中文名 / Name[/h1]`. Both languages include `[img]https://raw.githubusercontent.com/Sgt-Imalas/Sgt_Imalas-Oni-Mods/refs/heads/master/Compat_All.png[/img]`. Tags that work: `[h1]` `[h3]` `[b]` `[i]` `[u]` `[strike]` `[url=…]` `[img]` `[list]` `[olist]` `[*]` `[code]` `[hr][/hr]` `[noparse]` `[quote]`. Do not use Markdown, `[h2]`, or forum-only tags (`[table]`, `[color]`, `[size]`, `[spoiler]`, `[previewyoutube]`).
+GitHub: root `README.md` lists every mod (Steam column). Each `src/<Mod>/README.md` is the Markdown source. `npm run desc` writes `Description.txt`. `npm run steam-ids` scrapes `steamcommunity.com/id/canisminor/myworkshopfiles/?appid=457140` (no API key). This PC: Watt Toolkit — `curl.exe -k`, not Node `fetch`. Skip `browsefilter=mysubmissions`. English first, `[hr][/hr]`, Chinese. Compat_All `[img]` in both languages. Tags: `[h1]` `[h3]` `[b]` `[i]` `[u]` `[strike]` `[url=…]` `[img]` `[list]` `[olist]` `[*]` `[code]` `[hr][/hr]` `[noparse]` `[quote]`. Skip Markdown, `[h2]`, `[table]`, `[color]`, `[size]`, `[spoiler]`, `[previewyoutube]`. Write `(MPM)` not `[MPM]`. Recommended mods are optional.
 
 `mod_info.yaml`:
 

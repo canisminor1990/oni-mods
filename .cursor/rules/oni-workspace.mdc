@@ -1,17 +1,16 @@
 ---
-description: ONI mods workspace layout and load path. Always apply in this repo.
+description: ONI mods workspace layout, git allowlist, and npm commands
 alwaysApply: true
 ---
 
 # Workspace
 
-- Edit **source** under `src/<Mod>/`. The game loads **`local/<Mod>/`** from csproj `OutputPath`.
-- Klei also scans `mods/Dev/`. Keep that folder empty or absent so the game never loads source as a mod.
-- `packaging/mod.yaml` and `mod_info.yaml` must AfterBuild-copy into `local/<Mod>/`. Missing yaml → mod will not load.
-- DLL/PNG changes need a **full game quit**, not hot reload.
-- Player.log: `AppData\LocalLow\Klei\Oxygen Not Included\Player.log`. Grep `[ModName]`.
-- Game API excerpts: `ref/oni-api/INDEX.md`. Prefer those files over `%TEMP%\oni-dump`.
-- Deep playbook: `.cursor/skills/oni-modding/SKILL.md`
-- Single repo: all mods under `src/<ModName>/` (not one GitHub repo per mod). Only the workspace root has `.git`.
-- GitHub: root `README.md` + `src/<Mod>/README.md` (Markdown). Workshop: `src/<Mod>/Description.txt` (BBCode).
-- Git: allowlist `.gitignore` (`/*`, then `!src/` `!.cursor/` `!ref/oni-api/`). New top-level folders stay ignored.
+- Source: `src/<Mod>/`. Game loads `local/<Mod>/` (`OutputPath`). Missing yaml there → skipped.
+- One GitHub repo (`canisminor1990/oni-mods`). Only the workspace root has `.git`. No `src/<Mod>/.git`.
+- `.gitignore` is an allowlist (`/*` then `!src/` `!.cursor/` `!ref/oni-api/` `!scripts/` `!package.json`). New root folders stay ignored until you add `!`.
+- Do not put source in Klei `mods/Dev`. DLL/PNG: full game quit.
+- Commands: `npm run build`, `npm run desc`, `npm run steam-ids`, `npm run package`.
+- Docs: edit `README.md` only; `npm run desc` writes Workshop `Description.txt`.
+- Steam IDs: `npm run steam-ids` (vanity `canisminor`). This PC: Watt Toolkit — use `curl.exe -k`, not Node `fetch` / PowerShell `curl`.
+- Player.log: `AppData\LocalLow\Klei\Oxygen Not Included\Player.log`. API: `ref/oni-api/INDEX.md`.
+- Playbook: `.cursor/skills/oni-modding/SKILL.md`

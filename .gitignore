@@ -6,6 +6,10 @@
 !.gitignore
 !README.md
 !AGENTS.md
+!package.json
+
+!scripts/
+!scripts/**
 
 !.cursor/
 !.cursor/**

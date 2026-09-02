@@ -22,7 +22,7 @@ Do not tell the user to install Unity, Visual Studio templates, ILSpy GUI, or IL
 | Config | `mods\config\` |
 | Game API dumps | `ref/oni-api/` (`INDEX.md`) |
 
-Player: Chinese UI, 4K (`3840×2054`). Game language **code is often `en`** even when UI is Chinese (`System Language=ChineseSimplified`). All mods live in this one GitHub repo (`src/<ModName>/`). Only the workspace root has `.git`. GitHub copy is Markdown (`README.md`); Workshop paste is BBCode (`Description.txt`, English then Chinese, Compat_All.png in both languages).
+Player: Chinese UI, 4K (`3840×2054`). Game language **code is often `en`** even when UI is Chinese (`System Language=ChineseSimplified`). GitHub: https://github.com/canisminor1990/oni-mods (one repo, root `.git` only). Steam vanity `canisminor`. Edit `README.md`; `npm run desc` writes `Description.txt`. `npm run steam-ids` fills workshop ids.
 
 ## Ignore outdated guides
 
@@ -67,9 +67,9 @@ public class Mod : UserMod2
 
 5. `OutputPath` → `$(MSBuildProjectDirectory)\..\..\local\<ModName>\`
 6. AfterBuild copy yaml, `translations\`, and any `packaging\` assets.
-7. Build: `dotnet build -c Release` in the `src` project folder.
+7. Build: `npm run build` or `npm run build -- <ModName>` (wraps `dotnet build -c Release`).
 8. User must **fully quit the game** to pick up DLL/PNG. Hot reload is not enough.
-9. GitHub `README.md` (Markdown) plus Workshop `Description.txt` (BBCode, English then Chinese, Compat_All.png). Add a row to the root `README.md` table. See below.
+9. Edit `src/<Mod>/README.md` only. Add a `package.json` `oniMods` stub + a root `README.md` row. After Workshop publish: `npm run steam-ids` then `npm run desc`.
 
 Add Unity module refs only when the compiler asks (`ImageConversionModule`, `UI`, `TextMeshPro`, `JSONSerializeModule`, …).
 
@@ -103,17 +103,28 @@ Do not invent a custom picker if vanilla blueprints/inventory exist. `Strings.Ad
 
 Details: [reference.md](reference.md).
 
-## Workshop Description.txt (BBCode) vs GitHub README.md
+## Workshop Description.txt vs GitHub README.md
 
-This workspace is a **single repository** of every mod, like [aki-art/ONI-Mods](https://github.com/aki-art/ONI-Mods). Keep new mods under `src/<ModName>/`. Do not create a separate GitHub repo per mod.
+This workspace is a **single repository** of every mod, like [aki-art/ONI-Mods](https://github.com/aki-art/ONI-Mods). Keep new mods under `src/<ModName>/`.
 
-| File | Audience | Syntax |
-|------|----------|--------|
-| root `README.md` | GitHub index | Markdown table of mods |
-| `src/<Mod>/README.md` | GitHub | Markdown; same facts as the Workshop page |
-| `src/<Mod>/Description.txt` | Steam Workshop paste | BBCode |
+**Source of truth is `src/<Mod>/README.md`.** Commands in root `package.json`:
 
-Each `Description.txt` is pasted into the Steam Workshop item description. Steam renders BBCode, not Markdown. Match `src/ModListPreviews/Description.txt`.
+| Script | What |
+|--------|------|
+| `npm run build` | `dotnet build -c Release` every `src/<Mod>/*.csproj` → `local/<Mod>/` |
+| `npm run build -- <Mod>` | one mod |
+| `npm run desc` | README.md → Description.txt (BBCode, strips the Steam Workshop line) |
+| `npm run readme` | Description.txt → README.md (inserts Steam line from `oniMods`) |
+| `npm run steam-ids` | scrape `steamcommunity.com/id/<vanity>` workshop list and write `oniMods.steamId` |
+| `npm run package` | build + desc |
+
+Do not hand-edit `Description.txt`.
+
+Steam IDs: official `IPublishedFileService/QueryFiles` needs a Web API key — skip it. `npm run steam-ids` scrapes `https://steamcommunity.com/id/canisminor/myworkshopfiles/?appid=457140` and matches `workshopTitle` / `packaging/mod.yaml` title / spaced PascalCase (`DrywallTileSkins` → `Drywall Tile Skins`). Custom Chinese Fonts’ Workshop title is `自定义中文字体`.
+
+This PC runs Watt Toolkit on Steam HTTPS (`Server: WattToolkit`). Node `fetch` hits `UNABLE_TO_VERIFY_LEAF_SIGNATURE` or **HTTP 200 with an empty body**. PowerShell `curl` is `Invoke-WebRequest` and also comes back empty. Use `curl.exe -k` (see `scripts/steam-ids.mjs`). Do **not** add `browsefilter=mysubmissions` (empty here). `GetPublishedFileDetails` POST works without a key once you already have a file id.
+
+Related mods: **Recommended** / **建议订阅**, optional, runs standalone. Do not tick Workshop Required items unless the DLL cannot load without them. Write `Mod Profile Manager (MPM)` — raw `[MPM]` is parsed as BBCode/Markdown.
 
 Layout:
 
@@ -147,7 +158,7 @@ Plain English pitch.
 
 English first, then `[hr][/hr]`, then Chinese. Both languages must include the Compat_All `[img]`. Use `[h1]` / `[h3]` only (no `[h2]`). Chinese pitch is `[i]…[/i]`; English pitch is plain text. `[b]`, `[i]` (also for paths), `[list]` / `[olist]` with `[*]`, `[code]`, `[url=https://…]label[/url]`. Numbered how-tos are `[olist]`. JSON or literal square brackets go in `[code]` or `[noparse]`.
 
-`Description.txt` must **not** use Markdown (`#` headings, `**bold**`, `- ` bullets, `` `code` ``, `[text](url)`). Those show as raw characters on the Workshop page. Skip `[table]`, `[color]`, `[size]`, `[spoiler]`, `[previewyoutube]`. `README.md` uses Markdown for the same facts, plus `![ALL DLC](Compat_All url)` and a link to `Description.txt`.
+`Description.txt` is generated BBCode. Do not write Markdown into it. Skip `[table]`, `[color]`, `[size]`, `[spoiler]`, `[previewyoutube]`. `README.md` uses Markdown for the same facts, plus `![ALL DLC](Compat_All url)` and a Steam Workshop line.
 
 Details: [reference.md](reference.md).
 
@@ -172,9 +183,9 @@ Details: [reference.md](reference.md).
 
 ## Debug
 
-1. `dotnet build -c Release`.
+1. `npm run build` or `npm run build -- <ModName>`.
 2. Fully quit game, relaunch, enable mod under **local**.
 3. Grep Player.log for `[ModName]`. Missing `mod_info.yaml` in the loaded folder → “will not be loaded”.
 4. Decompile when guessing APIs: read `ref/oni-api/` first. If missing, `python ref/oni-api/scan_dll.py TypeName`, then paste a focused excerpt into that folder and update `INDEX.md`. Do not ask the user to click Unity.
 
-Constraints this player has used: no new building when hanging on vanilla is enough; no custom blueprint UI when `BuildingFacades` works; Chinese strings in `zh.po`; one GitHub repo (root `.git` only, allowlist `.gitignore`); `README.md` Markdown + `Description.txt` Workshop BBCode (en then zh, Compat_All.png).
+Constraints this player has used: no new building when hanging on vanilla is enough; no custom blueprint UI when `BuildingFacades` works; Chinese strings in `zh.po`; one GitHub repo (root `.git` only, allowlist `.gitignore`); edit `README.md`; `npm run desc` / `build` / `steam-ids`; Steam HTTPS via `curl.exe -k` on this PC.

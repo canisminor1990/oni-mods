@@ -1,30 +1,30 @@
 ---
 description: Steam Workshop Description.txt uses BBCode; GitHub README.md uses Markdown
-globs: "**/src/*/Description.txt,**/src/*/README.md,README.md"
+globs: "**/src/*/Description.txt,**/src/*/README.md,README.md,package.json,scripts/*.mjs"
 alwaysApply: false
 ---
 
 # Workshop vs GitHub copy
 
-This is a **single repo** of all mods (`src/<ModName>/`), like [aki-art/ONI-Mods](https://github.com/aki-art/ONI-Mods). Do not split each mod into its own GitHub repository.
+Single repo. **Maintain `src/<Mod>/README.md` only.** Then `npm run desc`. Do not hand-edit `Description.txt`. Reverse: `npm run readme`.
 
-| File | Audience | Syntax |
-|------|----------|--------|
-| `src/<Mod>/Description.txt` | Steam Workshop item description (paste as-is) | BBCode |
-| `src/<Mod>/README.md` | GitHub | Markdown |
-| root `README.md` | GitHub index of every mod | Markdown |
+| File | Role |
+|------|------|
+| `src/<Mod>/README.md` | source + GitHub (Markdown) |
+| `src/<Mod>/Description.txt` | generated Workshop paste (BBCode) |
+| root `README.md` | GitHub index + Steam column |
+| `package.json` `oniMods` | steamId / workshopTitle |
 
-## Description.txt (BBCode)
+## README.md
 
-Steam renders [BBCode](https://steamcommunity.com/comment/WorkshopItem/formattinghelp). Markdown preview will mangle `[tags]`.
+English first, `---`, Chinese. Compat_All.png in both languages. Steam Workshop line after the first image (`npm run desc` strips it). **Recommended** / **建议订阅** = optional; say the mod runs alone. Do not mark Workshop Required items unless load fails without them. Adding a mod: root table row + `oniMods` entry; after publish, `npm run steam-ids`.
 
-- English first (`[h1]English Name[/h1]` + plain pitch), then `[hr][/hr]`, then Chinese (`[h1]中文名 / English Name[/h1]`).
-- After each language’s intro, include `[img]https://raw.githubusercontent.com/Sgt-Imalas/Sgt_Imalas-Oni-Mods/refs/heads/master/Compat_All.png[/img]`.
-- Chinese pitch in `[i]…[/i]`, then a one-line “这是一个 Oxygen Not Included …” intro.
-- Sections: `[h3]Features[/h3]` / `[h3]功能[/h3]`. No `[h2]`.
-- `[list][*]…[/list]`, `[olist][*]…[/olist]`, `[b]`, `[i]path[/i]`, `[code]`, `[url=https://…]label[/url]`.
-- Do not use Markdown in this file. Skip `[table]`, `[color]`, `[size]`, `[spoiler]`, `[previewyoutube]`.
+`[MPM]` inside `[url]…[/url]` or Markdown `[text](url)` breaks. Write `(MPM)`.
 
-## README.md (Markdown)
+## Description.txt
 
-Same facts as `Description.txt`, written as Markdown (`#`, `- ` lists, `1.` steps, `` `path` ``, `![ALL DLC](Compat_All.png url)`). Link to `Description.txt`. Adding a mod: add a row to the root `README.md` table.
+Generated BBCode. Steam does not render `[table]`, `[color]`, `[size]`, `[spoiler]`, `[previewyoutube]`.
+
+## Steam IDs
+
+`npm run steam-ids` scrapes `steamcommunity.com/id/<steam.vanity>/myworkshopfiles/?appid=457140`. Match `workshopTitle`, `mod.yaml` title, or spaced PascalCase. No Web API key. This PC: Watt Toolkit empties Node `fetch`; `scripts/steam-ids.mjs` uses `curl.exe -k`. Skip `browsefilter=mysubmissions`.

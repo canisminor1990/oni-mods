@@ -5,6 +5,7 @@ Custom Simplified Chinese UI fonts for Oxygen Not Included. Body text defaults t
 [img]https://raw.githubusercontent.com/Sgt-Imalas/Sgt_Imalas-Oni-Mods/refs/heads/master/Compat_All.png[/img]
 
 [h3]Features[/h3]
+
 [list]
 [*]Chinese body text uses HarmonyOS Sans SC Regular by default.
 [*]Chinese titles default to HarmonyOS Sans SC Bold; Jinzishe Dezheng and your own font are optional in Settings.
@@ -12,12 +13,14 @@ Custom Simplified Chinese UI fonts for Oxygen Not Included. Body text defaults t
 [/list]
 
 [h3]Settings[/h3]
+
 [list]
 [*]Open the Mods list from the main menu or pause menu, then click Settings on this mod's row.
 [*]After turning English replacement off, fully restart the game to restore vanilla English fonts.
 [/list]
 
 [h3]Your own fonts[/h3]
+
 [list]
 [*]Put a TTF or OTF in [i]Documents/Klei/OxygenNotIncluded/mods/config/CustomChineseFonts/custom_fonts/[/i]
 [*][i]body.ttf[/i] or [i]body.otf[/i] replaces Chinese body text
@@ -38,6 +41,7 @@ Custom Simplified Chinese UI fonts for Oxygen Not Included. Body text defaults t
 [img]https://raw.githubusercontent.com/Sgt-Imalas/Sgt_Imalas-Oni-Mods/refs/heads/master/Compat_All.png[/img]
 
 [h3]功能[/h3]
+
 [list]
 [*]中文[b]正文[/b]默认使用 HarmonyOS Sans SC Regular。
 [*]中文[b]标题[/b]默认 HarmonyOS Sans SC Bold，可在设置里改成金字社得正体，或你自己的字体。
@@ -45,12 +49,14 @@ Custom Simplified Chinese UI fonts for Oxygen Not Included. Body text defaults t
 [/list]
 
 [h3]设置[/h3]
+
 [list]
 [*]主菜单或暂停菜单打开模组列表，在本模组那一行点「设置」。
 [*]关闭英文替换后，需要完全重启游戏才会恢复原版英文字体。
 [/list]
 
 [h3]用自己的字体[/h3]
+
 [list]
 [*]把 TTF 或 OTF 放到 [i]Documents/Klei/OxygenNotIncluded/mods/config/CustomChineseFonts/custom_fonts/[/i]
 [*][i]body.ttf[/i] 或 [i]body.otf[/i]：替换中文正文
