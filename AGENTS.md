@@ -38,7 +38,7 @@ User **fully quits** ONI to load DLL/PNG. Hot reload is not enough.
 
 - Edit `src/<Mod>/README.md` only (Markdown). Do not hand-edit `Description.txt`.
 - After README changes: `npm run desc` (also refreshes the root mods table). Do not hand-edit `Description.txt` or the `<!-- mods-table -->` block.
-- Workshop copy is language-specific: English first, `---`, then Chinese. Both ends with **Feedback & Source** / **问题反馈与源码** (repo, Issues + full Player.log, Ko-fi). `npm run workshop-desc` writes those halves to Steam `english` and `schinese`. Steam must be running as the item owner; quit ONI first. Do not call this unless you intend to publish text.
+- Workshop copy is language-specific: English first, `---`, then Chinese. Both ends with **Feedback & Source** / **问题反馈与源码** (repo, Issues + full Player.log, Ko-fi). `npm run workshop-desc` writes those halves to Steam `english` and `schinese`. Chinese title is `中文名 / English Name`. Steam must be running as the item owner; quit ONI first. Do not call this unless you intend to publish text.
 - English first, `---`, then Chinese. Compat_All.png in both languages.
 - Related mods go under **Recommended** / **建议订阅**: optional, the mod runs alone. Do not tick Steam “Required items” unless it really cannot load without them.
 - Avoid `[MPM]` inside BBCode/Markdown links (parsed as a tag). Write `(MPM)`.

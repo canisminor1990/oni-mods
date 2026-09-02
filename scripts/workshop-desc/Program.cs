@@ -73,7 +73,8 @@ foreach (var name in names)
 		continue;
 	}
 
-	jobs.Add(new Job(name, fileId, parts.English, parts.Chinese));
+	var titles = TitlesFromReadme(Path.Combine(srcDir, name, "README.md"), parts);
+	jobs.Add(new Job(name, fileId, parts.English, parts.Chinese, titles.English, titles.Chinese));
 }
 
 if (jobs.Count == 0)
@@ -105,9 +106,9 @@ try
 	var failed = 0;
 	foreach (var job in jobs)
 	{
-		if (!await PushLanguage(job, "english", job.English))
+		if (!await PushLanguage(job, "english", job.EnglishTitle, job.English))
 			failed += 1;
-		if (!await PushLanguage(job, "schinese", job.Chinese))
+		if (!await PushLanguage(job, "schinese", job.ChineseTitle, job.Chinese))
 			failed += 1;
 	}
 	return failed == 0 ? 0 : 1;
@@ -117,14 +118,16 @@ finally
 	SteamClient.Shutdown();
 }
 
-static async Task<bool> PushLanguage(Job job, string language, string description)
+static async Task<bool> PushLanguage(Job job, string language, string title, string description)
 {
-	Console.Write($"  {job.Name} {language} … ");
-	var result = await new Editor(job.FileId)
+	Console.Write($"  {job.Name} {language} ({title}) … ");
+	var editor = new Editor(job.FileId)
 		.InLanguage(language)
 		.WithDescription(description)
-		.WithChangeLog($"Update {language} description")
-		.SubmitAsync();
+		.WithChangeLog($"Update {language} description");
+	if (!string.IsNullOrWhiteSpace(title))
+		editor = editor.WithTitle(title);
+	var result = await editor.SubmitAsync();
 
 	if (result.Success)
 	{
@@ -145,5 +148,37 @@ static Localized SplitLocalized(string bbcode)
 	return new Localized(split[0].Trim(), split[1].Trim());
 }
 
-internal readonly record struct Job(string Name, ulong FileId, string English, string Chinese);
+static Localized TitlesFromReadme(string readmePath, Localized parts)
+{
+	var en = HeadingFromBbcode(parts.English);
+	var zh = HeadingFromBbcode(parts.Chinese);
+	if (File.Exists(readmePath))
+	{
+		var md = File.ReadAllText(readmePath).Replace("\r\n", "\n");
+		var cut = md.IndexOf("\n---\n", StringComparison.Ordinal);
+		var enMd = cut < 0 ? md : md[..cut];
+		var zhMd = cut < 0 ? "" : md[(cut + 5)..];
+		en = HeadingFromMarkdown(enMd) ?? en;
+		zh = HeadingFromMarkdown(zhMd) ?? zh;
+	}
+	en ??= "";
+	zh ??= "";
+	if (!string.IsNullOrEmpty(en) && !string.IsNullOrEmpty(zh) && !zh.Contains(" / "))
+		zh = $"{zh} / {en}";
+	return new Localized(en, zh);
+}
+
+static string? HeadingFromMarkdown(string text)
+{
+	var match = System.Text.RegularExpressions.Regex.Match(text, @"^#\s+(.+)$", System.Text.RegularExpressions.RegexOptions.Multiline);
+	return match.Success ? match.Groups[1].Value.Trim() : null;
+}
+
+static string? HeadingFromBbcode(string text)
+{
+	var match = System.Text.RegularExpressions.Regex.Match(text, @"\[h1\](.*?)\[/h1\]", System.Text.RegularExpressions.RegexOptions.IgnoreCase);
+	return match.Success ? match.Groups[1].Value.Trim() : null;
+}
+
+internal readonly record struct Job(string Name, ulong FileId, string English, string Chinese, string EnglishTitle, string ChineseTitle);
 internal readonly record struct Localized(string English, string Chinese);
