@@ -7,10 +7,10 @@ alwaysApply: true
 
 - Source: `src/<Mod>/`. Game loads `local/<Mod>/` (`OutputPath`). Missing yaml there → skipped.
 - One GitHub repo (`canisminor1990/oni-mods`). Only the workspace root has `.git`. No `src/<Mod>/.git`.
-- `.gitignore` is an allowlist (`/*` then `!src/` `!.cursor/` `!ref/oni-api/` `!scripts/` `!package.json`). New root folders stay ignored until you add `!`.
+- `.gitignore` is an allowlist (`/*` then `!src/` `!.cursor/` `!ref/oni-api/` `!scripts/` `!package.json` `!LICENSE`). New root folders stay ignored until you add `!`. License is MIT.
 - Do not put source in Klei `mods/Dev`. DLL/PNG: full game quit.
-- Commands: `npm run build`, `npm run desc`, `npm run steam-ids`, `npm run package`.
-- Docs: edit `README.md` only; `npm run desc` writes Workshop `Description.txt`.
+- Commands: `npm run build`, `npm run desc`, `npm run index`, `npm run steam-ids`, `npm run package`.
+- Docs: edit `src/<Mod>/README.md` only; `npm run desc` writes Workshop `Description.txt` and the root mods table.
 - Steam IDs: `npm run steam-ids` (vanity `canisminor`). This PC: Watt Toolkit — use `curl.exe -k`, not Node `fetch` / PowerShell `curl`.
 - Player.log: `AppData\LocalLow\Klei\Oxygen Not Included\Player.log`. API: `ref/oni-api/INDEX.md`.
 - Playbook: `.cursor/skills/oni-modding/SKILL.md`

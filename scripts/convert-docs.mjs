@@ -1,6 +1,7 @@
 import { existsSync, readFileSync, readdirSync, writeFileSync } from "node:fs";
 import { dirname, join } from "node:path";
 import { fileURLToPath } from "node:url";
+import { writeModsTable } from "./readme-index.mjs";
 
 const root = join(dirname(fileURLToPath(import.meta.url)), "..");
 const pkg = JSON.parse(readFileSync(join(root, "package.json"), "utf8"));
@@ -210,3 +211,4 @@ if (mode !== "desc" && mode !== "readme") {
 const requested = process.argv.slice(3);
 const mods = requested.length > 0 ? requested : listMods();
 for (const mod of mods) convertMod(mod, mode);
+if (mode === "desc") writeModsTable();

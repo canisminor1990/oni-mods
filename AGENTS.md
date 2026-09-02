@@ -2,7 +2,7 @@
 
 This folder is a **Klei mods workspace**, not a Unity project. Playbook: `.cursor/skills/oni-modding/SKILL.md` and `reference.md`.
 
-GitHub: https://github.com/canisminor1990/oni-mods (one repo, all mods). Steam author vanity: `canisminor` (ONI appid `457140`).
+GitHub: https://github.com/canisminor1990/oni-mods (one repo, all mods). Steam author vanity: `canisminor` (ONI appid `457140`). Collection: https://steamcommunity.com/workshop/filedetails/?id=3794379693 (`package.json` `steam.collectionId`). Root `README.md` mods table is generated (`npm run index`).
 
 ## Layout
 
@@ -17,7 +17,7 @@ GitHub: https://github.com/canisminor1990/oni-mods (one repo, all mods). Steam a
 
 Do not put source under Klei `mods/Dev` (the game loads that folder). Do not copy DLLs into Steam.
 
-One git repo at **this folder only**. Nested `src/<Mod>/.git` is forbidden. `.gitignore` is an allowlist: `/*` then `!src/` `!.cursor/` `!ref/oni-api/` `!scripts/` `!package.json`. New top-level names stay ignored until listed.
+One git repo at **this folder only**. Nested `src/<Mod>/.git` is forbidden. `.gitignore` is an allowlist: `/*` then `!src/` `!.cursor/` `!ref/oni-api/` `!scripts/` `!package.json` `!LICENSE`. New top-level names stay ignored until listed. License is MIT.
 
 ## Commands
 
@@ -25,9 +25,10 @@ One git repo at **this folder only**. Nested `src/<Mod>/.git` is forbidden. `.gi
 |--------|------|
 | `npm run build` | `dotnet build -c Release` every `src/<Mod>` → `local/<Mod>/` |
 | `npm run build -- <Mod>` | one mod |
-| `npm run desc` | `README.md` → `Description.txt` (BBCode) |
+| `npm run desc` | `README.md` → `Description.txt` (BBCode) + root mods table |
 | `npm run readme` | reverse (only if Description was edited on purpose) |
-| `npm run steam-ids` | scrape workshop page → `oniMods.steamId` + README links |
+| `npm run index` | rebuild root README mods table from `src/*/README.md` |
+| `npm run steam-ids` | scrape workshop page → `oniMods.steamId` + root table |
 | `npm run package` | build + desc |
 
 User **fully quits** ONI to load DLL/PNG. Hot reload is not enough.
@@ -35,7 +36,7 @@ User **fully quits** ONI to load DLL/PNG. Hot reload is not enough.
 ## Docs / Workshop
 
 - Edit `src/<Mod>/README.md` only (Markdown). Do not hand-edit `Description.txt`.
-- After README changes: `npm run desc`. Paste Description.txt into the Workshop item.
+- After README changes: `npm run desc` (also refreshes the root mods table). Paste Description.txt into the Workshop item. Do not hand-edit the `<!-- mods-table -->` block.
 - English first, `---`, then Chinese. Compat_All.png in both languages.
 - Related mods go under **Recommended** / **建议订阅**: optional, the mod runs alone. Do not tick Steam “Required items” unless it really cannot load without them.
 - Avoid `[MPM]` inside BBCode/Markdown links (parsed as a tag). Write `(MPM)`.

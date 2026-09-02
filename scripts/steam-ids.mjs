@@ -2,6 +2,7 @@ import { execFileSync } from "node:child_process";
 import { existsSync, readFileSync, writeFileSync } from "node:fs";
 import { dirname, join } from "node:path";
 import { fileURLToPath } from "node:url";
+import { writeModsTable } from "./readme-index.mjs";
 
 const root = join(dirname(fileURLToPath(import.meta.url)), "..");
 const pkgPath = join(root, "package.json");
@@ -141,18 +142,6 @@ for (const mod of listMods()) {
 	}
 }
 
-const rootReadmePath = join(root, "README.md");
-if (existsSync(rootReadmePath)) {
-	let rootReadme = readFileSync(rootReadmePath, "utf8");
-	for (const mod of listMods()) {
-		const id = pkg.oniMods[mod]?.steamId;
-		if (!id) continue;
-		const re = new RegExp(`(\\[${mod}\\]\\(src/${mod}\\)[^\\n]*filedetails/\\?id=)\\d+`);
-		rootReadme = rootReadme.replace(re, `$1${id}`);
-	}
-	writeFileSync(rootReadmePath, rootReadme, "utf8");
-}
-
 for (const item of items) {
 	if (!used.has(item.id)) console.warn(`Unmatched workshop item: ${item.id} ${item.title}`);
 }
@@ -161,3 +150,5 @@ if (changed) {
 	writeFileSync(pkgPath, JSON.stringify(pkg, null, 2) + "\n", "utf8");
 	console.log("Updated package.json oniMods");
 }
+
+writeModsTable();

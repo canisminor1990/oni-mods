@@ -12,12 +12,12 @@ Single repo. **Maintain `src/<Mod>/README.md` only.** Then `npm run desc`. Do no
 |------|------|
 | `src/<Mod>/README.md` | source + GitHub (Markdown) |
 | `src/<Mod>/Description.txt` | generated Workshop paste (BBCode) |
-| root `README.md` | GitHub index + Steam column |
+| root `README.md` | Collection, generated mods table, commands, MIT |
 | `package.json` `oniMods` | steamId / workshopTitle |
 
 ## README.md
 
-English first, `---`, Chinese. Compat_All.png in both languages. Steam Workshop line after the first image (`npm run desc` strips it). **Recommended** / **建议订阅** = optional; say the mod runs alone. Do not mark Workshop Required items unless load fails without them. Adding a mod: root table row + `oniMods` entry; after publish, `npm run steam-ids`.
+English first, `---`, Chinese. Compat_All.png in both languages. Steam Workshop line after the first image (`npm run desc` strips it). **Recommended** / **建议订阅** = optional; say the mod runs alone. Do not mark Workshop Required items unless load fails without them. Adding a mod: `oniMods` stub + `src/<Mod>/README.md`; `npm run desc` rebuilds the root table. After publish, `npm run steam-ids`.
 
 `[MPM]` inside `[url]…[/url]` or Markdown `[text](url)` breaks. Write `(MPM)`.
 

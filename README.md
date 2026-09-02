@@ -1,37 +1,40 @@
 # ONI Mods / 缺氧模组
 
-Mods for [Oxygen Not Included](https://www.klei.com/games/oxygen-not-included). All of them live in this one repository, same idea as [aki-art/ONI-Mods](https://github.com/aki-art/ONI-Mods).
-
-缺氧模组合集。所有模组都在同一个仓库里（`src/<ModName>/`），不是一模一组仓库。
-
-Edit each mod’s `README.md` (Markdown). `npm run desc` generates `Description.txt` (Steam Workshop BBCode). Paste that file into the Workshop item.
-
-只改各模组的 `README.md`，然后 `npm run desc` 生成工坊用的 `Description.txt`。
+[Mods made by CanisMinor](https://steamcommunity.com/workshop/filedetails/?id=3794379693)
 
 ## Mods
 
-| Folder | Title | Description | Steam |
-|--------|-------|-------------|-------|
-| [CustomChineseFonts](src/CustomChineseFonts) | Custom Chinese Fonts / 自定义中文字体 | Custom Simplified Chinese UI fonts. Body defaults to HarmonyOS Sans SC; titles can be switched in Settings. | [Workshop](https://steamcommunity.com/sharedfiles/filedetails/?id=3794395157) |
-| [DrywallTileSkins](src/DrywallTileSkins) | Drywall Tile Skins / 干板墙瓷砖皮肤 | Turns loaded tile textures into vanilla Drywall blueprint skins. Interior cell only, no tile borders. | [Workshop](https://steamcommunity.com/sharedfiles/filedetails/?id=3794025758) |
-| [DuplicantPortraits](src/DuplicantPortraits) | Duplicant Portraits / 复制人头像画 | Masterpiece portraits of every loaded duplicant personality on the vanilla 2x2 Blank Canvas. | [Workshop](https://steamcommunity.com/sharedfiles/filedetails/?id=3794390677) |
-| [ModListPreviews](src/ModListPreviews) | Mod List Previews / 模组封面预览 | Shows Steam Workshop cover thumbnails in the in-game Mods list. | [Workshop](https://steamcommunity.com/sharedfiles/filedetails/?id=3794018361) |
+<!-- mods-table -->
+| Cover | Folder | Title | Description | Steam |
+|-------|--------|-------|-------------|-------|
+| <img src="https://github.com/canisminor1990/oni-mods/blob/master/src/CustomChineseFonts/packaging/preview.png?raw=true" width="96" alt="Custom Chinese Fonts"> | [CustomChineseFonts](src/CustomChineseFonts) | Custom Chinese Fonts / 自定义中文字体 | Custom Simplified Chinese UI fonts for Oxygen Not Included. Body text defaults to HarmonyOS Sans SC; titles can be switched in Settings, and you can drop in your own fonts. This mod uses HarmonyOS Sans Fonts. | [Workshop](https://steamcommunity.com/sharedfiles/filedetails/?id=3794395157) |
+| <img src="https://github.com/canisminor1990/oni-mods/blob/master/src/DrywallTileSkins/packaging/preview.png?raw=true" width="96" alt="Drywall Tile Skins"> | [DrywallTileSkins](src/DrywallTileSkins) | Drywall Tile Skins / 干板墙瓷砖皮肤 | Turns loaded tile textures into blueprint skins for vanilla Drywall. | [Workshop](https://steamcommunity.com/sharedfiles/filedetails/?id=3794025758) |
+| <img src="https://github.com/canisminor1990/oni-mods/blob/master/src/DuplicantPortraits/packaging/preview.png?raw=true" width="96" alt="Duplicant Portraits"> | [DuplicantPortraits](src/DuplicantPortraits) | Duplicant Portraits / 复制人头像画 | Adds a masterpiece painting of every loaded duplicant personality to the vanilla 2x2 Blank Canvas. | [Workshop](https://steamcommunity.com/sharedfiles/filedetails/?id=3794390677) |
+| <img src="https://github.com/canisminor1990/oni-mods/blob/master/src/ModListPreviews/packaging/preview.png?raw=true" width="96" alt="Mod List Previews"> | [ModListPreviews](src/ModListPreviews) | Mod List Previews / 模组封面预览 | Shows Steam Workshop cover thumbnails in the in-game Mods list. | [Workshop](https://steamcommunity.com/sharedfiles/filedetails/?id=3794018361) |
+<!-- /mods-table -->
 
-## Layout
-
-| Path | Role |
-|------|------|
-| `src/<ModName>/` | Source and `README.md` (edit this) |
-| `src/<ModName>/Description.txt` | Generated Workshop BBCode (`npm run desc`) |
-| `src/<ModName>/packaging/` | `mod.yaml` / `mod_info.yaml` |
-| `local/<ModName>/` | Game-loaded build (`OutputPath`, gitignored) |
+## Commands
 
 ```text
 npm run build
 npm run build -- DrywallTileSkins
 npm run desc
+npm run index
 npm run steam-ids
 npm run package
 ```
 
-`package` = compile every mod + regenerate Workshop descriptions. Fully quit the game to pick up a new DLL or PNG; hot reload is not enough.
+| Script | What |
+|--------|------|
+| `build` | Compile every mod into `local/<Mod>/` |
+| `build -- <Mod>` | Compile one mod |
+| `desc` | Generate Workshop `Description.txt` and refresh the mods table |
+| `index` | Rebuild the root README mods table from `src/*/README.md` |
+| `steam-ids` | Fill Steam Workshop ids, then refresh the mods table |
+| `package` | `build` + `desc` |
+
+Fully quit the game after a DLL or PNG change.
+
+## License
+
+[MIT](LICENSE)

@@ -1,6 +1,7 @@
 {
   "name": "oni-mods",
   "private": true,
+  "license": "MIT",
   "type": "module",
   "description": "Oxygen Not Included mods monorepo",
   "scripts": {
@@ -8,12 +9,19 @@
     "desc": "node scripts/convert-docs.mjs desc",
     "readme": "node scripts/convert-docs.mjs readme",
     "docs": "node scripts/convert-docs.mjs desc",
+    "index": "node scripts/readme-index.mjs",
     "steam-ids": "node scripts/steam-ids.mjs",
     "package": "node scripts/build.mjs && node scripts/convert-docs.mjs desc"
   },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/canisminor1990/oni-mods",
+    "branch": "master"
+  },
   "steam": {
     "vanity": "canisminor",
-    "appId": 457140
+    "appId": 457140,
+    "collectionId": "3794379693"
   },
   "oniMods": {
     "CustomChineseFonts": {

@@ -69,7 +69,7 @@ public class Mod : UserMod2
 6. AfterBuild copy yaml, `translations\`, and any `packaging\` assets.
 7. Build: `npm run build` or `npm run build -- <ModName>` (wraps `dotnet build -c Release`).
 8. User must **fully quit the game** to pick up DLL/PNG. Hot reload is not enough.
-9. Edit `src/<Mod>/README.md` only. Add a `package.json` `oniMods` stub + a root `README.md` row. After Workshop publish: `npm run steam-ids` then `npm run desc`.
+9. Edit `src/<Mod>/README.md` only. Add a `package.json` `oniMods` stub. After Workshop publish: `npm run steam-ids` then `npm run desc` (root table is generated).
 
 Add Unity module refs only when the compiler asks (`ImageConversionModule`, `UI`, `TextMeshPro`, `JSONSerializeModule`, …).
 
@@ -113,8 +113,9 @@ This workspace is a **single repository** of every mod, like [aki-art/ONI-Mods](
 |--------|------|
 | `npm run build` | `dotnet build -c Release` every `src/<Mod>/*.csproj` → `local/<Mod>/` |
 | `npm run build -- <Mod>` | one mod |
-| `npm run desc` | README.md → Description.txt (BBCode, strips the Steam Workshop line) |
+| `npm run desc` | README.md → Description.txt (BBCode, strips the Steam Workshop line) + root mods table |
 | `npm run readme` | Description.txt → README.md (inserts Steam line from `oniMods`) |
+| `npm run index` | rebuild root README mods table from `src/*/README.md` + `oniMods` |
 | `npm run steam-ids` | scrape `steamcommunity.com/id/<vanity>` workshop list and write `oniMods.steamId` |
 | `npm run package` | build + desc |
 
