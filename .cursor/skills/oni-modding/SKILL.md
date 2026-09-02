@@ -116,10 +116,11 @@ This workspace is a **single repository** of every mod, like [aki-art/ONI-Mods](
 | `npm run desc` | README.md → Description.txt (BBCode, strips the Steam Workshop line) + root mods table |
 | `npm run readme` | Description.txt → README.md (inserts Steam line from `oniMods`) |
 | `npm run index` | rebuild root README mods table from `src/*/README.md` + `oniMods` |
+| `npm run workshop-desc` | push each `Description.txt` to Steam `english` + `schinese` (no pack). Steam client logged in as author; quit ONI first. |
 | `npm run steam-ids` | scrape `steamcommunity.com/id/<vanity>` workshop list and write `oniMods.steamId` |
 | `npm run package` | build + desc |
 
-Do not hand-edit `Description.txt`.
+Do not hand-edit `Description.txt`. After `desc`, `npm run workshop-desc` pushes the two language halves to Steam (`english` / `schinese`) through the running Steam client. Do not upload the pack.
 
 Steam IDs: official `IPublishedFileService/QueryFiles` needs a Web API key — skip it. `npm run steam-ids` scrapes `https://steamcommunity.com/id/canisminor/myworkshopfiles/?appid=457140` and matches `workshopTitle` / `packaging/mod.yaml` title / spaced PascalCase (`DrywallTileSkins` → `Drywall Tile Skins`). Custom Chinese Fonts’ Workshop title is `自定义中文字体`.
 
@@ -147,7 +148,7 @@ Plain English pitch.
 
 [i]中文一句话介绍。[/i]
 
-这是一个 Oxygen Not Included …模组。
+短说明。不要写「这是一个 Oxygen Not Included …模组」。
 
 [img]https://raw.githubusercontent.com/Sgt-Imalas/Sgt_Imalas-Oni-Mods/refs/heads/master/Compat_All.png[/img]
 

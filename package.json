@@ -10,6 +10,7 @@
     "readme": "node scripts/convert-docs.mjs readme",
     "docs": "node scripts/convert-docs.mjs desc",
     "index": "node scripts/readme-index.mjs",
+    "workshop-desc": "node scripts/workshop-desc.mjs",
     "steam-ids": "node scripts/steam-ids.mjs",
     "package": "node scripts/build.mjs && node scripts/convert-docs.mjs desc"
   },

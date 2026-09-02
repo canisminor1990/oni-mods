@@ -1,67 +1,85 @@
 [h1]Custom Chinese Fonts[/h1]
 
-Custom Simplified Chinese UI fonts for Oxygen Not Included. Body text defaults to HarmonyOS Sans SC; titles can be switched in Settings, and you can drop in your own fonts. This mod uses HarmonyOS Sans Fonts.
+Replaces the Simplified Chinese UI fonts. Body text defaults to HarmonyOS Sans SC; titles can be changed in Settings. You can also add your own TTF/OTF.
+
+This mod uses HarmonyOS Sans Fonts.
 
 [img]https://raw.githubusercontent.com/Sgt-Imalas/Sgt_Imalas-Oni-Mods/refs/heads/master/Compat_All.png[/img]
 
 [h3]Features[/h3]
 
 [list]
-[*]Chinese body text uses HarmonyOS Sans SC Regular by default.
-[*]Chinese titles default to HarmonyOS Sans SC Bold; Jinzishe Dezheng and your own font are optional in Settings.
-[*]English fonts are left unchanged by default. Enable English replacement in Settings to swap GRAYSTROKE / Roboto.
+[*]Chinese body text uses HarmonyOS Sans SC Regular.
+[*]Chinese titles default to HarmonyOS Sans SC Bold. Jinzishe Dezheng and a custom file are optional in Settings.
+[*]English fonts are unchanged unless you enable replacement in Settings (GRAYSTROKE / Roboto).
 [/list]
 
 [h3]Settings[/h3]
 
 [list]
-[*]Open the Mods list from the main menu or pause menu, then click Settings on this mod's row.
-[*]After turning English replacement off, fully restart the game to restore vanilla English fonts.
+[*]Open the Mods list, then click Settings on this mod.
+[*]After turning English replacement off, fully quit the game to restore vanilla English fonts.
 [/list]
 
 [h3]Your own fonts[/h3]
 
 [list]
 [*]Put a TTF or OTF in [i]Documents/Klei/OxygenNotIncluded/mods/config/CustomChineseFonts/custom_fonts/[/i]
-[*][i]body.ttf[/i] or [i]body.otf[/i] replaces Chinese body text
-[*][i]title.ttf[/i] or [i]title.otf[/i] adds a Custom title option in Settings
+[*][i]body.ttf[/i] / [i]body.otf[/i] replaces Chinese body text
+[*][i]title.ttf[/i] / [i]title.otf[/i] adds a Custom option in the title list
 [*]The folder (and a [i]README.txt[/i]) is created the first time the mod loads
 [*]Fully quit the game after adding or replacing fonts
-[*]You must have the right to use the font. Missing glyphs fall back to HarmonyOS Sans SC
+[*]Missing glyphs fall back to HarmonyOS Sans SC. You must have the right to use the font.
+[/list]
+
+[h3]Feedback & Source[/h3]
+
+[list]
+[*]Repository: [url=https://github.com/canisminor1990/oni-mods]canisminor1990/oni-mods[/url]
+[*]Bugs and requests go on [url=https://github.com/canisminor1990/oni-mods/issues]GitHub Issues[/url]. Please attach the full [i]Player.log[/i] ([i]%USERPROFILE%/AppData/LocalLow/Klei/Oxygen Not Included/Player.log[/i]).
+[*]If you like the work and want to support it: [url=https://ko-fi.com/canisminor1990]ko-fi.com/canisminor1990[/url]
 [/list]
 
 [hr][/hr]
 
 [h1]自定义中文字体 / Custom Chinese Fonts[/h1]
 
-[i]自定义缺氧游戏里的中文界面字体。正文默认 HarmonyOS Sans SC，标题可在设置里切换，也可以放进自己的字体。本模组使用 HarmonyOS Sans Fonts。[/i]
+[i]替换游戏的简体中文界面字体。正文默认鸿蒙黑体，标题可在设置里更换。本模组使用 HarmonyOS Sans Fonts。[/i]
 
-这是一个 Oxygen Not Included 中文界面字体模组。
+也可以放入自己的 TTF / OTF。
 
 [img]https://raw.githubusercontent.com/Sgt-Imalas/Sgt_Imalas-Oni-Mods/refs/heads/master/Compat_All.png[/img]
 
 [h3]功能[/h3]
 
 [list]
-[*]中文[b]正文[/b]默认使用 HarmonyOS Sans SC Regular。
-[*]中文[b]标题[/b]默认 HarmonyOS Sans SC Bold，可在设置里改成金字社得正体，或你自己的字体。
-[*][b]英文字体[/b]默认不替换；可在设置里打开，用当前正文字体 / 标题字体替换 GRAYSTROKE / Roboto。
+[*]中文正文默认 HarmonyOS Sans SC Regular。
+[*]中文标题默认 HarmonyOS Sans SC Bold。设置里可选金字社得正体，或自己的字体。
+[*]英文字体默认不替换。在设置里打开后，才会替换 GRAYSTROKE / Roboto。
 [/list]
 
 [h3]设置[/h3]
 
 [list]
-[*]主菜单或暂停菜单打开模组列表，在本模组那一行点「设置」。
-[*]关闭英文替换后，需要完全重启游戏才会恢复原版英文字体。
+[*]打开模组列表，点击本模组的「设置」。
+[*]关闭英文替换后，需要完全退出游戏，英文字体才会恢复。
 [/list]
 
 [h3]用自己的字体[/h3]
 
 [list]
 [*]把 TTF 或 OTF 放到 [i]Documents/Klei/OxygenNotIncluded/mods/config/CustomChineseFonts/custom_fonts/[/i]
-[*][i]body.ttf[/i] 或 [i]body.otf[/i]：替换中文正文
-[*][i]title.ttf[/i] 或 [i]title.otf[/i]：出现在设置里的「自定义」标题选项
-[*]第一次启动模组后，这个文件夹会自动创建，里面有一份 [i]README.txt[/i]
-[*]放好或更换字体后，必须[b]完全退出游戏再进[/b]（热重载无效）
-[*]请确保你有权使用该字体。缺字时会回退到鸿蒙黑体
+[*][i]body.ttf[/i] / [i]body.otf[/i]：替换中文正文
+[*][i]title.ttf[/i] / [i]title.otf[/i]：标题列表中的「自定义」选项
+[*]第一次加载模组时会自动创建文件夹，内含 [i]README.txt[/i]
+[*]添加或更换字体后，请完全退出游戏
+[*]缺字时回退到鸿蒙黑体。请确保你有权使用该字体。
+[/list]
+
+[h3]问题反馈与源码[/h3]
+
+[list]
+[*]模组仓库：[url=https://github.com/canisminor1990/oni-mods]canisminor1990/oni-mods[/url]
+[*]问题请开 [url=https://github.com/canisminor1990/oni-mods/issues]GitHub Issues[/url]。报告里务必附上完整的 [i]Player.log[/i]（[i]%USERPROFILE%/AppData/LocalLow/Klei/Oxygen Not Included/Player.log[/i]）。
+[*]喜欢这些模组、想支持一下：[url=https://ko-fi.com/canisminor1990]ko-fi.com/canisminor1990[/url]
 [/list]

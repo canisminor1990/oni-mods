@@ -59,7 +59,7 @@ Vanilla `walls_kanim` on this install: 256×256, `filter=Trilinear`, `mips=9`, `
 
 `mod.yaml`: `title`, `description`, `staticID`. `description` is a short in-game blurb, not the Workshop page.
 
-GitHub: root `README.md` mods table is generated (`npm run index` / `desc`). Each `src/<Mod>/README.md` is the Markdown source. `npm run desc` writes `Description.txt`. `npm run steam-ids` scrapes `steamcommunity.com/id/canisminor/myworkshopfiles/?appid=457140` (no API key). This PC: Watt Toolkit — `curl.exe -k`, not Node `fetch`. Skip `browsefilter=mysubmissions`. English first, `[hr][/hr]`, Chinese. Compat_All `[img]` in both languages. Tags: `[h1]` `[h3]` `[b]` `[i]` `[u]` `[strike]` `[url=…]` `[img]` `[list]` `[olist]` `[*]` `[code]` `[hr][/hr]` `[noparse]` `[quote]`. Skip Markdown, `[h2]`, `[table]`, `[color]`, `[size]`, `[spoiler]`, `[previewyoutube]`. Write `(MPM)` not `[MPM]`. Recommended mods are optional.
+GitHub: root `README.md` mods table is generated (`npm run index` / `desc`). Each `src/<Mod>/README.md` is the Markdown source. `npm run desc` writes `Description.txt`. `npm run workshop-desc` pushes `english` + `schinese` via ISteamUGC (Steam client logged in; no pack). `npm run steam-ids` scrapes `steamcommunity.com/id/canisminor/myworkshopfiles/?appid=457140` (no API key). This PC: Watt Toolkit — `curl.exe -k`, not Node `fetch`. Skip `browsefilter=mysubmissions`. English first, `[hr][/hr]`, Chinese. Compat_All `[img]` in both languages. Tags: `[h1]` `[h3]` `[b]` `[i]` `[u]` `[strike]` `[url=…]` `[img]` `[list]` `[olist]` `[*]` `[code]` `[hr][/hr]` `[noparse]` `[quote]`. Skip Markdown, `[h2]`, `[table]`, `[color]`, `[size]`, `[spoiler]`, `[previewyoutube]`. Write `(MPM)` not `[MPM]`. Recommended mods are optional.
 
 `mod_info.yaml`:
 

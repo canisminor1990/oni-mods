@@ -1,3 +1,3 @@
 title: "Drywall Tile Skins"
-description: "Adds every loaded tile texture as a Drywall blueprint skin. Repeats the interior cell only, without tile borders."
+description: "Turns loaded tile textures into Drywall blueprint skins. Interior cell only, no tile borders."
 staticID: "DarrenLee.DrywallTileSkins"

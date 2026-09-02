@@ -25,6 +25,12 @@ namespace DrywallTileSkins
 			public List<GroupEntry> groups = new List<GroupEntry>();
 		}
 
+		[Serializable]
+		private class FileData
+		{
+			public string[] disabled = new string[0];
+		}
+
 		private static Data data;
 		private static readonly Dictionary<string, GroupEntry> byId = new Dictionary<string, GroupEntry>(StringComparer.OrdinalIgnoreCase);
 
@@ -37,11 +43,51 @@ namespace DrywallTileSkins
 			}
 		}
 
+		public static string ConfigDir
+		{
+			get
+			{
+				return Path.Combine(Util.RootFolder(), "mods", "config", "DrywallTileSkins");
+			}
+		}
+
+		public static string LegacyConfigDir
+		{
+			get
+			{
+				return Path.Combine(Util.RootFolder(), "mods", "config", "drywall_tile_skins");
+			}
+		}
+
+		public static string CustomWallsDir
+		{
+			get
+			{
+				return Path.Combine(ConfigDir, "custom_walls");
+			}
+		}
+
+		public static string LegacyCustomWallsDir
+		{
+			get
+			{
+				return Path.Combine(LegacyConfigDir, "custom_walls");
+			}
+		}
+
 		public static string FilePath
 		{
 			get
 			{
-				return Path.Combine(Util.RootFolder(), "mods", "config", "drywall_tile_skins", "settings.json");
+				return Path.Combine(ConfigDir, "settings.json");
+			}
+		}
+
+		private static string LegacyFilePath
+		{
+			get
+			{
+				return Path.Combine(LegacyConfigDir, "settings.json");
 			}
 		}
 
@@ -54,12 +100,7 @@ namespace DrywallTileSkins
 			byId.Clear();
 			try
 			{
-				if (File.Exists(FilePath))
-				{
-					Data loaded = JsonUtility.FromJson<Data>(File.ReadAllText(FilePath));
-					if (loaded != null && loaded.groups != null)
-						data = loaded;
-				}
+				ApplyFile(ReadFile());
 			}
 			catch (Exception ex)
 			{
@@ -70,6 +111,9 @@ namespace DrywallTileSkins
 			PruneMergedGroups();
 			RegisterGroup(BuiltinGroupId, STRINGS.DRYWALL_TILE_SKINS.GROUP_BUILTIN);
 			RegisterGroup(CustomGroupId, STRINGS.DRYWALL_TILE_SKINS.GROUP_CUSTOM);
+			if (!File.Exists(FilePath) && File.Exists(LegacyFilePath))
+				Save();
+			Debug.Log("[DrywallTileSkins] settings " + FilePath + " (" + DisabledIds().Length + " disabled)");
 		}
 
 		public static bool IsStainedGlass(string prefabId)
@@ -264,12 +308,52 @@ namespace DrywallTileSkins
 				string dir = Path.GetDirectoryName(FilePath);
 				if (!string.IsNullOrEmpty(dir))
 					Directory.CreateDirectory(dir);
-				File.WriteAllText(FilePath, JsonUtility.ToJson(data, true));
+				string[] disabled = DisabledIds();
+				File.WriteAllText(FilePath, JsonUtility.ToJson(new FileData { disabled = disabled }, true));
+				Debug.Log("[DrywallTileSkins] saved settings (" + disabled.Length + " disabled) " + FilePath);
 			}
 			catch (Exception ex)
 			{
 				Debug.LogWarning("[DrywallTileSkins] failed to save settings: " + ex.Message);
 			}
+		}
+
+		private static FileData ReadFile()
+		{
+			string path = File.Exists(FilePath) ? FilePath : LegacyFilePath;
+			if (!File.Exists(path))
+				return null;
+			return JsonUtility.FromJson<FileData>(File.ReadAllText(path));
+		}
+
+		private static void ApplyFile(FileData loaded)
+		{
+			if (loaded == null || loaded.disabled == null)
+				return;
+			for (int i = 0; i < loaded.disabled.Length; i++)
+			{
+				string id = loaded.disabled[i];
+				if (string.IsNullOrEmpty(id) || byId.ContainsKey(id))
+					continue;
+				GroupEntry entry = new GroupEntry { id = id, name = id, enabled = false };
+				data.groups.Add(entry);
+				byId[id] = entry;
+			}
+		}
+
+		private static string[] DisabledIds()
+		{
+			List<string> disabled = new List<string>();
+			for (int i = 0; i < data.groups.Count; i++)
+			{
+				GroupEntry entry = data.groups[i];
+				if (entry == null || string.IsNullOrEmpty(entry.id) || entry.enabled)
+					continue;
+				if (ResolveGroupId(entry.id) != entry.id)
+					continue;
+				disabled.Add(entry.id);
+			}
+			return disabled.ToArray();
 		}
 
 		private static bool PruneMergedGroups()

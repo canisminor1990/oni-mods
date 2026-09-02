@@ -1,3 +1,3 @@
 title: "Custom Chinese Fonts"
-description: "自定义缺氧中文界面字体。正文默认 HarmonyOS Sans SC，标题可选鸿蒙粗体、金字社得正体，也可放入自己的 TTF/OTF。本模组使用 HarmonyOS Sans Fonts。"
+description: "替换简体中文界面字体。正文默认鸿蒙黑体，标题可在设置里更换。使用 HarmonyOS Sans Fonts。"
 staticID: "DarrenLee.CustomChineseFonts"

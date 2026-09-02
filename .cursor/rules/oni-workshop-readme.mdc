@@ -17,7 +17,7 @@ Single repo. **Maintain `src/<Mod>/README.md` only.** Then `npm run desc`. Do no
 
 ## README.md
 
-English first, `---`, Chinese. Compat_All.png in both languages. Steam Workshop line after the first image (`npm run desc` strips it). **Recommended** / **建议订阅** = optional; say the mod runs alone. Do not mark Workshop Required items unless load fails without them. Adding a mod: `oniMods` stub + `src/<Mod>/README.md`; `npm run desc` rebuilds the root table. After publish, `npm run steam-ids`.
+English first, `---`, Chinese. Compat_All.png in both languages. Copy like Aki / True Tiles: one plain sentence of what it does, then facts. No half-sentences, no parallel jokes. Steam Workshop line after the first image (`npm run desc` strips it). **Recommended** / **建议订阅** = optional; say the mod runs alone. Do not mark Workshop Required items unless load fails without them. End both languages with **Feedback & Source** / **问题反馈与源码**: repo, GitHub Issues + full `Player.log`, Ko-fi. Adding a mod: `oniMods` stub + `src/<Mod>/README.md`; `npm run desc` rebuilds the root table. After publish, `npm run steam-ids`. Push text with `npm run workshop-desc` (Steam client logged in; writes `english` + `schinese`; no pack).
 
 `[MPM]` inside `[url]…[/url]` or Markdown `[text](url)` breaks. Write `(MPM)`.
 

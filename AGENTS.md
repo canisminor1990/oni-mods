@@ -28,6 +28,7 @@ One git repo at **this folder only**. Nested `src/<Mod>/.git` is forbidden. `.gi
 | `npm run desc` | `README.md` → `Description.txt` (BBCode) + root mods table |
 | `npm run readme` | reverse (only if Description was edited on purpose) |
 | `npm run index` | rebuild root README mods table from `src/*/README.md` |
+| `npm run workshop-desc` | push `Description.txt` to Steam `english` + `schinese` (Steam client logged in as author; no pack) |
 | `npm run steam-ids` | scrape workshop page → `oniMods.steamId` + root table |
 | `npm run package` | build + desc |
 
@@ -36,7 +37,8 @@ User **fully quits** ONI to load DLL/PNG. Hot reload is not enough.
 ## Docs / Workshop
 
 - Edit `src/<Mod>/README.md` only (Markdown). Do not hand-edit `Description.txt`.
-- After README changes: `npm run desc` (also refreshes the root mods table). Paste Description.txt into the Workshop item. Do not hand-edit the `<!-- mods-table -->` block.
+- After README changes: `npm run desc` (also refreshes the root mods table). Do not hand-edit `Description.txt` or the `<!-- mods-table -->` block.
+- Workshop copy is language-specific: English first, `---`, then Chinese. Both ends with **Feedback & Source** / **问题反馈与源码** (repo, Issues + full Player.log, Ko-fi). `npm run workshop-desc` writes those halves to Steam `english` and `schinese`. Steam must be running as the item owner; quit ONI first. Do not call this unless you intend to publish text.
 - English first, `---`, then Chinese. Compat_All.png in both languages.
 - Related mods go under **Recommended** / **建议订阅**: optional, the mod runs alone. Do not tick Steam “Required items” unless it really cannot load without them.
 - Avoid `[MPM]` inside BBCode/Markdown links (parsed as a tag). Write `(MPM)`.

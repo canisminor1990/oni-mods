@@ -91,7 +91,8 @@ namespace DrywallTileSkins
 
 			string[] folders =
 			{
-				Path.Combine(Util.RootFolder(), "mods", "config", "drywall_tile_skins", "custom_walls"),
+				ModSettings.CustomWallsDir,
+				ModSettings.LegacyCustomWallsDir,
 				Path.Combine(Util.RootFolder(), "mods", "config", "backwalls", "custom_walls")
 			};
 
