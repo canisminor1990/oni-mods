@@ -32,11 +32,11 @@ One git repo at **this folder only**. Nested `src/<Mod>/.git` is forbidden. `.gi
 | `npm run steam-ids` | scrape workshop page → `oniMods.steamId` + root table |
 | `npm run package` | build + desc |
 
-User **fully quits** ONI to load DLL/PNG. Hot reload is not enough.
+User **fully quits** ONI to load DLL/PNG. Hot reload is not enough. Agent/dev only — never write that into README / Workshop copy.
 
 ## Docs / Workshop
 
-- Edit `src/<Mod>/README.md` only (Markdown). Do not hand-edit `Description.txt`.
+- Edit `src/<Mod>/README.md` only (Markdown). Do not hand-edit `Description.txt`. Player copy: no DLL, hot reload, `local/`, or rebuild-reload notes. Restart sentences only when a *player* action needs a full quit (settings, custom fonts/PNGs, room toggles).
 - After README changes: `npm run desc` (also refreshes the root mods table). Do not hand-edit `Description.txt` or the `<!-- mods-table -->` block.
 - Workshop copy is language-specific: English first, `---`, then Chinese. Both ends with **Feedback & Source** / **问题反馈与源码** (repo, Issues + full Player.log, Ko-fi). `npm run workshop-desc` writes those halves to Steam `english` and `schinese`. Chinese title is `中文名 / English Name`. Steam must be running as the item owner; quit ONI first. Do not call this unless you intend to publish text.
 - English first, `---`, then Chinese. Compat_All.png in both languages.

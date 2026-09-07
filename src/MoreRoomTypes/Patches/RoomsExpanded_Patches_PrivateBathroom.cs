@@ -1,6 +1,7 @@
 using System;
 using Database;
 using HarmonyLib;
+using Klei.AI;
 using UnityEngine;
 
 namespace MoreRoomTypes
@@ -8,7 +9,9 @@ namespace MoreRoomTypes
 	class RoomsExpanded_Patches_PrivateBathroom
 	{
 		public const float ShowerTimeBonus = 0.2f;
+		public const float Morale = 3f;
 		public const string VanillaBathroomEffectId = "RoomBathroom";
+		public const string ExtraMoraleEffectId = "PrivateBathroomMorale";
 
 		public static void AddRoom(ref RoomTypes __instance)
 		{
@@ -27,6 +30,32 @@ namespace MoreRoomTypes
 			{
 				Debug.LogWarning($"{Mod.Namespace}: failed to wire bathroom upgrades: {ex.Message}");
 			}
+		}
+
+		public static void RegisterEffects()
+		{
+			var dbEffects = Db.Get().effects;
+			if (dbEffects.Exists(ExtraMoraleEffectId))
+				return;
+
+			float duration = 0f;
+			if (dbEffects.Exists(VanillaBathroomEffectId))
+			{
+				Effect vanilla = dbEffects.Get(VanillaBathroomEffectId);
+				if (vanilla != null)
+					duration = vanilla.duration;
+			}
+
+			Effect extra = new Effect(
+				ExtraMoraleEffectId,
+				STRINGS.ROOMS.EFFECTS.PRIVATEBATHROOM.NAME,
+				STRINGS.ROOMS.EFFECTS.PRIVATEBATHROOM.DESCRIPTION,
+				duration,
+				true,
+				true,
+				false);
+			extra.Add(new AttributeModifier("QualityOfLife", Morale, STRINGS.ROOMS.EFFECTS.PRIVATEBATHROOM.NAME));
+			dbEffects.Add(extra);
 		}
 
 		[HarmonyPatch(typeof(WashSinkConfig), nameof(WashSinkConfig.ConfigureBuildingTemplate))]

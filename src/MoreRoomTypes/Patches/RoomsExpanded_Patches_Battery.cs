@@ -17,15 +17,6 @@ namespace MoreRoomTypes
 			RoomConstraintTags.AddStompInConflict(RoomTypes_AllModded.BatteryRoom, __instance.PowerPlant);
 		}
 
-		public static void ApplyLateStomps(RoomTypes db)
-		{
-			if (!Settings.Instance.BatteryRoom.IncludeRoom)
-				return;
-			RoomConstraintTags.AddStompInConflict(
-				RoomTypes_AllModded.BatteryRoom,
-				RoomConstraintTags.FindRoomType(db, RoomTypeIndustrialData.RoomId));
-		}
-
 		[HarmonyPatch(typeof(BatteryConfig), nameof(BatteryConfig.ConfigureBuildingTemplate))]
 		public static class BatteryConfig_Patch
 		{
@@ -48,6 +39,18 @@ namespace MoreRoomTypes
 		public static class BatteryModuleConfig_Patch
 		{
 			public static void Postfix(GameObject go) => RoomConstraintTags.AddBuildingTag(go, RoomConstraintTags.BatteryBuildingTag);
+		}
+
+		[HarmonyPatch(typeof(PowerTransformerConfig), nameof(PowerTransformerConfig.ConfigureBuildingTemplate))]
+		public static class PowerTransformerConfig_Patch
+		{
+			public static void Postfix(GameObject go) => RoomConstraintTags.AddBuildingTag(go, RoomConstraintTags.TransformerBuildingTag);
+		}
+
+		[HarmonyPatch(typeof(PowerTransformerSmallConfig), nameof(PowerTransformerSmallConfig.ConfigureBuildingTemplate))]
+		public static class PowerTransformerSmallConfig_Patch
+		{
+			public static void Postfix(GameObject go) => RoomConstraintTags.AddBuildingTag(go, RoomConstraintTags.TransformerBuildingTag);
 		}
 
 		[HarmonyPatch(typeof(Battery), nameof(Battery.EnergySim200ms))]

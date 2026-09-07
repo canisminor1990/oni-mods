@@ -4,33 +4,32 @@ Adds extra colony room types. This standalone mod is built with thanks on pether
 
 ![ALL DLC](https://raw.githubusercontent.com/Sgt-Imalas/Sgt_Imalas-Oni-Mods/refs/heads/master/Compat_All.png)
 
-Steam Workshop: More Room Types · [Description.txt](Description.txt) (BBCode)
+Steam Workshop: [More Room Types](https://steamcommunity.com/sharedfiles/filedetails/?id=3797339501) · [Description.txt](Description.txt) (BBCode)
 
 ### New rooms
 
-- **Private Bathroom**: exactly one flush toilet, one sink, and one shower, with decor and a finished back wall (12–32 tiles). Grants the same morale bonus as a Washroom, and showers finish 20% faster.
-- **Warehouse**: at least 4 storage buildings (24–120 tiles). Classification only; storage capacity is unchanged.
-- **Battery Room**: at least 8 batteries (24–120 tiles). Rocket battery modules count. Batteries in the room lose charge more slowly.
-- **Oxygen Room**: an oxygen producer plus a gas pump (12–64 tiles). Matching equipment runs 10% more efficiently.
-- **Waste Processing Room**: Compost plus a Sludge Press or Fertilizer Synthesizer (12–64 tiles). Matching processors run 10% more efficiently.
-- **Water Treatment Room**: Water Sieve or Desalinator (12–64 tiles). Matching equipment runs 10% more efficiently.
-- **Nuclear Power Plant**: Research Reactor plus a Steam Turbine (24–120 tiles). Grants the same bonus as a Power Plant: generators can be tuned with microchips. Takes priority over Power Plant.
-- **Hallway**: Ladder and Fire Pole in the same enclosed space (12–240 tiles). Low priority so it does not override functional rooms. Duplicants gain Athletics while inside.
+- **Private Bathroom**: exactly one flush toilet, one sink, and one shower, with decor and a finished back wall (12–32 tiles). Using a Private Bathroom will greatly improve Duplicants' Morale. Showers in this room finish faster.
+- **Warehouse**: at least 4 storage buildings and no industrial machinery (24–120 tiles). A Warehouse does not change storage capacity.
+- **Battery Room**: at least 4 batteries (24–120 tiles). Rocket battery modules count. No industrial machinery except batteries, battery modules, and power transformers. Batteries in a Battery Room lose charge more slowly.
+- **Waste Processing Room**: Compost plus a Sludge Press or Fertilizer Synthesizer (12–64 tiles). Compost, Sludge Presses and Fertilizer Synthesizers in this room function more efficiently.
+- **Water Treatment Room**: Water Sieve or Desalinator (12–64 tiles). Water Sieves and Desalinators in this room function more efficiently.
+- **Nuclear Power Plant**: Research Reactor plus a Steam Turbine (24–120 tiles). Heavy-duty generators built in a Nuclear Power Plant can be tuned up using microchips from Power Control Stations to improve their Power production. Takes priority over Power Plant.
+- **Hallway**: Ladder and Fire Pole in the same enclosed space, with no industrial machinery (12–240 tiles). Low priority so it does not override functional rooms. Duplicants in a Hallway gain Athletics.
 
 ### From Rooms Expanded
 
 With thanks to pether.pg, the following rooms from the original mod are still included here:
 
-- **Gym Room**: Manual Generator, Water Cooler, and a decorative item (12–64 tiles). Working the generator trains Athletics faster. Power Plant still takes priority.
-- **Art Museum**: Pedestal, 6 masterpieces, and a displayed ornament (32–120 tiles). Visiting grants morale from Creativity (up to +10). Upgrades to Space Museum.
-- **Space Museum**: Pedestal plus 6 unique artifacts (32–120 tiles). Visiting grants morale from Piloting, with extra morale after Cosmic Archaeology.
-- **Graveyard**: Tasteful Memorial and a wild plant, no industrial machinery (12–96 tiles). Visiting can raise or lower stress for a fraction of a cycle.
-- **Industrial Room**: Any industrial machinery (12–96 tiles). Low-priority classification that upgrades into Power Plant, Farm, Stable, Gym, or the utility rooms above.
+- **Gym Room**: Manual Generator, Water Cooler, and a decorative item (12–64 tiles). Working a Manual Generator in a Gym Room improves Athletics training. Power Plant still takes priority.
+- **Art Museum**: Pedestal, 6 masterpieces, and a displayed ornament (32–120 tiles). Visiting an Art Museum will improve Duplicants' Morale. Upgrades to Space Museum.
+- **Space Museum**: Pedestal plus 6 unique artifacts (32–120 tiles). Visiting a Space Museum will improve Duplicants' Morale. After Cosmic Archaeology, unique artifacts grant additional Morale.
+- **Graveyard**: Tasteful Memorial and a wild plant, no industrial machinery (12–96 tiles). Visiting a Graveyard will raise or lower Duplicants' Stress.
+
+Each extra room type can be turned on or off from the mod's Settings button on the Mods screen. Fully quit the game after changing those options.
 
 ### Notes
 
 - Please do not enable this together with the original [Rooms Expanded](https://steamcommunity.com/sharedfiles/filedetails/?id=2348079481), as the room ids would conflict.
-- After updating the DLL, please fully quit Oxygen Not Included before launching again. Hot reload is not enough.
 
 ### License
 
@@ -52,29 +51,28 @@ Many thanks to pether.pg for releasing [Rooms Expanded](https://steamcommunity.c
 
 ### 新增房间
 
-- **私人卫生间**：恰好 1 个抽水马桶、1 个洗手池与 1 个淋浴间，需要装饰与后墙（12–32 格）。加成与官方卫生间相同，淋浴时间缩短 20%。
-- **仓库**：至少 4 个储物建筑（24–120 格）。仅房间分类，不改容量。
-- **储能室**：至少 8 个电池（24–120 格）。火箭电池仓也算。室内电池自放电更慢。
-- **制氧室**：制氧设备 + 气泵（12–64 格）。相关设备效率提升 10%。
-- **废料处理间**：堆肥堆 + 泥浆压榨器或肥料合成器（12–64 格）。相关设备效率提升 10%。
-- **水处理间**：净水器或脱盐器（12–64 格）。相关设备效率提升 10%。
-- **核电站**：研究反应堆 + 蒸汽涡轮机（24–120 格）。加成与官方发电厂相同：可用电控站微芯片调校发电机。优先于发电厂。
-- **走廊**：同一封闭空间内同时有梯子和消防滑杆（12–240 格）。低优先级，不会覆盖功能房间。复制人在走廊内获得运动加成。
+- **私人卫生间**：恰好 1 个抽水马桶、1 个洗手池与 1 个淋浴间，需要装饰与后墙（12–32 格）。使用私人卫生间会大大提升复制人的士气。在此淋浴会更快完成。
+- **仓库**：至少 4 个储物建筑，不能有工业设备（24–120 格）。仓库不会改变储存容量。
+- **储能室**：至少 4 个电池（24–120 格）。火箭电池仓也算。不能有蓄电池、电池仓、电力调节器（大小变压器）以外的工业设备。储能室中的电池漏电更慢。
+- **废料处理间**：堆肥堆 + 泥浆压榨器或肥料合成器（12–64 格）。废料处理间中的堆肥堆、泥浆压榨器和肥料合成器使用效率更高。
+- **水处理间**：净水器或脱盐器（12–64 格）。水处理间中的净水器和脱盐器使用效率更高。
+- **核电站**：研究反应堆 + 蒸汽涡轮机（24–120 格）。建在核电站中的重型发电机可以用电控站的微芯片进行调校来提高电力生产。优先于发电厂。
+- **走廊**：同一封闭空间内同时有梯子和消防滑杆，不能有工业设备（12–240 格）。低优先级，不会覆盖功能房间。身处走廊会提升复制人的运动。
 
 ### 来自 Rooms Expanded
 
 感谢 pether.pg，以下房间沿用自原模组：
 
-- **健身房**：人力发电机、饮水机与一件装饰物（12–64 格）。踩发电机时运动技能涨得更快。发电厂仍优先于健身房。
-- **艺术博物馆**：基座、6 件杰作与展示装饰（32–120 格）。参观按创造力给予士气（最高 +10）。可升级为太空博物馆。
-- **太空博物馆**：基座 + 6 件独特文物（32–120 格）。参观按驾驶给予士气；完成「宇宙考古」后还有额外士气。
-- **墓地**：雅致的纪念碑与一株野生植物，不能有工业器械（12–96 格）。参观可能升高或降低压力。
-- **车间**：任意工业器械（12–96 格）。低优先级分类，可升级为发电厂、农场、畜舍、健身房或上方的功能房间。
+- **健身房**：人力发电机、饮水机与一件装饰物（12–64 格）。在健身房使用人力发电机会加快运动技能的提升。发电厂仍优先于健身房。
+- **艺术博物馆**：基座、6 件杰作与展示装饰（32–120 格）。参观艺术博物馆会提升复制人的士气。可升级为太空博物馆。
+- **太空博物馆**：基座 + 6 件独特文物（32–120 格）。参观太空博物馆会提升复制人的士气。完成「宇宙考古」后，独特文物会提供额外士气。
+- **墓地**：雅致的纪念碑与一株野生植物，不能有工业器械（12–96 格）。参观墓地会升高或降低复制人的压力。
+
+每种额外房间可在模组列表的「设置」里单独开关。改完后请完全退出游戏再启动。
 
 ### 说明
 
 - 请勿与原版 [Rooms Expanded](https://steamcommunity.com/sharedfiles/filedetails/?id=2348079481) 同时启用，以免房间 ID 冲突。
-- 更新 DLL 后，请完全退出缺氧再启动。热重载不够。
 
 ### 许可
 

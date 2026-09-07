@@ -38,6 +38,9 @@ python ref/oni-api/scan_dll.py BuildingFacades
 | `kmodmanager.cs` | `KMod.Manager.Sanitize` unsubscribes `!is_subscribed` |
 | `kmodmod.cs` | `KMod.Mod.is_subscribed` is not persisted |
 | `modsscreen.cs` | `ModsScreen.OnActivate` calls `Sanitize` then `BuildDisplay` |
-| `hierarchyreferences.cs` | `HierarchyReferences.GetReference<T>` logs `LogError` on type mismatch (does not throw); untyped `GetReference(name)` returns `Component` |
+| `roomtype.cs` | `RoomType` (`effect`, `effects`, `GetRoomEffectsString`) |
+| `roomdetails.cs` | `RoomDetails.EFFECT` / `EFFECTS` overlay hover |
+| `roomtypes.cs` / `Database.RoomTypes.decompiled.cs` | vanilla room registration |
+| `codex_rooms.cs` | `CodexEntryGenerator.GenerateRoomsEntries` + room details (effects from `GetRoomEffectsString` only) |
 
 `MISSING …` headers mean that dump pass did not find the type; search another file or rescan the DLL.

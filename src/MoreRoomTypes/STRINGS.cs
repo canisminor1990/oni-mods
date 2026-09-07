@@ -12,6 +12,15 @@ namespace MoreRoomTypes
 			}
 		}
 
+		public class SETTINGS
+		{
+			public static LocString BUTTON = "Settings";
+			public static LocString TITLE = "More Room Types";
+			public static LocString HINT = "Enable or disable each extra room type. Fully quit Oxygen Not Included after changing these, then launch again.";
+			public static LocString ALL_ON = "Enable all";
+			public static LocString ALL_OFF = "Disable all";
+		}
+
 		public class ROOMS
 		{
 			public class TYPES
@@ -19,92 +28,89 @@ namespace MoreRoomTypes
 				public class GRAVEYARD
 				{
 					public static LocString NAME = "Graveyard";
-					public static LocString EFFECT = " - Stress: +10% or -10% for {0} cycle";
-					public static LocString TOOLTIP = "It makes duplicants happy to think that they are still alive.";
+					public static LocString DESCRIPTION = "It makes Duplicants happy to think that they are still alive.\n\nVisiting a Graveyard will raise or lower Duplicants' Stress.";
+					public static LocString EFFECT = "- Stress bonus";
+					public static LocString TOOLTIP = "Visiting a Graveyard will raise or lower Duplicants' Stress";
 				}
 
 				public class GYMROOM
 				{
 					public static LocString NAME = "Gym Room";
-					public static LocString EFFECT = " - Faster athletics increase by {0}";
-					public static LocString TOOLTIP = "Professional Gym Room allows duplicants to exercise more efficiently.";
-				}
-
-				public class INDUSTRIAL
-				{
-					public static LocString NAME = "Industrial Room";
-					public static LocString EFFECT = " - (no additional effect)";
-					public static LocString TOOLTIP = "This room contains some noisy, greasy machinery.";
+					public static LocString DESCRIPTION = "Professional equipment lets Duplicants exercise more efficiently.\n\nWorking a Manual Generator in a Gym Room improves Athletics training.";
+					public static LocString EFFECT = "- Athletics training bonus";
+					public static LocString TOOLTIP = "Working a Manual Generator in a Gym Room improves Athletics training";
 				}
 
 				public class MUSEUM
 				{
 					public static LocString NAME = "Art Museum";
-					public static LocString EFFECT = " • <style=\"KKeyword\">Morale</style>: +{0} of duplicant's Creativity skill as morale (up to +10)";
-					public static LocString TOOLTIP = "It used to be a storehouse, before Meep confused Pedestal content with art.";
+					public static LocString DESCRIPTION = "It used to be a storehouse, before Meep confused Pedestal content with art.\n\nVisiting an Art Museum will improve Duplicants' Morale.";
+					public static LocString EFFECT = "- Morale bonus";
+					public static LocString TOOLTIP = "Visiting an Art Museum will improve Duplicants' Morale";
 				}
 
 				public class MUSEUMSPACE
 				{
 					public static LocString NAME = "Space Museum";
-					public static LocString EFFECT = " • <style=\"KKeyword\">Morale</style>: \n\t + {0} of duplicant's Piloting skill as morale (up to +10)\n    After \"Cosmic Archaeology\" completion: \n\t additional +1 for each unique artifact (up to +5) \n\t additional +1 for each 2 more unique artifacts (up to +5)\n\t additional +1 for each 3 more unique artifacts (up to +5)";
-					public static LocString TOOLTIP = "Perfect for storing Ancient Knowledge on the pedestals.";
+					public static LocString DESCRIPTION = "Perfect for storing Ancient Knowledge on the pedestals.\n\nVisiting a Space Museum will improve Duplicants' Morale.";
+					public static LocString EFFECT = "- Morale bonus";
+					public static LocString TOOLTIP = "Visiting a Space Museum will improve Duplicants' Morale";
 				}
 
 				public class PRIVATEBATHROOM
 				{
 					public static LocString NAME = "Private Bathroom";
-					public static LocString EFFECT = " • Same morale bonus as a Washroom\n • Showers take 20% less time";
-					public static LocString TOOLTIP = "Exactly one flush toilet, one sink, and one shower, with decor and a finished back wall.";
+					public static LocString DESCRIPTION = "Finally, a place to truly be alone with one's thoughts.\n\nUsing a Private Bathroom will greatly improve Duplicants' Morale.\nShowers in this room finish faster.";
+					public static LocString EFFECT = "- Morale bonus";
+					public static LocString TOOLTIP = "Using a Private Bathroom will greatly improve Duplicants' Morale";
 				}
 
 				public class WAREHOUSE
 				{
 					public static LocString NAME = "Warehouse";
-					public static LocString EFFECT = " - Organized storage area";
-					public static LocString TOOLTIP = "Requires at least 4 storage buildings.";
+					public static LocString DESCRIPTION = "An enclosed space for keeping supplies in order.\n\nA Warehouse does not change storage capacity.";
+					public static LocString EFFECT = "- No effect";
+					public static LocString TOOLTIP = "A Warehouse does not change storage capacity";
 				}
 
 				public class BATTERYROOM
 				{
 					public static LocString NAME = "Battery Room";
-					public static LocString EFFECT = " - Batteries lose charge more slowly";
-					public static LocString TOOLTIP = "Requires at least 8 batteries. Rocket battery modules count.";
-				}
-
-				public class OXYGENROOM
-				{
-					public static LocString NAME = "Oxygen Room";
-					public static LocString EFFECT = " - Equipment in this room runs 10% more efficiently";
-					public static LocString TOOLTIP = "Requires an oxygen producer and a gas pump.";
+					public static LocString DESCRIPTION = "A dedicated space for stored power.\n\nBatteries in a Battery Room lose charge more slowly.";
+					public static LocString EFFECT = "- Reduced battery leakage";
+					public static LocString TOOLTIP = "Batteries in a Battery Room lose charge more slowly";
 				}
 
 				public class WASTEROOM
 				{
 					public static LocString NAME = "Waste Processing Room";
-					public static LocString EFFECT = " - Equipment in this room runs 10% more efficiently";
-					public static LocString TOOLTIP = "Requires Compost plus a Sludge Press or Fertilizer Synthesizer.";
+					public static LocString DESCRIPTION = "Where refuse is put back to work.\n\nCompost, Sludge Presses and Fertilizer Synthesizers in a Waste Processing Room function more efficiently.";
+					public static LocString EFFECT = "- Efficiency bonus";
+					public static LocString TOOLTIP = "Compost, Sludge Presses and Fertilizer Synthesizers in a Waste Processing Room function more efficiently";
 				}
 
 				public class WATERROOM
 				{
 					public static LocString NAME = "Water Treatment Room";
-					public static LocString EFFECT = " - Equipment in this room runs 10% more efficiently";
-					public static LocString TOOLTIP = "Requires a Water Sieve or Desalinator.";
+					public static LocString DESCRIPTION = "Where dirty water gets a second chance.\n\nWater Sieves and Desalinators in a Water Treatment Room function more efficiently.";
+					public static LocString EFFECT = "- Efficiency bonus";
+					public static LocString TOOLTIP = "Water Sieves and Desalinators in a Water Treatment Room function more efficiently";
 				}
 
 				public class HALLWAY
 				{
 					public static LocString NAME = "Hallway";
-					public static LocString EFFECT = " - Athletics bonus while inside";
-					public static LocString TOOLTIP = "A transit shaft with a Ladder and a Fire Pole.";
+					public static LocString DESCRIPTION = "A transit shaft for moving between floors.\n\nDuplicants in a Hallway gain Athletics.";
+					public static LocString EFFECT = "- Athletics bonus";
+					public static LocString TOOLTIP = "Duplicants in a Hallway gain Athletics";
 				}
 
 				public class NUCLEARPLANT
 				{
 					public static LocString NAME = "Nuclear Power Plant";
-					public static LocString EFFECT = " - Same bonus as a Power Plant: microchip tune-ups on generators";
-					public static LocString TOOLTIP = "Requires a Research Reactor and a Steam Turbine.";
+					public static LocString DESCRIPTION = "The perfect place for Duplicants to flex their Electrical Engineering skills.\n\nHeavy-duty generators built within a Nuclear Power Plant can be tuned up using microchips from power control stations to improve their <link=\"POWER\">Power</link> production.";
+					public static LocString EFFECT = "- Enables <link=\"POWERSTATIONTOOLS\">Microchip</link> tune-ups on heavy-duty generators";
+					public static LocString TOOLTIP = "Heavy-duty generators built in a Nuclear Power Plant can be tuned up using microchips from Power Control Stations to improve their Power production";
 				}
 			}
 
@@ -126,12 +132,6 @@ namespace MoreRoomTypes
 				{
 					public static LocString NAME = (LocString)UI.FormatAsLink("Water Cooler", "WATERCOOLER");
 					public static LocString DESCRIPTION = "At least one Water Cooler";
-				}
-
-				public class INDUSTRIAL
-				{
-					public static LocString NAME = (LocString)UI.FormatAsLink("Industrial Machinery", "BUILDCATEGORYREQUIREMENTCLASSINDUSTRIALMACHINERY");
-					public static LocString DESCRIPTION = "At least one Industrial Machinery building";
 				}
 
 				public class PEDESTAL
@@ -178,20 +178,14 @@ namespace MoreRoomTypes
 
 				public class BATTERIES
 				{
-					public static LocString NAME = "8 Batteries";
-					public static LocString DESCRIPTION = "At least 8 batteries. Rocket battery modules count.";
+					public static LocString NAME = "4 Batteries";
+					public static LocString DESCRIPTION = "At least 4 batteries. Rocket battery modules count.";
 				}
 
-				public class OXYGEN_PRODUCER
+				public class NO_EXTRA_INDUSTRIAL
 				{
-					public static LocString NAME = "Oxygen Producer";
-					public static LocString DESCRIPTION = "At least one oxygen-producing building.";
-				}
-
-				public class GAS_PUMP
-				{
-					public static LocString NAME = (LocString)UI.FormatAsLink("Gas Pump", "GASPUMP");
-					public static LocString DESCRIPTION = "At least one Gas Pump.";
+					public static LocString NAME = "No extra industrial machinery";
+					public static LocString DESCRIPTION = "No industrial machinery except batteries, rocket battery modules, and power transformers.";
 				}
 
 				public class COMPOST
@@ -267,6 +261,13 @@ namespace MoreRoomTypes
 				{
 					public static LocString NAME = "Hallway Transit";
 					public static LocString DESCRIPTION = "This Duplicant is moving through a Hallway.";
+				}
+
+				public class PRIVATEBATHROOM
+				{
+					public static LocString NAME = "Private Bathroom";
+					public static LocString DESCRIPTION = "This Duplicant used a Private Bathroom.";
+					public static LocString SHOWER = "Shower time: -20%";
 				}
 			}
 		}

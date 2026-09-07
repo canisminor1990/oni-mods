@@ -15,15 +15,6 @@ namespace MoreRoomTypes
 			RoomConstraintTags.AddStompInConflict(RoomTypes_AllModded.NuclearPlant, __instance.PowerPlant);
 		}
 
-		public static void ApplyLateStomps(RoomTypes db)
-		{
-			if (!Settings.Instance.NuclearPlant.IncludeRoom)
-				return;
-			RoomConstraintTags.AddStompInConflict(
-				RoomTypes_AllModded.NuclearPlant,
-				RoomConstraintTags.FindRoomType(db, RoomTypeIndustrialData.RoomId));
-		}
-
 		[HarmonyPatch(typeof(NuclearReactorConfig), nameof(NuclearReactorConfig.ConfigureBuildingTemplate))]
 		public static class NuclearReactorConfig_Patch
 		{

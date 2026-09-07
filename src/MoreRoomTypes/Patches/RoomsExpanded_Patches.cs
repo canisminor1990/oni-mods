@@ -48,6 +48,7 @@ namespace MoreRoomTypes
 			public static void Postfix()
 			{
 				RoomsExpanded_Patches_Hallway.RegisterEffects();
+				RoomsExpanded_Patches_PrivateBathroom.RegisterEffects();
 			}
 		}
 
@@ -67,16 +68,13 @@ namespace MoreRoomTypes
 				RoomsExpanded_Patches_PrivateBathroom.AddRoom(ref __instance);
 				RoomsExpanded_Patches_Warehouse.AddRoom(ref __instance);
 				RoomsExpanded_Patches_Battery.AddRoom(ref __instance);
-				RoomsExpanded_Patches_Oxygen.AddRoom(ref __instance);
 				RoomsExpanded_Patches_Waste.AddRoom(ref __instance);
 				RoomsExpanded_Patches_Water.AddRoom(ref __instance);
 				RoomsExpanded_Patches_Nuclear.AddRoom(ref __instance);
-				RoomsExpanded_Patches_Industrial.AddRoom(ref __instance);
 				RoomsExpanded_Patches_Museum.AddRoom(ref __instance);
 				RoomsExpanded_Patches_MuseumSpace.AddRoom(ref __instance);
 				RoomsExpanded_Patches_Hallway.AddRoom(ref __instance);
-				RoomsExpanded_Patches_Battery.ApplyLateStomps(__instance);
-				RoomsExpanded_Patches_Nuclear.ApplyLateStomps(__instance);
+				RoomConstraintTags.ApplyFunctionalRoomStomps(__instance);
 				RoomConstraintTags.ResizeRooms(ref __instance);
 			}
 		}
@@ -87,6 +85,32 @@ namespace MoreRoomTypes
 			public static void Postfix()
 			{
 				TuningData<RoomProber.Tuning>.Get().maxRoomSize = Settings.Instance.GetMaxRoomSize();
+			}
+		}
+
+		[HarmonyPatch(typeof(RoomType), nameof(RoomType.GetRoomEffectsString))]
+		public static class RoomType_GetRoomEffectsString_Patch
+		{
+			public static void Postfix(RoomType __instance, ref string __result)
+			{
+				if (!RoomTypeAbstractData.IsModdedRoom(__instance))
+					return;
+
+				if (__instance.Id == RoomTypePrivateBathroomData.RoomId)
+				{
+					if (string.IsNullOrEmpty(__result))
+						__result = (string)ROOMS.EFFECTS.HEADER;
+					string shower = MoreRoomTypes.STRINGS.ROOMS.EFFECTS.PRIVATEBATHROOM.SHOWER;
+					if (!__result.Contains(shower))
+						__result += "\n    • " + shower;
+					return;
+				}
+
+				if (!string.IsNullOrEmpty(__result))
+					return;
+				if (string.IsNullOrEmpty(__instance.effect))
+					return;
+				__result = (string)ROOMS.EFFECTS.HEADER + "\n    " + __instance.effect.Trim();
 			}
 		}
 
@@ -108,16 +132,21 @@ namespace MoreRoomTypes
 				List<RoomType> roomTypeList = new List<RoomType>(Db.Get().RoomTypes.resources);
 				foreach (RoomType roomType in roomTypeList)
 				{
-					if (roomType.effects == null && !string.IsNullOrEmpty(roomType.effect))
+					if (!RoomTypeAbstractData.IsModdedRoom(roomType) || string.IsNullOrEmpty(roomType.effect))
+						continue;
+
+					string effects = roomType.GetRoomEffectsString();
+					if (string.IsNullOrEmpty(effects))
+						continue;
+
+					for (int i = 0; i < __result.Count; i++)
 					{
-						for (int i = 0; i < __result.Count; i++)
-						{
-							if (__result[i].name == roomType.Name)
-							{
-								string header = (string)ROOMS.EFFECTS.HEADER;
-								__result[i].desc += $"\n\n{header}\n    {roomType.effect}";
-							}
-						}
+						string legendName = __result[i].name ?? "";
+						if (legendName != roomType.Name && !legendName.StartsWith(roomType.Name + "\n"))
+							continue;
+						if (!string.IsNullOrEmpty(__result[i].desc) && __result[i].desc.Contains(effects))
+							continue;
+						__result[i].desc += "\n\n" + effects;
 					}
 				}
 			}
@@ -135,13 +164,11 @@ namespace MoreRoomTypes
 
 				SetColor(namedLookup, RoomTypeGymData.RoomId, Settings.Instance.Gym.RoomColor);
 				SetColor(namedLookup, RoomTypeGraveyardData.RoomId, Settings.Instance.Graveyard.RoomColor);
-				SetColor(namedLookup, RoomTypeIndustrialData.RoomId, Settings.Instance.Industrial.RoomColor);
 				SetColor(namedLookup, RoomTypeMuseumData.RoomId, Settings.Instance.Museum.RoomColor);
 				SetColor(namedLookup, RoomTypeMuseumSpaceData.RoomId, Settings.Instance.MuseumSpace.RoomColor);
 				SetColor(namedLookup, RoomTypePrivateBathroomData.RoomId, Settings.Instance.PrivateBathroom.RoomColor);
 				SetColor(namedLookup, RoomTypeWarehouseData.RoomId, Settings.Instance.Warehouse.RoomColor);
 				SetColor(namedLookup, RoomTypeBatteryRoomData.RoomId, Settings.Instance.BatteryRoom.RoomColor);
-				SetColor(namedLookup, RoomTypeOxygenRoomData.RoomId, Settings.Instance.OxygenRoom.RoomColor);
 				SetColor(namedLookup, RoomTypeWasteRoomData.RoomId, Settings.Instance.WasteRoom.RoomColor);
 				SetColor(namedLookup, RoomTypeWaterRoomData.RoomId, Settings.Instance.WaterRoom.RoomColor);
 				SetColor(namedLookup, RoomTypeNuclearPlantData.RoomId, Settings.Instance.NuclearPlant.RoomColor);

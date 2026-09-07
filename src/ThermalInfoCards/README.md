@@ -27,7 +27,6 @@ Steam Workshop: [Thermal Info Cards](https://steamcommunity.com/sharedfiles/file
 
 - Please do not enable this together with the original [Thermal Tooltips](https://steamcommunity.com/sharedfiles/filedetails/?id=1983504552) or [Better Info Cards](https://steamcommunity.com/sharedfiles/filedetails/?id=1960947963).
 - Display All Temps keeps control of the temperature string if that mod is present.
-- After updating the DLL, please fully quit Oxygen Not Included before launching again. Hot reload is not enough.
 
 ### License
 
@@ -68,7 +67,6 @@ Many thanks to Peter Han for [Thermal Tooltips](https://github.com/peterhaneve/O
 
 - 请勿与原版 [Thermal Tooltips](https://steamcommunity.com/sharedfiles/filedetails/?id=1983504552) 或 [Better Info Cards](https://steamcommunity.com/sharedfiles/filedetails/?id=1960947963) 同时启用。
 - 若装了 Display All Temps，温度字符串仍由它控制。
-- 更新 DLL 后，请完全退出缺氧再启动。热重载不够。
 
 ### 许可
 

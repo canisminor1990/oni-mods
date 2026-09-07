@@ -11,9 +11,10 @@ namespace MoreRoomTypes
 		{
 			Id = RoomId;
 			Name = STRINGS.ROOMS.TYPES.NUCLEARPLANT.NAME;
+			Description = STRINGS.ROOMS.TYPES.NUCLEARPLANT.DESCRIPTION;
 			Tooltip = STRINGS.ROOMS.TYPES.NUCLEARPLANT.TOOLTIP;
 			Effect = STRINGS.ROOMS.TYPES.NUCLEARPLANT.EFFECT;
-			Catergory = CreateCategory();
+			Catergory = CreateCategory(Db.Get().RoomTypeCategories.Industrial);
 			ConstraintPrimary = RoomModdedConstraints.NUCLEAR_REACTOR;
 			ConstrantsAdditional = new RoomConstraints.Constraint[]
 			{

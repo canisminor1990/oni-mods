@@ -11,12 +11,14 @@ namespace MoreRoomTypes
 		{
 			Id = RoomId;
 			Name = STRINGS.ROOMS.TYPES.BATTERYROOM.NAME;
+			Description = STRINGS.ROOMS.TYPES.BATTERYROOM.DESCRIPTION;
 			Tooltip = STRINGS.ROOMS.TYPES.BATTERYROOM.TOOLTIP;
 			Effect = STRINGS.ROOMS.TYPES.BATTERYROOM.EFFECT;
-			Catergory = CreateCategory();
+			Catergory = CreateCategory(Db.Get().RoomTypeCategories.Industrial);
 			ConstraintPrimary = RoomModdedConstraints.BATTERIES;
 			ConstrantsAdditional = new RoomConstraints.Constraint[]
 			{
+				RoomModdedConstraints.NO_EXTRA_INDUSTRIAL,
 				RoomConstraints.MINIMUM_SIZE_24,
 				RoomConstraintTags.GetMaxSizeConstraint(Settings.Instance.BatteryRoom.MaxSize)
 			};

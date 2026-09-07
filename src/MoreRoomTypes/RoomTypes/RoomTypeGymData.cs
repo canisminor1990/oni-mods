@@ -11,9 +11,10 @@ namespace MoreRoomTypes
 		{
 			Id = RoomId;
 			Name = STRINGS.ROOMS.TYPES.GYMROOM.NAME;
+			Description = STRINGS.ROOMS.TYPES.GYMROOM.DESCRIPTION;
 			Tooltip = STRINGS.ROOMS.TYPES.GYMROOM.TOOLTIP;
-			Effect = string.Format(STRINGS.ROOMS.TYPES.GYMROOM.EFFECT, MiscUtils.Percent(Settings.Instance.Gym.Bonus));
-			Catergory = CreateCategory();
+			Effect = STRINGS.ROOMS.TYPES.GYMROOM.EFFECT;
+			Catergory = CreateCategory(Db.Get().RoomTypeCategories.Recreation);
 			ConstraintPrimary = RoomModdedConstraints.RUNNING_WHEEL;
 			ConstrantsAdditional = new RoomConstraints.Constraint[4]
 			{

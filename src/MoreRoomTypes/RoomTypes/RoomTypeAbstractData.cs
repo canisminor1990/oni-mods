@@ -1,4 +1,4 @@
-using System;
+using System.Collections.Generic;
 using STRINGS;
 
 namespace MoreRoomTypes
@@ -21,18 +21,52 @@ namespace MoreRoomTypes
 		public string[] Effects;
 		public int SortKey;
 
-		protected RoomTypeCategory CreateCategory()
+		static HashSet<string> _moddedIds;
+
+		static HashSet<string> ModdedIds
 		{
-			string categoryId = string.Format("{0}Category", Id);
-			return new RoomTypeCategory(categoryId, "", Id, "unknown");
+			get
+			{
+				if (_moddedIds == null)
+				{
+					_moddedIds = new HashSet<string>
+					{
+						RoomTypePrivateBathroomData.RoomId,
+						RoomTypeWarehouseData.RoomId,
+						RoomTypeBatteryRoomData.RoomId,
+						RoomTypeWasteRoomData.RoomId,
+						RoomTypeWaterRoomData.RoomId,
+						RoomTypeNuclearPlantData.RoomId,
+						RoomTypeHallwayData.RoomId,
+						RoomTypeGymData.RoomId,
+						RoomTypeMuseumData.RoomId,
+						RoomTypeMuseumSpaceData.RoomId,
+						RoomTypeGraveyardData.RoomId
+					};
+				}
+				return _moddedIds;
+			}
+		}
+
+		protected RoomTypeCategory CreateCategory(RoomTypeCategory vanilla)
+		{
+			if (vanilla == null)
+				return new RoomTypeCategory(string.Format("{0}Category", Id), "", Id, "unknown");
+			return new RoomTypeCategory(vanilla.Id, vanilla.Name, Id, vanilla.icon);
+		}
+
+		public static bool IsModdedRoom(RoomType room)
+		{
+			return room != null && ModdedIds.Contains(room.Id);
 		}
 
 		public RoomType GetRoomType()
 		{
+			string description = string.IsNullOrEmpty(Description) ? Tooltip : Description;
 			return new RoomType(
 				Id,
 				Name,
-				Tooltip,
+				description,
 				Tooltip,
 				Effect,
 				Catergory,

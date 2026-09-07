@@ -12,9 +12,10 @@ namespace MoreRoomTypes
 		{
 			Id = RoomId;
 			Name = STRINGS.ROOMS.TYPES.GRAVEYARD.NAME;
+			Description = STRINGS.ROOMS.TYPES.GRAVEYARD.DESCRIPTION;
 			Tooltip = STRINGS.ROOMS.TYPES.GRAVEYARD.TOOLTIP;
-			Effect = string.Format(STRINGS.ROOMS.TYPES.GRAVEYARD.EFFECT, Settings.Instance.Graveyard.Bonus);
-			Catergory = CreateCategory();
+			Effect = STRINGS.ROOMS.TYPES.GRAVEYARD.EFFECT;
+			Catergory = CreateCategory(Db.Get().RoomTypeCategories.Park);
 			ConstraintPrimary = RoomModdedConstraints.GRAVESTONE;
 			ConstrantsAdditional = new RoomConstraints.Constraint[4]
 			{

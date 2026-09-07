@@ -14,12 +14,6 @@ namespace MoreRoomTypes
 			name: STRINGS.ROOMS.CRITERIA.GRAVE.NAME,
 			description: STRINGS.ROOMS.CRITERIA.GRAVE.DESCRIPTION);
 
-		public static RoomConstraints.Constraint INDUSTRIAL = new RoomConstraints.Constraint(
-			bc => bc.HasTag(RoomConstraints.ConstraintTags.IndustrialMachinery),
-			null,
-			name: STRINGS.ROOMS.CRITERIA.INDUSTRIAL.NAME,
-			description: STRINGS.ROOMS.CRITERIA.INDUSTRIAL.DESCRIPTION);
-
 		public static RoomConstraints.Constraint RUNNING_WHEEL = new RoomConstraints.Constraint(
 			bc => bc.HasTag(RoomConstraintTags.RunningWheelGeneratorTag),
 			null,
@@ -89,6 +83,8 @@ namespace MoreRoomTypes
 			name: STRINGS.ROOMS.CRITERIA.SHOWER_ONE.NAME,
 			description: STRINGS.ROOMS.CRITERIA.SHOWER_ONE.DESCRIPTION);
 
+		public static readonly int RequiredBatteries = 4;
+
 		public static RoomConstraints.Constraint STORAGE_BUILDINGS = new RoomConstraints.Constraint(
 			bc => bc.HasTag(RoomConstraintTags.StorageBuildingTag),
 			room => RoomConstraintTags.CountBuildings(room, RoomConstraintTags.StorageBuildingTag) >= 4,
@@ -97,9 +93,33 @@ namespace MoreRoomTypes
 
 		public static RoomConstraints.Constraint BATTERIES = new RoomConstraints.Constraint(
 			bc => bc.HasTag(RoomConstraintTags.BatteryBuildingTag),
-			room => RoomConstraintTags.CountBuildings(room, RoomConstraintTags.BatteryBuildingTag) >= 8,
+			room => RoomConstraintTags.CountBuildings(room, RoomConstraintTags.BatteryBuildingTag) >= RequiredBatteries,
 			name: STRINGS.ROOMS.CRITERIA.BATTERIES.NAME,
 			description: STRINGS.ROOMS.CRITERIA.BATTERIES.DESCRIPTION);
+
+		public static RoomConstraints.Constraint NO_EXTRA_INDUSTRIAL = new RoomConstraints.Constraint(
+			null,
+			room =>
+			{
+				if (room == null || room.buildings == null)
+					return true;
+				for (int i = 0; i < room.buildings.Count; i++)
+				{
+					KPrefabID building = room.buildings[i];
+					if (building == null)
+						continue;
+					if (!building.HasTag(RoomConstraints.ConstraintTags.IndustrialMachinery))
+						continue;
+					if (building.HasTag(RoomConstraintTags.BatteryBuildingTag) || building.HasTag(RoomConstraintTags.TransformerBuildingTag))
+						continue;
+					if (building.GetComponent<Battery>() != null || building.GetComponent<PowerTransformer>() != null)
+						continue;
+					return false;
+				}
+				return true;
+			},
+			name: STRINGS.ROOMS.CRITERIA.NO_EXTRA_INDUSTRIAL.NAME,
+			description: STRINGS.ROOMS.CRITERIA.NO_EXTRA_INDUSTRIAL.DESCRIPTION);
 
 		public static RoomConstraints.Constraint NUCLEAR_REACTOR = new RoomConstraints.Constraint(
 			bc => bc.HasTag(RoomConstraintTags.NuclearReactorTag),
@@ -112,18 +132,6 @@ namespace MoreRoomTypes
 			null,
 			name: STRINGS.ROOMS.CRITERIA.STEAM_TURBINE.NAME,
 			description: STRINGS.ROOMS.CRITERIA.STEAM_TURBINE.DESCRIPTION);
-
-		public static RoomConstraints.Constraint OXYGEN_PRODUCER = new RoomConstraints.Constraint(
-			bc => bc.HasTag(RoomConstraintTags.OxygenProducerTag),
-			null,
-			name: STRINGS.ROOMS.CRITERIA.OXYGEN_PRODUCER.NAME,
-			description: STRINGS.ROOMS.CRITERIA.OXYGEN_PRODUCER.DESCRIPTION);
-
-		public static RoomConstraints.Constraint GAS_PUMP = new RoomConstraints.Constraint(
-			bc => bc.HasTag(RoomConstraintTags.GasPumpBuildingTag),
-			null,
-			name: STRINGS.ROOMS.CRITERIA.GAS_PUMP.NAME,
-			description: STRINGS.ROOMS.CRITERIA.GAS_PUMP.DESCRIPTION);
 
 		public static RoomConstraints.Constraint COMPOST = new RoomConstraints.Constraint(
 			bc => bc.HasTag(RoomConstraintTags.CompostBuildingTag),

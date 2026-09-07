@@ -11,9 +11,10 @@ namespace MoreRoomTypes
 		{
 			Id = RoomId;
 			Name = STRINGS.ROOMS.TYPES.PRIVATEBATHROOM.NAME;
+			Description = STRINGS.ROOMS.TYPES.PRIVATEBATHROOM.DESCRIPTION;
 			Tooltip = STRINGS.ROOMS.TYPES.PRIVATEBATHROOM.TOOLTIP;
 			Effect = STRINGS.ROOMS.TYPES.PRIVATEBATHROOM.EFFECT;
-			Catergory = CreateCategory();
+			Catergory = CreateCategory(Db.Get().RoomTypeCategories.Bathroom);
 			ConstraintPrimary = RoomModdedConstraints.FLUSH_TOILET_EXACTLY_ONE;
 			ConstrantsAdditional = new RoomConstraints.Constraint[]
 			{
@@ -35,7 +36,10 @@ namespace MoreRoomTypes
 			Upgrades = null;
 			SingleAssignee = true;
 			PriorityUse = false;
-			Effects = new string[] { RoomsExpanded_Patches_PrivateBathroom.VanillaBathroomEffectId };
+			Effects = new string[]
+			{
+				RoomsExpanded_Patches_PrivateBathroom.ExtraMoraleEffectId
+			};
 			SortKey = SortingCounter.GetAndIncrement(SortingCounter.PlumbedBathroomSortKey);
 		}
 	}

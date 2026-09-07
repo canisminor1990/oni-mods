@@ -68,7 +68,7 @@ public class Mod : UserMod2
 5. `OutputPath` → `$(MSBuildProjectDirectory)\..\..\local\<ModName>\`
 6. AfterBuild copy yaml, `translations\`, and any `packaging\` assets.
 7. Build: `npm run build` or `npm run build -- <ModName>` (wraps `dotnet build -c Release`).
-8. User must **fully quit the game** to pick up DLL/PNG. Hot reload is not enough.
+8. User must **fully quit the game** to pick up DLL/PNG. Hot reload is not enough. This is an **agent/dev note only** — never put DLL, hot reload, `local/`, or build-reload instructions in `README.md` / Workshop copy. Players subscribe on Steam; they do not update a DLL. A restart sentence is OK only when a *player action* (settings, custom fonts/PNGs, room toggles) actually needs a full quit.
 9. Edit `src/<Mod>/README.md` only. Add a `package.json` `oniMods` stub. After Workshop publish: `npm run steam-ids` then `npm run desc` (root table is generated).
 
 Add Unity module refs only when the compiler asks (`ImageConversionModule`, `UI`, `TextMeshPro`, `JSONSerializeModule`, …).
@@ -158,7 +158,7 @@ Plain English pitch.
 [/list]
 ```
 
-English first, then `[hr][/hr]`, then Chinese. Both languages must include the Compat_All `[img]`. Use `[h1]` / `[h3]` only (no `[h2]`). Chinese pitch is `[i]…[/i]`; English pitch is plain text. `[b]`, `[i]` (also for paths), `[list]` / `[olist]` with `[*]`, `[code]`, `[url=https://…]label[/url]`. Numbered how-tos are `[olist]`. JSON or literal square brackets go in `[code]` or `[noparse]`.
+English first, then `[hr][/hr]`, then Chinese. Both languages must include the Compat_All `[img]`. Use `[h1]` / `[h3]` only (no `[h2]`). Chinese pitch is `[i]…[/i]`; English pitch is plain text. `[b]`, `[i]` (also for paths), `[list]` / `[olist]` with `[*]`, `[code]`, `[url=https://…]label[/url]`. Numbered how-tos are `[olist]`. JSON or literal square brackets go in `[code]` or `[noparse]`. Player copy never mentions updating a DLL, hot reload, `local/`, or rebuild — those stay in AGENTS.md / this skill. Restart text is OK only for a player action that actually needs a full quit.
 
 `Description.txt` is generated BBCode. Do not write Markdown into it. Skip `[table]`, `[color]`, `[size]`, `[spoiler]`, `[previewyoutube]`. `README.md` uses Markdown for the same facts, plus `![ALL DLC](Compat_All url)` and a Steam Workshop line.
 

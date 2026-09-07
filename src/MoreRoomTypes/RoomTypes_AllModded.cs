@@ -6,11 +6,9 @@ namespace MoreRoomTypes
 		static RoomType prv_gym;
 		static RoomType prv_Museum;
 		static RoomType prv_MuseumSpace;
-		static RoomType prv_Industrial;
 		static RoomType prv_PrivateBathroom;
 		static RoomType prv_Warehouse;
 		static RoomType prv_Battery;
-		static RoomType prv_Oxygen;
 		static RoomType prv_Waste;
 		static RoomType prv_Water;
 		static RoomType prv_Nuclear;
@@ -56,13 +54,6 @@ namespace MoreRoomTypes
 			}
 		}
 
-		public static RoomType IndustrialRoom(RoomType[] upgrades)
-		{
-			if (prv_Industrial == null)
-				prv_Industrial = new RoomTypeIndustrialData(upgrades).GetRoomType();
-			return prv_Industrial;
-		}
-
 		public static RoomType PrivateBathroom
 		{
 			get
@@ -90,16 +81,6 @@ namespace MoreRoomTypes
 				if (prv_Battery == null)
 					prv_Battery = new RoomTypeBatteryRoomData().GetRoomType();
 				return prv_Battery;
-			}
-		}
-
-		public static RoomType OxygenRoom
-		{
-			get
-			{
-				if (prv_Oxygen == null)
-					prv_Oxygen = new RoomTypeOxygenRoomData().GetRoomType();
-				return prv_Oxygen;
 			}
 		}
 

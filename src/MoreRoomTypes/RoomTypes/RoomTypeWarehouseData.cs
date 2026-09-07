@@ -11,9 +11,10 @@ namespace MoreRoomTypes
 		{
 			Id = RoomId;
 			Name = STRINGS.ROOMS.TYPES.WAREHOUSE.NAME;
+			Description = STRINGS.ROOMS.TYPES.WAREHOUSE.DESCRIPTION;
 			Tooltip = STRINGS.ROOMS.TYPES.WAREHOUSE.TOOLTIP;
 			Effect = STRINGS.ROOMS.TYPES.WAREHOUSE.EFFECT;
-			Catergory = CreateCategory();
+			Catergory = CreateCategory(Db.Get().RoomTypeCategories.Industrial);
 			ConstraintPrimary = RoomModdedConstraints.STORAGE_BUILDINGS;
 			ConstrantsAdditional = new RoomConstraints.Constraint[]
 			{

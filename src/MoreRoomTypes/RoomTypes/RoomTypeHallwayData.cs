@@ -12,13 +12,15 @@ namespace MoreRoomTypes
 		{
 			Id = RoomId;
 			Name = STRINGS.ROOMS.TYPES.HALLWAY.NAME;
+			Description = STRINGS.ROOMS.TYPES.HALLWAY.DESCRIPTION;
 			Tooltip = STRINGS.ROOMS.TYPES.HALLWAY.TOOLTIP;
 			Effect = STRINGS.ROOMS.TYPES.HALLWAY.EFFECT;
-			Catergory = CreateCategory();
+			Catergory = CreateCategory(Db.Get().RoomTypeCategories.Recreation);
 			ConstraintPrimary = RoomModdedConstraints.LADDER;
 			ConstrantsAdditional = new RoomConstraints.Constraint[]
 			{
 				RoomModdedConstraints.FIRE_POLE,
+				RoomConstraints.NO_INDUSTRIAL_MACHINERY,
 				RoomConstraints.MINIMUM_SIZE_12,
 				RoomConstraintTags.GetMaxSizeConstraint(Settings.Instance.Hallway.MaxSize)
 			};

@@ -14,11 +14,11 @@ namespace MoreRoomTypes
 
 		public override void OnLoad(Harmony harmony)
 		{
-			base.OnLoad(harmony);
-
 			HarmonyInstance = harmony;
 			Namespace = GetType().Namespace;
 			ContentPath = path;
+			Settings.EnsureLoaded();
+			base.OnLoad(harmony);
 
 			Debug.Log($"{Namespace}: Loaded from: {ContentPath}");
 			if (mod != null && mod.packagedModInfo != null)

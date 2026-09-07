@@ -33,15 +33,12 @@ namespace MoreRoomTypes
 			Stomp(__instance.NatureReserve);
 			Stomp(RoomConstraintTags.FindRoomType(__instance, "BanquetHall"));
 			Stomp(__instance.MassageClinic);
-			Stomp(RoomConstraintTags.FindRoomType(__instance, RoomTypeIndustrialData.RoomId));
 			if (Settings.Instance.PrivateBathroom.IncludeRoom)
 				Stomp(RoomTypes_AllModded.PrivateBathroom);
 			if (Settings.Instance.Warehouse.IncludeRoom)
 				Stomp(RoomTypes_AllModded.Warehouse);
 			if (Settings.Instance.BatteryRoom.IncludeRoom)
 				Stomp(RoomTypes_AllModded.BatteryRoom);
-			if (Settings.Instance.OxygenRoom.IncludeRoom)
-				Stomp(RoomTypes_AllModded.OxygenRoom);
 			if (Settings.Instance.WasteRoom.IncludeRoom)
 				Stomp(RoomTypes_AllModded.WasteRoom);
 			if (Settings.Instance.WaterRoom.IncludeRoom)

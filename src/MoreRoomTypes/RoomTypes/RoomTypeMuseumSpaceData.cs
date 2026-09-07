@@ -12,9 +12,10 @@ namespace MoreRoomTypes
 		{
 			Id = RoomId;
 			Name = STRINGS.ROOMS.TYPES.MUSEUMSPACE.NAME;
+			Description = STRINGS.ROOMS.TYPES.MUSEUMSPACE.DESCRIPTION;
 			Tooltip = STRINGS.ROOMS.TYPES.MUSEUMSPACE.TOOLTIP;
-			Effect = string.Format(STRINGS.ROOMS.TYPES.MUSEUMSPACE.EFFECT, MiscUtils.Percent(Settings.Instance.MuseumSpace.Bonus));
-			Catergory = CreateCategory();
+			Effect = STRINGS.ROOMS.TYPES.MUSEUMSPACE.EFFECT;
+			Catergory = CreateCategory(Db.Get().RoomTypeCategories.Recreation);
 			ConstraintPrimary = RoomModdedConstraints.PEDESTAL;
 			ConstrantsAdditional = new RoomConstraints.Constraint[5]
 			{

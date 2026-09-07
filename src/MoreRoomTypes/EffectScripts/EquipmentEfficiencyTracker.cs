@@ -6,8 +6,6 @@ namespace MoreRoomTypes
 	{
 		public const float Bonus = 0.1f;
 
-		float originalPumpRate = -1f;
-
 		public static void Attach(GameObject go)
 		{
 			if (go != null)
@@ -19,12 +17,10 @@ namespace MoreRoomTypes
 			if (component == null)
 				return false;
 
-			bool oxygen = RoomConstraintTags.HasBuildingTag(component, RoomConstraintTags.OxygenProducerTag)
-				|| RoomConstraintTags.HasBuildingTag(component, RoomConstraintTags.GasPumpBuildingTag);
 			bool waste = RoomConstraintTags.HasBuildingTag(component, RoomConstraintTags.CompostBuildingTag)
 				|| RoomConstraintTags.HasBuildingTag(component, RoomConstraintTags.WasteProcessorTag);
 			bool water = RoomConstraintTags.HasBuildingTag(component, RoomConstraintTags.WaterTreatmentTag);
-			if (!oxygen && !waste && !water)
+			if (!waste && !water)
 				return false;
 
 			if (Game.Instance == null || Game.Instance.roomProber == null)
@@ -35,8 +31,6 @@ namespace MoreRoomTypes
 				return false;
 
 			string roomId = info.room.roomType.Id;
-			if (oxygen && roomId == RoomTypeOxygenRoomData.RoomId)
-				return true;
 			if (waste && roomId == RoomTypeWasteRoomData.RoomId)
 				return true;
 			if (water && roomId == RoomTypeWaterRoomData.RoomId)
@@ -52,28 +46,6 @@ namespace MoreRoomTypes
 			ElementConverter converter = GetComponent<ElementConverter>();
 			if (converter != null)
 				converter.SetWorkSpeedMultiplier(speed);
-
-			UpdatePumpRate(boost);
-		}
-
-		void UpdatePumpRate(bool boost)
-		{
-			if (!RoomConstraintTags.HasBuildingTag(this, RoomConstraintTags.GasPumpBuildingTag))
-				return;
-
-			ElementConsumer consumer = GetComponent<ElementConsumer>();
-			if (consumer == null)
-				return;
-
-			if (originalPumpRate < 0f)
-				originalPumpRate = consumer.consumptionRate;
-
-			float target = boost ? originalPumpRate * (1f + Bonus) : originalPumpRate;
-			if (!Mathf.Approximately(consumer.consumptionRate, target))
-			{
-				consumer.consumptionRate = target;
-				consumer.RefreshConsumptionRate();
-			}
 		}
 	}
 }
