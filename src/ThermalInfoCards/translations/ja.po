@@ -1,0 +1,134 @@
+msgid ""
+msgstr ""
+"Project-Id-Version: ThermalInfoCards\n"
+"Language: ja\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Application: Oxygen Not Included\n"
+"POT Version: 2.0\n"
+
+msgctxt "ThermalInfoCards.STRINGS.THERMAL_INFO_CARDS.SETTINGS_BUTTON"
+msgid "Settings"
+msgstr "設定"
+
+msgctxt "ThermalInfoCards.STRINGS.THERMAL_INFO_CARDS.SETTINGS_TITLE"
+msgid "Thermal Info Cards"
+msgstr "熱情報カード"
+
+msgctxt "ThermalInfoCards.STRINGS.THERMAL_INFO_CARDS.SETTINGS_HINT"
+msgid "Thermal lines apply immediately. Card grouping and size tweaks may need a restart."
+msgstr "熱の行はすぐ反映されます。カードのまとめとサイズ変更は再起動が必要な場合があります。"
+
+msgctxt "ThermalInfoCards.STRINGS.THERMAL_INFO_CARDS.DISPLAY_ALL"
+msgid "Display All Units"
+msgstr "すべての温度単位を表示"
+
+msgctxt "ThermalInfoCards.STRINGS.THERMAL_INFO_CARDS.DISPLAY_ALL_TOOLTIP"
+msgid "Show temperatures in Fahrenheit, Celsius, and Kelvin."
+msgstr "華氏、摂氏、ケルビンを同時に表示します。"
+
+msgctxt "ThermalInfoCards.STRINGS.THERMAL_INFO_CARDS.ONLY_THERMAL"
+msgid "Only on Thermal Overlay"
+msgstr "温度オーバーレイ時のみ"
+
+msgctxt "ThermalInfoCards.STRINGS.THERMAL_INFO_CARDS.ONLY_THERMAL_TOOLTIP"
+msgid "Show extra thermal stats only on the Temperature Overlay."
+msgstr "追加の熱情報は温度オーバーレイのときだけ表示します。"
+
+msgctxt "ThermalInfoCards.STRINGS.THERMAL_INFO_CARDS.HIDE_ELEMENT_CATEGORIES"
+msgid "Hide Element Categories"
+msgstr "元素カテゴリを隠す"
+
+msgctxt "ThermalInfoCards.STRINGS.THERMAL_INFO_CARDS.HIDE_ELEMENT_CATEGORIES_TOOLTIP"
+msgid "Remove element category lines from hover cards."
+msgstr "ホバーカードから元素カテゴリ行を外します。"
+
+msgctxt "ThermalInfoCards.STRINGS.THERMAL_INFO_CARDS.RESTRICT_SELECTION"
+msgid "Restrict Selections"
+msgstr "選択範囲を制限"
+
+msgctxt "ThermalInfoCards.STRINGS.THERMAL_INFO_CARDS.RESTRICT_SELECTION_TOOLTIP"
+msgid "On: only cards the base game would allow. Off: any visible card can be selected."
+msgstr "オン：本体と同じカードだけ選べます。オフ：見えるカードはどれでも選べます。"
+
+msgctxt "ThermalInfoCards.STRINGS.THERMAL_INFO_CARDS.FIRST_SELECTION_HOVER"
+msgid "First Selection Hover"
+msgstr "最初の選択はハイライト対象"
+
+msgctxt "ThermalInfoCards.STRINGS.THERMAL_INFO_CARDS.FIRST_SELECTION_HOVER_TOOLTIP"
+msgid "On: first click selects the highlighted object. Off: first click selects the first card."
+msgstr "オン：最初のクリックでハイライト中の物体を選びます。オフ：最初のカードを選びます。"
+
+msgctxt "ThermalInfoCards.STRINGS.THERMAL_INFO_CARDS.OVERRIDE_CARD_SIZE"
+msgid "Compact Cards"
+msgstr "コンパクトカード"
+
+msgctxt "ThermalInfoCards.STRINGS.THERMAL_INFO_CARDS.OVERRIDE_CARD_SIZE_TOOLTIP"
+msgid "Slightly smaller fonts and icons on hover cards. Restart after changing."
+msgstr "ホバーカードの文字とアイコンを少し小さくします。変更後は再起動してください。"
+
+msgctxt "ThermalInfoCards.STRINGS.THERMAL_INFO_CARDS.AND_JOIN"
+msgid "[{0}] and "
+msgstr "[{0}] と "
+
+msgctxt "ThermalInfoCards.STRINGS.THERMAL_INFO_CARDS.CHANGES"
+msgid "Changes"
+msgstr "変化"
+
+msgctxt "ThermalInfoCards.STRINGS.THERMAL_INFO_CARDS.TO_JOIN"
+msgid " to "
+msgstr " → "
+
+msgctxt "ThermalInfoCards.STRINGS.THERMAL_INFO_CARDS.SUM"
+msgid " (Σ)"
+msgstr " (Σ)"
+
+msgctxt "ThermalInfoCards.STRINGS.THERMAL_INFO_CARDS.HEAT_ENERGY"
+msgid "Heat Energy: {0} {1}"
+msgstr "熱量：{0} {1}"
+
+msgctxt "ThermalInfoCards.STRINGS.THERMAL_INFO_CARDS.THERMAL_MASS"
+msgid "Thermal Mass: {0} {1}/{2}"
+msgstr "熱容量：{0} {1}/{2}"
+
+msgctxt "ThermalInfoCards.STRINGS.THERMAL_INFO_CARDS.HOVER_CONDUCTIVITY"
+msgid "Thermal Conductivity: {0}"
+msgstr "熱伝導率：{0}"
+
+msgctxt "ThermalInfoCards.STRINGS.THERMAL_INFO_CARDS.EFFECT_CONDUCTIVITY"
+msgid "<link=\"HEAT\">Thermal Conductivity</link>: {0}"
+msgstr "<link=\"HEAT\">熱伝導率</link>：{0}"
+
+msgctxt "ThermalInfoCards.STRINGS.THERMAL_INFO_CARDS.EFFECT_MELT_TEMPERATURE"
+msgid "<link=\"HEAT\">Melting Point</link>: {0}"
+msgstr "<link=\"HEAT\">融点</link>：{0}"
+
+msgctxt "ThermalInfoCards.STRINGS.THERMAL_INFO_CARDS.EFFECT_THERMAL_MASS"
+msgid "<link=\"HEAT\">Thermal Mass</link>: {0:##0.#} {1}/{2}"
+msgstr "<link=\"HEAT\">熱容量</link>：{0:##0.#} {1}/{2}"
+
+msgctxt "ThermalInfoCards.STRINGS.THERMAL_INFO_CARDS.BUILDING_CONDUCTIVITY"
+msgid ""
+"The completed {0} will have a thermal conductivity of <b>{1}</b>\n"
+"\n"
+"For every 1 {3} of difference between the building's <link=\"HEAT\">Temperature</link> and its surroundings, {2:##0.#} {4} will be transferred"
+msgstr ""
+"完成した{0}の熱伝導率は <b>{1}</b> です。\n"
+"\n"
+"建物と周囲の<link=\"HEAT\">温度</link>差 1 {3} ごとに {2:##0.#} {4} が移動します"
+
+msgctxt "ThermalInfoCards.STRINGS.THERMAL_INFO_CARDS.BUILDING_MELT_TEMPERATURE"
+msgid "The completed {0} will melt at <b>{1}</b> into {2}"
+msgstr "完成した{0}は <b>{1}</b> で溶けて {2} になります"
+
+msgctxt "ThermalInfoCards.STRINGS.THERMAL_INFO_CARDS.BUILDING_THERMAL_MASS"
+msgid ""
+"The completed {0} will have a thermal mass of <b>{1:##0.#} {2}/{3}</b>\n"
+"\n"
+"Adding or removing {1:##0.#} {2} will change the building's <link=\"HEAT\">Temperature</link> by 1 {3}"
+msgstr ""
+"完成した{0}の熱容量は <b>{1:##0.#} {2}/{3}</b> です。\n"
+"\n"
+"{1:##0.#} {2} を足すか減らすと建物の<link=\"HEAT\">温度</link>が 1 {3} 変わります"
+

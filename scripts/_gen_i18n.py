@@ -1,0 +1,395 @@
+# One-shot: write ja.po / ko.po / ru.po next to each zh.po.
+# Run from repo root: python scripts/_gen_i18n.py
+
+from pathlib import Path
+
+ROOT = Path(__file__).resolve().parents[1] / "src"
+
+HEADER = '''msgid ""
+msgstr ""
+"Project-Id-Version: {project}\\n"
+"Language: {lang}\\n"
+"MIME-Version: 1.0\\n"
+"Content-Type: text/plain; charset=UTF-8\\n"
+"Content-Transfer-Encoding: 8bit\\n"
+"Application: Oxygen Not Included\\n"
+"POT Version: 2.0\\n"
+'''
+
+def esc(s: str) -> str:
+	return s.replace("\\", "\\\\").replace('"', '\\"')
+
+def write_entry(lines, ctx, msgid, msgstr):
+	lines.append(f'msgctxt "{esc(ctx)}"')
+	if "\n" in msgid or "\n" in msgstr:
+		def blob(key, text):
+			parts = text.split("\n")
+			out = [f'{key} ""']
+			for i, part in enumerate(parts):
+				suffix = "\\n" if i < len(parts) - 1 else ""
+				out.append(f'"{esc(part)}{suffix}"')
+			return out
+		lines.extend(blob("msgid", msgid))
+		lines.extend(blob("msgstr", msgstr))
+	else:
+		lines.append(f'msgid "{esc(msgid)}"')
+		lines.append(f'msgstr "{esc(msgstr)}"')
+	lines.append("")
+
+def write_po(path: Path, project: str, lang: str, entries):
+	lines = [HEADER.format(project=project, lang=lang), ""]
+	for ctx, msgid, msgstr in entries:
+		write_entry(lines, ctx, msgid, msgstr)
+	path.parent.mkdir(parents=True, exist_ok=True)
+	path.write_text("\n".join(lines).replace("\n\n\n", "\n\n") + "\n", encoding="utf-8")
+	print("wrote", path.relative_to(ROOT.parent))
+
+
+# (msgctxt, msgid, ja, ko, ru)
+CUSTOM = [
+	("CustomChineseFonts.STRINGS.CUSTOM_CHINESE_FONTS.SETTINGS_BUTTON", "Settings", "設定", "설정", "Настройки"),
+	("CustomChineseFonts.STRINGS.CUSTOM_CHINESE_FONTS.SETTINGS_TITLE", "Custom Chinese Fonts", "中国語フォント", "중국어 글꼴", "Китайские шрифты"),
+	("CustomChineseFonts.STRINGS.CUSTOM_CHINESE_FONTS.SETTINGS_HINT",
+	 "Chinese body text uses HarmonyOS Sans SC Regular unless you add body.ttf. Restart after turning English replacement off, or after adding custom fonts.",
+	 "本文は HarmonyOS Sans SC Regular を使います。body.ttf を置くと差し替えできます。英語フォント置換を切ったあと、またはフォントを追加したあとは再起動してください。",
+	 "본문은 HarmonyOS Sans SC Regular을 씁니다. body.ttf를 넣으면 바꿀 수 있습니다. 영어 글꼴 치환을 끄거나 글꼴을 추가한 뒤에는 게임을 완전히 종료했다가 다시 켜세요.",
+	 "Основной текст использует HarmonyOS Sans SC Regular, пока не добавите body.ttf. Полностью перезапустите игру после отключения замены английских шрифтов или добавления своих."),
+	("CustomChineseFonts.STRINGS.CUSTOM_CHINESE_FONTS.SECTION_ENGLISH", "Replace English fonts", "英語フォントを置換", "영어 글꼴 바꾸기", "Заменять английские шрифты"),
+	("CustomChineseFonts.STRINGS.CUSTOM_CHINESE_FONTS.ENGLISH_OFF", "Off", "オフ", "끄기", "Выкл."),
+	("CustomChineseFonts.STRINGS.CUSTOM_CHINESE_FONTS.ENGLISH_ON", "On", "オン", "켜기", "Вкл."),
+	("CustomChineseFonts.STRINGS.CUSTOM_CHINESE_FONTS.SECTION_TITLE", "Chinese title font", "中国語タイトルフォント", "중국어 제목 글꼴", "Шрифт китайских заголовков"),
+	("CustomChineseFonts.STRINGS.CUSTOM_CHINESE_FONTS.TITLE_HARMONYOS", "HarmonyOS Sans SC Bold", "HarmonyOS Sans SC Bold", "HarmonyOS Sans SC Bold", "HarmonyOS Sans SC Bold"),
+	("CustomChineseFonts.STRINGS.CUSTOM_CHINESE_FONTS.TITLE_JINZISHE", "Jinzishe Dezheng", "金字社得正体", "금자사 득정체", "Jinzishe Dezheng"),
+	("CustomChineseFonts.STRINGS.CUSTOM_CHINESE_FONTS.TITLE_CUSTOM", "Custom", "カスタム", "사용자 지정", "Свой"),
+	("CustomChineseFonts.STRINGS.CUSTOM_CHINESE_FONTS.CUSTOM_FONTS_HINT",
+	 "Optional own fonts: put body.ttf / title.ttf (or .otf) in Documents/Klei/OxygenNotIncluded/mods/config/CustomChineseFonts/custom_fonts/ then fully restart.",
+	 "自分のフォントを使う場合は body.ttf / title.ttf（または .otf）を Documents/Klei/OxygenNotIncluded/mods/config/CustomChineseFonts/custom_fonts/ に置いて、ゲームを完全に終了してから再起動してください。",
+	 "직접 글꼴을 쓰려면 body.ttf / title.ttf(또는 .otf)를 Documents/Klei/OxygenNotIncluded/mods/config/CustomChineseFonts/custom_fonts/에 넣은 뒤 게임을 완전히 종료했다가 다시 켜세요.",
+	 "Свои шрифты: положите body.ttf / title.ttf (или .otf) в Documents/Klei/OxygenNotIncluded/mods/config/CustomChineseFonts/custom_fonts/ и полностью перезапустите игру."),
+]
+
+DUPES = [
+	("DuplicantPortraits.STRINGS.DUPLICANT_PORTRAITS.STAGE_NAME", "Portrait of {0}", "{0}の肖像", "{0}의 초상", "Портрет: {0}"),
+	("DuplicantPortraits.STRINGS.DUPLICANT_PORTRAITS.STAGE_DESC",
+	 "A masterpiece portrait of {0}, painted on a Blank Canvas.",
+	 "白紙のキャンバスに描かれた傑作：{0}の肖像。",
+	 "빈 캔버스에 그린 걸작: {0}의 초상.",
+	 "Шедевр на чистом холсте: портрет {0}."),
+]
+
+PREVIEWS = [
+	("ModListPreviews.STRINGS.UI.MODLISTPREVIEWS.SETTINGS_BUTTON", "Settings", "設定", "설정", "Настройки"),
+	("ModListPreviews.STRINGS.UI.MODLISTPREVIEWS.SETTINGS_TITLE", "Mod List Previews", "MODリストのカバー", "모드 목록 커버", "Обложки в списке модов"),
+	("ModListPreviews.STRINGS.UI.MODLISTPREVIEWS.SETTINGS_HINT", "Cover size and cache for the Mods list.", "MODリストのカバーサイズとキャッシュ。", "모드 목록 커버 크기와 캐시.", "Размер обложек и кэш списка модов."),
+	("ModListPreviews.STRINGS.UI.MODLISTPREVIEWS.SIZE_VALUE", "{0} px", "{0} px", "{0} px", "{0} пикс."),
+	("ModListPreviews.STRINGS.UI.MODLISTPREVIEWS.MINUS", "−", "−", "−", "−"),
+	("ModListPreviews.STRINGS.UI.MODLISTPREVIEWS.PLUS", "+", "+", "+", "+"),
+	("ModListPreviews.STRINGS.UI.MODLISTPREVIEWS.REFRESH_COVERS", "Refresh covers", "カバーを更新", "커버 새로고침", "Обновить обложки"),
+	("ModListPreviews.STRINGS.UI.MODLISTPREVIEWS.REFRESH_HINT",
+	 "Clear cached images and download workshop covers again.",
+	 "キャッシュを消してワークショップのカバーを再ダウンロードします。",
+	 "캐시를 지우고 창작마당 커버를 다시 받습니다.",
+	 "Очистить кэш и снова скачать обложки Мастерской."),
+	("ModListPreviews.STRINGS.UI.MODLISTPREVIEWS.REFRESH_STARTED", "Refreshing covers...", "カバーを再ダウンロード中…", "커버를 다시 받는 중…", "Обложки обновляются…"),
+]
+
+DRYWALL = [
+	("DrywallTileSkins.STRINGS.DRYWALL_TILE_SKINS.FACADE_DESC", "Applies this tile's interior cell to Drywall, without tile borders.", "このタイルの内側マスをドライウォールに貼ります。枠は使いません。", "이 타일의 안쪽 칸만 석고 벽에 붙입니다. 테두리는 쓰지 않습니다.", "Наносит внутреннюю клетку этой плитки на гипсокартон без рамки."),
+	("DrywallTileSkins.STRINGS.DRYWALL_TILE_SKINS.CUSTOM_DESC", "Custom Drywall wallpaper. Repeats the interior cell only.", "カスタムのドライウォール壁紙。内側マスだけを繰り返します。", "사용자 지정 석고 벽지. 안쪽 칸만 반복합니다.", "Свои обои для гипсокартона. Повторяется только внутренняя клетка."),
+	("DrywallTileSkins.STRINGS.DRYWALL_TILE_SKINS.BUILTIN_DESC", "Built-in cartoon wallpaper in the vanilla Drywall print style.", "本体ドライウォール風の内蔵カートゥーン壁紙。", "본편 석고 벽 무늬 느낌의 기본 만화 벽지.", "Встроенные мультяшные обои в стиле обычного гипсокартона."),
+	("DrywallTileSkins.STRINGS.DRYWALL_TILE_SKINS.GROUP_BUILTIN", "Cartoon Prints", "カートゥーン壁紙", "만화 벽지", "Мультяшные обои"),
+	("DrywallTileSkins.STRINGS.DRYWALL_TILE_SKINS.GROUP_STAINED_GLASS", "Stained Glass", "ステンドグラス", "스테인드글라스", "Витраж"),
+	("DrywallTileSkins.STRINGS.DRYWALL_TILE_SKINS.GROUP_CUSTOM", "Custom Prints", "カスタム壁紙", "사용자 지정 벽지", "Свои обои"),
+	("DrywallTileSkins.STRINGS.DRYWALL_TILE_SKINS.SETTINGS_BUTTON", "Settings", "設定", "설정", "Настройки"),
+	("DrywallTileSkins.STRINGS.DRYWALL_TILE_SKINS.SETTINGS_TITLE", "Drywall Tile Skins", "ドライウォールタイルスキン", "석고 벽 타일 스킨", "Облицовка гипсокартона"),
+	("DrywallTileSkins.STRINGS.DRYWALL_TILE_SKINS.SETTINGS_HINT", "Choose which tile types to load as Drywall wallpapers. Restart the game to apply.", "ドライウォール壁紙にするタイル種類を選びます。反映するにはゲームを再起動してください。", "석고 벽지로 쓸 타일 종류를 고르세요. 적용하려면 게임을 다시 시작하세요.", "Выберите типы плитки для обоев гипсокартона. Перезапустите игру."),
+	("DrywallTileSkins.STRINGS.DRYWALL_TILE_SKINS.SETTINGS_ALL_ON", "Enable All", "すべて有効", "모두 켜기", "Включить все"),
+	("DrywallTileSkins.STRINGS.DRYWALL_TILE_SKINS.SETTINGS_ALL_OFF", "Disable All", "すべて無効", "모두 끄기", "Выключить все"),
+	("DrywallTileSkins.STRINGS.DRYWALL_TILE_SKINS.SETTINGS_CLOSE", "Close", "閉じる", "닫기", "Закрыть"),
+	("DrywallTileSkins.STRINGS.DRYWALL_TILE_SKINS.BUILTIN.PASTEL_DOTS", "Pastel Dots", "パステルドット", "파스텔 점", "Пастельные точки"),
+	("DrywallTileSkins.STRINGS.DRYWALL_TILE_SKINS.BUILTIN.CITRUS_SLICES", "Citrus Slices", "シトラススライス", "시트러스 조각", "Дольки цитруса"),
+	("DrywallTileSkins.STRINGS.DRYWALL_TILE_SKINS.BUILTIN.COLONY_STARS", "Colony Stars", "コロニースター", "식민지 별", "Звёзды колонии"),
+	("DrywallTileSkins.STRINGS.DRYWALL_TILE_SKINS.BUILTIN.MUSH_CAPS", "Mushroom Caps", "キノコ笠", "버섯 갓", "Шляпки грибов"),
+	("DrywallTileSkins.STRINGS.DRYWALL_TILE_SKINS.BUILTIN.RAIN_DROPS", "Raindrops", "雨粒", "빗방울", "Капли дождя"),
+	("DrywallTileSkins.STRINGS.DRYWALL_TILE_SKINS.BUILTIN.PUFFY_CLOUDS", "Puffy Clouds", "ふわふわ雲", "솜구름", "Пушистые облака"),
+	("DrywallTileSkins.STRINGS.DRYWALL_TILE_SKINS.BUILTIN.LEAF_SCATTER", "Scattered Leaves", "散った葉", "흩어진 잎", "Опавшие листья"),
+	("DrywallTileSkins.STRINGS.DRYWALL_TILE_SKINS.BUILTIN.HONEYCOMB", "Honeycomb", "ハニカム", "벌집", "Соты"),
+	("DrywallTileSkins.STRINGS.DRYWALL_TILE_SKINS.BUILTIN.WAVY_SEA", "Wavy Sea", "波の海", "물결 바다", "Волнистое море"),
+	("DrywallTileSkins.STRINGS.DRYWALL_TILE_SKINS.BUILTIN.CANDY_HEARTS", "Candy Hearts", "キャンディハート", "사탕 하트", "Конфетные сердца"),
+	("DrywallTileSkins.STRINGS.DRYWALL_TILE_SKINS.BUILTIN.CARTOON_BRICKS", "Cartoon Bricks", "カートゥーンレンガ", "만화 벽돌", "Мультяшный кирпич"),
+	("DrywallTileSkins.STRINGS.DRYWALL_TILE_SKINS.BUILTIN.PLUS_GRID", "Plus Grid", "プラス格子", "십자 격자", "Решётка плюсов"),
+	("DrywallTileSkins.STRINGS.DRYWALL_TILE_SKINS.BUILTIN.LITTLE_FISH", "Little Fish", "小さな魚", "작은 물고기", "Рыбки"),
+	("DrywallTileSkins.STRINGS.DRYWALL_TILE_SKINS.BUILTIN.TINY_FLOWERS", "Tiny Flowers", "小さな花", "작은 꽃", "Цветочки"),
+	("DrywallTileSkins.STRINGS.DRYWALL_TILE_SKINS.BUILTIN.AQUA_BUBBLES", "Aqua Bubbles", "水の泡", "물방울", "Водяные пузыри"),
+	("DrywallTileSkins.STRINGS.DRYWALL_TILE_SKINS.BUILTIN.SOFT_CHECKERS", "Soft Checkers", "ソフトチェック", "부드러운 체크", "Мягкая клетка"),
+	("DrywallTileSkins.STRINGS.DRYWALL_TILE_SKINS.BUILTIN.LITTLE_SUNS", "Little Suns", "小さな太陽", "작은 태양", "Солнышки"),
+	("DrywallTileSkins.STRINGS.DRYWALL_TILE_SKINS.BUILTIN.CANDY_DIAMONDS", "Candy Diamonds", "キャンディダイヤ", "사탕 다이아", "Конфетные ромбы"),
+]
+
+STOCK = [
+	("StockProduction.STRINGS.STOCK_PRODUCTION.MODE_ONCE", "Once", "1回", "1회", "Разово"),
+	("StockProduction.STRINGS.STOCK_PRODUCTION.MODE_STOCK", "Maintain", "維持", "유지", "Поддерживать"),
+	("StockProduction.STRINGS.STOCK_PRODUCTION.MODE_FOREVER", "Forever", "連続", "계속", "Бесконечно"),
+	("StockProduction.STRINGS.STOCK_PRODUCTION.MODE_TOOLTIP",
+	 "Click to cycle Once, Maintain, and Forever.\n\nMaintain pauses when this world's Resources list reaches the number, and starts again when it drops below.",
+	 "クリックで切替：1回、維持、連続。\n\n維持では、この小惑星の資源一覧がその数に達すると止まり、下回ると再開します。",
+	 "클릭해서 전환: 1회, 유지, 계속.\n\n유지 모드는 이 소행성의 자원 목록이 그 수량에 도달하면 멈추고, 아래로 떨어지면 다시 시작합니다.",
+	 "Нажимайте, чтобы переключать: разово, поддерживать, бесконечно.\n\n«Поддерживать» останавливается, когда список ресурсов этого мира достигает числа, и возобновляется, когда запас падает."),
+	("StockProduction.STRINGS.STOCK_PRODUCTION.TARGET_TOOLTIP",
+	 "Pause when stock reaches this amount (same units as the Resources list).",
+	 "在庫がこの量に達すると一時停止します（単位は資源一覧と同じ）。",
+	 "재고가 이 수량에 도달하면 일시정지합니다(단위는 자원 목록과 같음).",
+	 "Пауза, когда запас достигает этого количества (те же единицы, что в списке ресурсов)."),
+	("StockProduction.STRINGS.STOCK_PRODUCTION.QUEUE_TOOLTIP",
+	 "Maintain: {0}\nCurrent: {1}\n\nPauses when the colony has this many. Starts again when stock drops below.",
+	 "維持：{0}\n現在：{1}\n\n足りていれば止まり、下回ると再開します。",
+	 "유지: {0}\n현재: {1}\n\n충분하면 멈추고, 아래로 떨어지면 다시 시작합니다.",
+	 "Поддерживать: {0}\nСейчас: {1}\n\nОстанавливается, когда запас достигнут. Возобновляется, когда его становится меньше."),
+	("StockProduction.STRINGS.STOCK_PRODUCTION.UNIT_KG", "kg", "kg", "kg", "кг"),
+	("StockProduction.STRINGS.STOCK_PRODUCTION.UNIT_T", "t", "t", "t", "т"),
+	("StockProduction.STRINGS.STOCK_PRODUCTION.UNIT_TOOLTIP",
+	 "Click to switch kilograms and tonnes.\n1 t = 1000 kg.",
+	 "クリックでキログラムとトンを切替。\n1 t = 1000 kg。",
+	 "클릭해서 킬로그램과 톤을 전환합니다.\n1 t = 1000 kg.",
+	 "Нажмите, чтобы переключить килограммы и тонны.\n1 т = 1000 кг."),
+]
+
+THERMAL = [
+	("ThermalInfoCards.STRINGS.THERMAL_INFO_CARDS.SETTINGS_BUTTON", "Settings", "設定", "설정", "Настройки"),
+	("ThermalInfoCards.STRINGS.THERMAL_INFO_CARDS.SETTINGS_TITLE", "Thermal Info Cards", "熱情報カード", "열 정보 카드", "Тепловые карточки"),
+	("ThermalInfoCards.STRINGS.THERMAL_INFO_CARDS.SETTINGS_HINT",
+	 "Thermal lines apply immediately. Card grouping and size tweaks may need a restart.",
+	 "熱の行はすぐ反映されます。カードのまとめとサイズ変更は再起動が必要な場合があります。",
+	 "열 줄은 바로 적용됩니다. 카드 묶기와 크기 변경은 재시작이 필요할 수 있습니다.",
+	 "Строки тепла применяются сразу. Группировка и размер карточек могут потребовать перезапуска."),
+	("ThermalInfoCards.STRINGS.THERMAL_INFO_CARDS.DISPLAY_ALL", "Display All Units", "すべての温度単位を表示", "모든 온도 단위 표시", "Все единицы температуры"),
+	("ThermalInfoCards.STRINGS.THERMAL_INFO_CARDS.DISPLAY_ALL_TOOLTIP", "Show temperatures in Fahrenheit, Celsius, and Kelvin.", "華氏、摂氏、ケルビンを同時に表示します。", "화씨, 섭씨, 켈빈을 함께 표시합니다.", "Показывать температуру в °F, °C и K."),
+	("ThermalInfoCards.STRINGS.THERMAL_INFO_CARDS.ONLY_THERMAL", "Only on Thermal Overlay", "温度オーバーレイ時のみ", "온도 오버레이에서만", "Только на тепловой карте"),
+	("ThermalInfoCards.STRINGS.THERMAL_INFO_CARDS.ONLY_THERMAL_TOOLTIP", "Show extra thermal stats only on the Temperature Overlay.", "追加の熱情報は温度オーバーレイのときだけ表示します。", "추가 열 정보는 온도 오버레이에서만 표시합니다.", "Доп. тепловые данные только на оверлее температуры."),
+	("ThermalInfoCards.STRINGS.THERMAL_INFO_CARDS.HIDE_ELEMENT_CATEGORIES", "Hide Element Categories", "元素カテゴリを隠す", "원소 분류 숨기기", "Скрыть категории элементов"),
+	("ThermalInfoCards.STRINGS.THERMAL_INFO_CARDS.HIDE_ELEMENT_CATEGORIES_TOOLTIP", "Remove element category lines from hover cards.", "ホバーカードから元素カテゴリ行を外します。", "호버 카드에서 원소 분류 줄을 뺍니다.", "Убрать строки категорий элементов с карточек."),
+	("ThermalInfoCards.STRINGS.THERMAL_INFO_CARDS.RESTRICT_SELECTION", "Restrict Selections", "選択範囲を制限", "선택 범위 제한", "Ограничить выбор"),
+	("ThermalInfoCards.STRINGS.THERMAL_INFO_CARDS.RESTRICT_SELECTION_TOOLTIP", "On: only cards the base game would allow. Off: any visible card can be selected.", "オン：本体と同じカードだけ選べます。オフ：見えるカードはどれでも選べます。", "켜기: 본편이 허용하는 카드만 선택. 끄기: 보이는 카드는 모두 선택 가능.", "Вкл.: только карточки как в ванили. Выкл.: любая видимая карточка."),
+	("ThermalInfoCards.STRINGS.THERMAL_INFO_CARDS.FIRST_SELECTION_HOVER", "First Selection Hover", "最初の選択はハイライト対象", "첫 선택은 가리킨 대상", "Первый клик — подсветка"),
+	("ThermalInfoCards.STRINGS.THERMAL_INFO_CARDS.FIRST_SELECTION_HOVER_TOOLTIP", "On: first click selects the highlighted object. Off: first click selects the first card.", "オン：最初のクリックでハイライト中の物体を選びます。オフ：最初のカードを選びます。", "켜기: 첫 클릭이 강조된 물체를 고릅니다. 끄기: 첫 카드를 고릅니다.", "Вкл.: первый клик выбирает подсвеченный объект. Выкл.: первую карточку."),
+	("ThermalInfoCards.STRINGS.THERMAL_INFO_CARDS.OVERRIDE_CARD_SIZE", "Compact Cards", "コンパクトカード", "작은 카드", "Компактные карточки"),
+	("ThermalInfoCards.STRINGS.THERMAL_INFO_CARDS.OVERRIDE_CARD_SIZE_TOOLTIP", "Slightly smaller fonts and icons on hover cards. Restart after changing.", "ホバーカードの文字とアイコンを少し小さくします。変更後は再起動してください。", "호버 카드의 글자와 아이콘을 조금 줄입니다. 바꾼 뒤 다시 시작하세요.", "Чуть меньше шрифт и иконки на карточках. После смены перезапустите."),
+	("ThermalInfoCards.STRINGS.THERMAL_INFO_CARDS.AND_JOIN", "[{0}] and ", "[{0}] と ", "[{0}] 및 ", "[{0}] и "),
+	("ThermalInfoCards.STRINGS.THERMAL_INFO_CARDS.CHANGES", "Changes", "変化", "변화", "Переходит"),
+	("ThermalInfoCards.STRINGS.THERMAL_INFO_CARDS.TO_JOIN", " to ", " → ", " → ", " в "),
+	("ThermalInfoCards.STRINGS.THERMAL_INFO_CARDS.SUM", " (Σ)", " (Σ)", " (Σ)", " (Σ)"),
+	("ThermalInfoCards.STRINGS.THERMAL_INFO_CARDS.HEAT_ENERGY", "Heat Energy: {0} {1}", "熱量：{0} {1}", "열량: {0} {1}", "Тепловая энергия: {0} {1}"),
+	("ThermalInfoCards.STRINGS.THERMAL_INFO_CARDS.THERMAL_MASS", "Thermal Mass: {0} {1}/{2}", "熱容量：{0} {1}/{2}", "열용량: {0} {1}/{2}", "Теплоёмкость: {0} {1}/{2}"),
+	("ThermalInfoCards.STRINGS.THERMAL_INFO_CARDS.HOVER_CONDUCTIVITY", "Thermal Conductivity: {0}", "熱伝導率：{0}", "열전도율: {0}", "Теплопроводность: {0}"),
+	("ThermalInfoCards.STRINGS.THERMAL_INFO_CARDS.EFFECT_CONDUCTIVITY", '<link="HEAT">Thermal Conductivity</link>: {0}', '<link="HEAT">熱伝導率</link>：{0}', '<link="HEAT">열전도율</link>: {0}', '<link="HEAT">Теплопроводность</link>: {0}'),
+	("ThermalInfoCards.STRINGS.THERMAL_INFO_CARDS.EFFECT_MELT_TEMPERATURE", '<link="HEAT">Melting Point</link>: {0}', '<link="HEAT">融点</link>：{0}', '<link="HEAT">녹는점</link>: {0}', '<link="HEAT">Температура плавления</link>: {0}'),
+	("ThermalInfoCards.STRINGS.THERMAL_INFO_CARDS.EFFECT_THERMAL_MASS", '<link="HEAT">Thermal Mass</link>: {0:##0.#} {1}/{2}', '<link="HEAT">熱容量</link>：{0:##0.#} {1}/{2}', '<link="HEAT">열용량</link>: {0:##0.#} {1}/{2}', '<link="HEAT">Теплоёмкость</link>: {0:##0.#} {1}/{2}'),
+	("ThermalInfoCards.STRINGS.THERMAL_INFO_CARDS.BUILDING_CONDUCTIVITY",
+	 "The completed {0} will have a thermal conductivity of <b>{1}</b>\n\nFor every 1 {3} of difference between the building's <link=\"HEAT\">Temperature</link> and its surroundings, {2:##0.#} {4} will be transferred",
+	 "完成した{0}の熱伝導率は <b>{1}</b> です。\n\n建物と周囲の<link=\"HEAT\">温度</link>差 1 {3} ごとに {2:##0.#} {4} が移動します",
+	 "완성된 {0}의 열전도율은 <b>{1}</b>입니다.\n\n건물과 주변 <link=\"HEAT\">온도</link>가 1 {3} 차이날 때마다 {2:##0.#} {4}가 전달됩니다",
+	 "У готового {0} теплопроводность <b>{1}</b>\n\nНа каждые 1 {3} разницы <link=\"HEAT\">температуры</link> здания и окружения передаётся {2:##0.#} {4}"),
+	("ThermalInfoCards.STRINGS.THERMAL_INFO_CARDS.BUILDING_MELT_TEMPERATURE",
+	 "The completed {0} will melt at <b>{1}</b> into {2}",
+	 "完成した{0}は <b>{1}</b> で溶けて {2} になります",
+	 "완성된 {0}는 <b>{1}</b>에서 녹아 {2}가 됩니다",
+	 "Готовый {0} расплавится при <b>{1}</b> в {2}"),
+	("ThermalInfoCards.STRINGS.THERMAL_INFO_CARDS.BUILDING_THERMAL_MASS",
+	 "The completed {0} will have a thermal mass of <b>{1:##0.#} {2}/{3}</b>\n\nAdding or removing {1:##0.#} {2} will change the building's <link=\"HEAT\">Temperature</link> by 1 {3}",
+	 "完成した{0}の熱容量は <b>{1:##0.#} {2}/{3}</b> です。\n\n{1:##0.#} {2} を足すか減らすと建物の<link=\"HEAT\">温度</link>が 1 {3} 変わります",
+	 "완성된 {0}의 열용량은 <b>{1:##0.#} {2}/{3}</b>입니다.\n\n{1:##0.#} {2}를 더하거나 빼면 건물 <link=\"HEAT\">온도</link>가 1 {3} 바뀝니다",
+	 "У готового {0} теплоёмкость <b>{1:##0.#} {2}/{3}</b>\n\nДобавление или удаление {1:##0.#} {2} меняет <link=\"HEAT\">температуру</link> здания на 1 {3}"),
+]
+
+ROOMS = [
+	("MoreRoomTypes.STRINGS.TRANSLATION.AUTHOR.NAME", "CanisMinor", "CanisMinor", "CanisMinor", "CanisMinor"),
+	("MoreRoomTypes.STRINGS.SETTINGS.BUTTON", "Settings", "設定", "설정", "Настройки"),
+	("MoreRoomTypes.STRINGS.SETTINGS.TITLE", "More Room Types", "追加の部屋", "추가 방 종류", "Больше типов комнат"),
+	("MoreRoomTypes.STRINGS.SETTINGS.HINT",
+	 "Enable or disable each extra room type. Fully quit Oxygen Not Included after changing these, then launch again.",
+	 "追加の部屋種類を個別にオン／オフできます。変更後はゲームを完全に終了してから再起動してください。",
+	 "추가 방 종류를 하나씩 켜거나 끌 수 있습니다. 바꾼 뒤 게임을 완전히 종료했다가 다시 켜세요.",
+	 "Включайте или выключайте каждый доп. тип комнаты. После смены полностью закройте игру и запустите снова."),
+	("MoreRoomTypes.STRINGS.SETTINGS.ALL_ON", "Enable all", "すべて有効", "모두 켜기", "Включить все"),
+	("MoreRoomTypes.STRINGS.SETTINGS.ALL_OFF", "Disable all", "すべて無効", "모두 끄기", "Выключить все"),
+	("MoreRoomTypes.STRINGS.ROOMS.TYPES.GRAVEYARD.NAME", "Graveyard", "墓地", "묘지", "Кладбище"),
+	("MoreRoomTypes.STRINGS.ROOMS.TYPES.GRAVEYARD.DESCRIPTION",
+	 "It makes Duplicants happy to think that they are still alive.\n\nVisiting a Graveyard will raise or lower Duplicants' Stress.",
+	 "まだ生きていると思えると複製人間は嬉しくなります。\n\n墓地を訪れると複製人間のストレスが上がるか下がります。",
+	 "아직 살아 있다는 생각에 복제인간이 기뻐합니다.\n\n묘지를 방문하면 복제인간의 스트레스가 오르거나 내려갑니다.",
+	 "Дубликантам приятно осознавать, что они ещё живы.\n\nПосещение кладбища повышает или снижает стресс."),
+	("MoreRoomTypes.STRINGS.ROOMS.TYPES.GRAVEYARD.EFFECT", "- Stress bonus", "- ストレス補正", "- 스트레스 보정", "- Бонус к стрессу"),
+	("MoreRoomTypes.STRINGS.ROOMS.TYPES.GRAVEYARD.TOOLTIP", "Visiting a Graveyard will raise or lower Duplicants' Stress", "墓地を訪れると複製人間のストレスが上がるか下がります", "묘지를 방문하면 복제인간의 스트레스가 오르거나 내려갑니다", "Посещение кладбища повышает или снижает стресс"),
+	("MoreRoomTypes.STRINGS.ROOMS.TYPES.GYMROOM.NAME", "Gym Room", "ジム", "체육관", "Спортзал"),
+	("MoreRoomTypes.STRINGS.ROOMS.TYPES.GYMROOM.DESCRIPTION",
+	 "Professional equipment lets Duplicants exercise more efficiently.\n\nWorking a Manual Generator in a Gym Room improves Athletics training.",
+	 "専門器具で複製人間は効率よく鍛えられます。\n\nジムの人力発電機を使うと運動スキルの訓練が早くなります。",
+	 "전문 기구로 복제인간이 더 효율적으로 운동합니다.\n\n체육관의 수동 발전기를 쓰면 운동 훈련이 빨라집니다.",
+	 "Профессиональные тренажёры дают дубликантам эффективнее тренироваться.\n\nРабота на ручном генераторе в спортзале ускоряет тренировку атлетики."),
+	("MoreRoomTypes.STRINGS.ROOMS.TYPES.GYMROOM.EFFECT", "- Athletics training bonus", "- 運動訓練ボーナス", "- 운동 훈련 보너스", "- Бонус тренировки атлетики"),
+	("MoreRoomTypes.STRINGS.ROOMS.TYPES.GYMROOM.TOOLTIP", "Working a Manual Generator in a Gym Room improves Athletics training", "ジムの人力発電機を使うと運動スキルの訓練が早くなります", "체육관의 수동 발전기를 쓰면 운동 훈련이 빨라집니다", "Ручной генератор в спортзале ускоряет тренировку атлетики"),
+	("MoreRoomTypes.STRINGS.ROOMS.TYPES.MUSEUM.NAME", "Art Museum", "美術館", "미술관", "Художественный музей"),
+	("MoreRoomTypes.STRINGS.ROOMS.TYPES.MUSEUM.DESCRIPTION",
+	 "It used to be a storehouse, before Meep confused Pedestal content with art.\n\nVisiting an Art Museum will improve Duplicants' Morale.",
+	 "かつては倉庫でした。ミープが台座の中身を芸術と勘違いするまでは。\n\n美術館を訪れると複製人間の士気が上がります。",
+	 "예전엔 창고였습니다. 미프가 받침대 위 물건을 예술로 착각하기 전까지는.\n\n미술관을 방문하면 복제인간의 사기가 오릅니다.",
+	 "Раньше это был склад, пока Мип не принял содержимое пьедесталов за искусство.\n\nПосещение музея повышает мораль дубликантов."),
+	("MoreRoomTypes.STRINGS.ROOMS.TYPES.MUSEUM.EFFECT", "- Morale bonus", "- 士気ボーナス", "- 사기 보너스", "- Бонус морали"),
+	("MoreRoomTypes.STRINGS.ROOMS.TYPES.MUSEUM.TOOLTIP", "Visiting an Art Museum will improve Duplicants' Morale", "美術館を訪れると複製人間の士気が上がります", "미술관을 방문하면 복제인간의 사기가 오릅니다", "Посещение музея повышает мораль"),
+	("MoreRoomTypes.STRINGS.ROOMS.TYPES.MUSEUMSPACE.NAME", "Space Museum", "宇宙博物館", "우주 박물관", "Космический музей"),
+	("MoreRoomTypes.STRINGS.ROOMS.TYPES.MUSEUMSPACE.DESCRIPTION",
+	 "Perfect for storing Ancient Knowledge on the pedestals.\n\nVisiting a Space Museum will improve Duplicants' Morale.",
+	 "古代の知識を台座に並べるのに最適です。\n\n宇宙博物館を訪れると複製人間の士気が上がります。",
+	 "고대 지식을 받침대에 올리기에 안성맞춤입니다.\n\n우주 박물관을 방문하면 복제인간의 사기가 오릅니다.",
+	 "Идеально, чтобы выставить древние знания на пьедесталах.\n\nПосещение космического музея повышает мораль."),
+	("MoreRoomTypes.STRINGS.ROOMS.TYPES.MUSEUMSPACE.EFFECT", "- Morale bonus", "- 士気ボーナス", "- 사기 보너스", "- Бонус морали"),
+	("MoreRoomTypes.STRINGS.ROOMS.TYPES.MUSEUMSPACE.TOOLTIP", "Visiting a Space Museum will improve Duplicants' Morale", "宇宙博物館を訪れると複製人間の士気が上がります", "우주 박물관을 방문하면 복제인간의 사기가 오릅니다", "Посещение космического музея повышает мораль"),
+	("MoreRoomTypes.STRINGS.ROOMS.TYPES.PRIVATEBATHROOM.NAME", "Private Bathroom", "個室トイレ", "개인 화장실", "Личная уборная"),
+	("MoreRoomTypes.STRINGS.ROOMS.TYPES.PRIVATEBATHROOM.DESCRIPTION",
+	 "Finally, a place to truly be alone with one's thoughts.\n\nUsing a Private Bathroom will greatly improve Duplicants' Morale.\nShowers in this room finish faster.",
+	 "ようやく、一人で考えるための場所です。\n\n個室トイレを使うと複製人間の士気が大きく上がります。\nこの部屋のシャワーは早く終わります。",
+	 "드디어 혼자 생각할 수 있는 공간입니다.\n\n개인 화장실을 쓰면 복제인간의 사기가 크게 오릅니다.\n이 방의 샤워는 더 빨리 끝납니다.",
+	 "Наконец, место побыть наедине с мыслями.\n\nЛичная уборная сильно повышает мораль.\nДуш в этой комнате заканчивается быстрее."),
+	("MoreRoomTypes.STRINGS.ROOMS.TYPES.PRIVATEBATHROOM.EFFECT", "- Morale bonus", "- 士気ボーナス", "- 사기 보너스", "- Бонус морали"),
+	("MoreRoomTypes.STRINGS.ROOMS.TYPES.PRIVATEBATHROOM.TOOLTIP", "Using a Private Bathroom will greatly improve Duplicants' Morale", "個室トイレを使うと複製人間の士気が大きく上がります", "개인 화장실을 쓰면 복제인간의 사기가 크게 오릅니다", "Личная уборная сильно повышает мораль"),
+	("MoreRoomTypes.STRINGS.ROOMS.TYPES.WAREHOUSE.NAME", "Warehouse", "倉庫", "창고", "Склад"),
+	("MoreRoomTypes.STRINGS.ROOMS.TYPES.WAREHOUSE.DESCRIPTION",
+	 "An enclosed space for keeping supplies in order.\n\nA Warehouse does not change storage capacity.",
+	 "物資を整理して置くための閉じた空間です。\n\n倉庫は収納量を変えません。",
+	 "물자를 정리해 두는 밀폐 공간입니다.\n\n창고는 저장량을 바꾸지 않습니다.",
+	 "Закрытое место, чтобы держать припасы в порядке.\n\nСклад не меняет вместимость."),
+	("MoreRoomTypes.STRINGS.ROOMS.TYPES.WAREHOUSE.EFFECT", "- No effect", "- 効果なし", "- 효과 없음", "- Нет эффекта"),
+	("MoreRoomTypes.STRINGS.ROOMS.TYPES.WAREHOUSE.TOOLTIP", "A Warehouse does not change storage capacity", "倉庫は収納量を変えません", "창고는 저장량을 바꾸지 않습니다", "Склад не меняет вместимость"),
+	("MoreRoomTypes.STRINGS.ROOMS.TYPES.BATTERYROOM.NAME", "Battery Room", "バッテリー室", "배터리실", "Батарейная"),
+	("MoreRoomTypes.STRINGS.ROOMS.TYPES.BATTERYROOM.DESCRIPTION",
+	 "A dedicated space for stored power.\n\nBatteries in a Battery Room lose charge more slowly.",
+	 "蓄電のための専用空間です。\n\nバッテリー室の電池は放電が遅くなります。",
+	 "전력을 모아 두는 전용 공간입니다.\n\n배터리실의 전지는 방전 속도가 느려집니다.",
+	 "Отдельное место для запаса энергии.\n\nБатареи в батарейной разряжаются медленнее."),
+	("MoreRoomTypes.STRINGS.ROOMS.TYPES.BATTERYROOM.EFFECT", "- Reduced battery leakage", "- 電池の漏電減少", "- 배터리 누전 감소", "- Меньше утечки заряда"),
+	("MoreRoomTypes.STRINGS.ROOMS.TYPES.BATTERYROOM.TOOLTIP", "Batteries in a Battery Room lose charge more slowly", "バッテリー室の電池は放電が遅くなります", "배터리실의 전지는 방전 속도가 느려집니다", "Батареи в батарейной разряжаются медленнее"),
+	("MoreRoomTypes.STRINGS.ROOMS.TYPES.WASTEROOM.NAME", "Waste Processing Room", "廃棄物処理室", "폐기물 처리실", "Переработка отходов"),
+	("MoreRoomTypes.STRINGS.ROOMS.TYPES.WASTEROOM.DESCRIPTION",
+	 "Where refuse is put back to work.\n\nCompost, Sludge Presses and Fertilizer Synthesizers in a Waste Processing Room function more efficiently.",
+	 "ごみを再び役立てる場所です。\n\n廃棄物処理室のコンポスト、汚泥プレス、肥料合成機は効率が上がります。",
+	 "쓰레기를 다시 쓸모 있게 만드는 곳입니다.\n\n폐기물 처리실의 퇴비, 슬러지 압축기, 비료 합성기는 더 효율적으로 작동합니다.",
+	 "Здесь отходы снова идут в дело.\n\nКомпост, прессы ила и синтезаторы удобрений работают эффективнее."),
+	("MoreRoomTypes.STRINGS.ROOMS.TYPES.WASTEROOM.EFFECT", "- Efficiency bonus", "- 効率ボーナス", "- 효율 보너스", "- Бонус эффективности"),
+	("MoreRoomTypes.STRINGS.ROOMS.TYPES.WASTEROOM.TOOLTIP", "Compost, Sludge Presses and Fertilizer Synthesizers in a Waste Processing Room function more efficiently", "廃棄物処理室のコンポスト、汚泥プレス、肥料合成機は効率が上がります", "폐기물 처리실의 퇴비, 슬러지 압축기, 비료 합성기는 더 효율적으로 작동합니다", "Компост, прессы ила и синтезаторы удобрений работают эффективнее"),
+	("MoreRoomTypes.STRINGS.ROOMS.TYPES.WATERROOM.NAME", "Water Treatment Room", "水処理室", "수처리실", "Водоочистка"),
+	("MoreRoomTypes.STRINGS.ROOMS.TYPES.WATERROOM.DESCRIPTION",
+	 "Where dirty water gets a second chance.\n\nWater Sieves and Desalinators in a Water Treatment Room function more efficiently.",
+	 "汚れた水に再チャンスを与える場所です。\n\n水処理室の浄水器と淡水化装置は効率が上がります。",
+	 "더러운 물에 두 번째 기회를 주는 곳입니다.\n\n수처리실의 정수기와 담수화 장치는 더 효율적으로 작동합니다.",
+	 "Грязной воде дают второй шанс.\n\nФильтры и опреснители работают эффективнее."),
+	("MoreRoomTypes.STRINGS.ROOMS.TYPES.WATERROOM.EFFECT", "- Efficiency bonus", "- 効率ボーナス", "- 효율 보너스", "- Бонус эффективности"),
+	("MoreRoomTypes.STRINGS.ROOMS.TYPES.WATERROOM.TOOLTIP", "Water Sieves and Desalinators in a Water Treatment Room function more efficiently", "水処理室の浄水器と淡水化装置は効率が上がります", "수처리실의 정수기와 담수화 장치는 더 효율적으로 작동합니다", "Фильтры и опреснители работают эффективнее"),
+	("MoreRoomTypes.STRINGS.ROOMS.TYPES.HALLWAY.NAME", "Hallway", "通路", "복도", "Коридор"),
+	("MoreRoomTypes.STRINGS.ROOMS.TYPES.HALLWAY.DESCRIPTION",
+	 "A transit shaft for moving between floors.\n\nDuplicants in a Hallway gain Athletics.",
+	 "階を行き来するための縦の通路です。\n\n通路にいる複製人間は運動が上がります。",
+	 "층 사이를 오가는 통로입니다.\n\n복도에 있는 복제인간은 운동이 오릅니다.",
+	 "Шахта для перемещения между этажами.\n\nДубликанты в коридоре получают атлетику."),
+	("MoreRoomTypes.STRINGS.ROOMS.TYPES.HALLWAY.EFFECT", "- Athletics bonus", "- 運動ボーナス", "- 운동 보너스", "- Бонус атлетики"),
+	("MoreRoomTypes.STRINGS.ROOMS.TYPES.HALLWAY.TOOLTIP", "Duplicants in a Hallway gain Athletics", "通路にいる複製人間は運動が上がります", "복도에 있는 복제인간은 운동이 오릅니다", "Дубликанты в коридоре получают атлетику"),
+	("MoreRoomTypes.STRINGS.ROOMS.TYPES.NUCLEARPLANT.NAME", "Nuclear Power Plant", "原子力発電所", "원자력 발전소", "АЭС"),
+	("MoreRoomTypes.STRINGS.ROOMS.TYPES.NUCLEARPLANT.DESCRIPTION",
+	 'The perfect place for Duplicants to flex their Electrical Engineering skills.\n\nHeavy-duty generators built within a Nuclear Power Plant can be tuned up using microchips from power control stations to improve their <link="POWER">Power</link> production.',
+	 '複製人間が電気工学を発揮するのに最適な場所です。\n\n原子力発電所に建てた大型発電機は、電力制御ステーションのマイクロチップで調整して<link="POWER">電力</link>生産を上げられます。',
+	 '복제인간이 전기 공학 실력을 발휘하기 좋은 곳입니다.\n\n원자력 발전소에 지은 대형 발전기는 전력 제어 스테이션의 마이크로칩으로 조정해 <link="POWER">전력</link> 생산을 올릴 수 있습니다.',
+	 'Идеальное место показать электротехнику.\n\nТяжёлые генераторы в АЭС можно настраивать микрочипами со станций контроля питания, чтобы повысить выработку <link="POWER">энергии</link>.'),
+	("MoreRoomTypes.STRINGS.ROOMS.TYPES.NUCLEARPLANT.EFFECT",
+	 '- Enables <link="POWERSTATIONTOOLS">Microchip</link> tune-ups on heavy-duty generators',
+	 '- 大型発電機に<link="POWERSTATIONTOOLS">マイクロチップ</link>調整が可能',
+	 '- 대형 발전기에 <link="POWERSTATIONTOOLS">마이크로칩</link> 조정이 가능',
+	 '- Позволяет настраивать тяжёлые генераторы <link="POWERSTATIONTOOLS">микрочипами</link>'),
+	("MoreRoomTypes.STRINGS.ROOMS.TYPES.NUCLEARPLANT.TOOLTIP",
+	 "Heavy-duty generators built in a Nuclear Power Plant can be tuned up using microchips from Power Control Stations to improve their Power production",
+	 "原子力発電所に建てた大型発電機は、電力制御ステーションのマイクロチップで調整して電力生産を上げられます",
+	 "원자력 발전소에 지은 대형 발전기는 전력 제어 스테이션의 마이크로칩으로 조정해 전력 생산을 올릴 수 있습니다",
+	 "Тяжёлые генераторы в АЭС можно настраивать микрочипами со станций контроля питания"),
+	("MoreRoomTypes.STRINGS.ROOMS.CRITERIA.GRAVE.NAME", "Tasteful Memorial", "上品な記念碑", "품위 있는 기념비", "Изящный мемориал"),
+	("MoreRoomTypes.STRINGS.ROOMS.CRITERIA.GRAVE.DESCRIPTION", "At least one Tasteful Memorial", "上品な記念碑が1つ以上", "품위 있는 기념비가 1개 이상", "Хотя бы один изящный мемориал"),
+	("MoreRoomTypes.STRINGS.ROOMS.CRITERIA.MANUALGENERATOR.NAME", "Manual Generator", "人力発電機", "수동 발전기", "Ручной генератор"),
+	("MoreRoomTypes.STRINGS.ROOMS.CRITERIA.MANUALGENERATOR.DESCRIPTION", "At least one Manual Generator", "人力発電機が1つ以上", "수동 발전기가 1개 이상", "Хотя бы один ручной генератор"),
+	("MoreRoomTypes.STRINGS.ROOMS.CRITERIA.WATERCOOLER.NAME", "Water Cooler", "ウォータークーラー", "냉수기", "Кулер"),
+	("MoreRoomTypes.STRINGS.ROOMS.CRITERIA.WATERCOOLER.DESCRIPTION", "At least one Water Cooler", "ウォータークーラーが1つ以上", "냉수기가 1개 이상", "Хотя бы один кулер"),
+	("MoreRoomTypes.STRINGS.ROOMS.CRITERIA.PEDESTAL.NAME", "Pedestal", "台座", "받침대", "Пьедестал"),
+	("MoreRoomTypes.STRINGS.ROOMS.CRITERIA.PEDESTAL.DESCRIPTION", "At least one Pedestal", "台座が1つ以上", "받침대가 1개 이상", "Хотя бы один пьедестал"),
+	("MoreRoomTypes.STRINGS.ROOMS.CRITERIA.MASTERPIECES.NAME", "{0} Masterpieces", "傑作 {0} 点", "걸작 {0}점", "{0} шедевров"),
+	("MoreRoomTypes.STRINGS.ROOMS.CRITERIA.MASTERPIECES.DESCRIPTION", "At least {0} Masterpieces.", "傑作が少なくとも {0} 点。", "걸작이 적어도 {0}점.", "Не меньше {0} шедевров."),
+	("MoreRoomTypes.STRINGS.ROOMS.CRITERIA.ARTIIFACTS.NAME", "{0} Unique Artifacts", "ユニーク遺物 {0} 点", "고유 유물 {0}점", "{0} уникальных артефактов"),
+	("MoreRoomTypes.STRINGS.ROOMS.CRITERIA.ARTIIFACTS.DESCRIPTION", "At least {0} unique Artifacts.", "ユニーク遺物が少なくとも {0} 点。", "고유 유물이 적어도 {0}점.", "Не меньше {0} уникальных артефактов."),
+	("MoreRoomTypes.STRINGS.ROOMS.CRITERIA.FLUSHTOILET_ONE.NAME", "Exactly one Flush Toilet", "水洗トイレちょうど1つ", "수세식 화장실 정확히 1개", "Ровно один смывной туалет"),
+	("MoreRoomTypes.STRINGS.ROOMS.CRITERIA.FLUSHTOILET_ONE.DESCRIPTION", "The room must contain exactly one Flush Toilet.", "部屋には水洗トイレがちょうど1つ必要です。", "방에는 수세식 화장실이 정확히 1개 있어야 합니다.", "В комнате должен быть ровно один смывной туалет."),
+	("MoreRoomTypes.STRINGS.ROOMS.CRITERIA.SINK_ONE.NAME", "Exactly one Sink", "洗面台ちょうど1つ", "세면대 정확히 1개", "Ровно одна раковина"),
+	("MoreRoomTypes.STRINGS.ROOMS.CRITERIA.SINK_ONE.DESCRIPTION", "The room must contain exactly one Sink.", "部屋には洗面台がちょうど1つ必要です。", "방에는 세면대가 정확히 1개 있어야 합니다.", "В комнате должна быть ровно одна раковина."),
+	("MoreRoomTypes.STRINGS.ROOMS.CRITERIA.SHOWER_ONE.NAME", "Exactly one Shower", "シャワーちょうど1つ", "샤워 정확히 1개", "Ровно один душ"),
+	("MoreRoomTypes.STRINGS.ROOMS.CRITERIA.SHOWER_ONE.DESCRIPTION", "The room must contain exactly one Shower.", "部屋にはシャワーがちょうど1つ必要です。", "방에는 샤워가 정확히 1개 있어야 합니다.", "В комнате должен быть ровно один душ."),
+	("MoreRoomTypes.STRINGS.ROOMS.CRITERIA.STORAGE_BUILDINGS.NAME", "4 Storage Buildings", "収納建物 4つ", "저장 건물 4개", "4 хранилища"),
+	("MoreRoomTypes.STRINGS.ROOMS.CRITERIA.STORAGE_BUILDINGS.DESCRIPTION", "At least 4 storage buildings.", "収納建物が少なくとも 4 つ。", "저장 건물이 적어도 4개.", "Не меньше 4 хранилищ."),
+	("MoreRoomTypes.STRINGS.ROOMS.CRITERIA.BATTERIES.NAME", "4 Batteries", "電池 4つ", "전지 4개", "4 батареи"),
+	("MoreRoomTypes.STRINGS.ROOMS.CRITERIA.BATTERIES.DESCRIPTION", "At least 4 batteries. Rocket battery modules count.", "電池が少なくとも 4 つ。ロケット電池モジュールも数えます。", "전지가 적어도 4개. 로켓 전지 모듈도 셉니다.", "Не меньше 4 батарей. Ракетные модули считаются."),
+	("MoreRoomTypes.STRINGS.ROOMS.CRITERIA.NO_EXTRA_INDUSTRIAL.NAME", "No extra industrial machinery", "余分な産業機械なし", "추가 산업 기계 없음", "Без лишней промышленности"),
+	("MoreRoomTypes.STRINGS.ROOMS.CRITERIA.NO_EXTRA_INDUSTRIAL.DESCRIPTION",
+	 "No industrial machinery except batteries, rocket battery modules, and power transformers.",
+	 "電池、ロケット電池モジュール、変圧器以外の産業機械は置けません。",
+	 "전지, 로켓 전지 모듈, 변압기 외의 산업 기계는 안 됩니다.",
+	 "Кроме батарей, ракетных модулей и трансформаторов промышленности быть не должно."),
+	("MoreRoomTypes.STRINGS.ROOMS.CRITERIA.COMPOST.NAME", "Compost", "コンポスト", "퇴비", "Компост"),
+	("MoreRoomTypes.STRINGS.ROOMS.CRITERIA.COMPOST.DESCRIPTION", "At least one Compost.", "コンポストが1つ以上。", "퇴비가 1개 이상.", "Хотя бы один компост."),
+	("MoreRoomTypes.STRINGS.ROOMS.CRITERIA.WASTE_PROCESSOR.NAME", "Waste Processor", "廃棄物処理装置", "폐기물 처리 장치", "Переработчик отходов"),
+	("MoreRoomTypes.STRINGS.ROOMS.CRITERIA.WASTE_PROCESSOR.DESCRIPTION", "A Sludge Press or Fertilizer Synthesizer.", "汚泥プレスまたは肥料合成機。", "슬러지 압축기 또는 비료 합성기.", "Пресс ила или синтезатор удобрений."),
+	("MoreRoomTypes.STRINGS.ROOMS.CRITERIA.WATER_TREATMENT.NAME", "Water Treatment", "水処理装置", "수처리 장치", "Водоочистка"),
+	("MoreRoomTypes.STRINGS.ROOMS.CRITERIA.WATER_TREATMENT.DESCRIPTION", "A Water Sieve or Desalinator.", "浄水器または淡水化装置。", "정수기 또는 담수화 장치.", "Фильтр воды или опреснитель."),
+	("MoreRoomTypes.STRINGS.ROOMS.CRITERIA.LADDER.NAME", "Ladder", "はしご", "사다리", "Лестница"),
+	("MoreRoomTypes.STRINGS.ROOMS.CRITERIA.LADDER.DESCRIPTION", "At least one Ladder.", "はしごが1つ以上。", "사다리가 1개 이상.", "Хотя бы одна лестница."),
+	("MoreRoomTypes.STRINGS.ROOMS.CRITERIA.FIRE_POLE.NAME", "Fire Pole", "滑り棒", "소방 미끄럼봉", "Пожарный шест"),
+	("MoreRoomTypes.STRINGS.ROOMS.CRITERIA.FIRE_POLE.DESCRIPTION", "At least one Fire Pole.", "滑り棒が1つ以上。", "소방 미끄럼봉이 1개 이상.", "Хотя бы один пожарный шест."),
+	("MoreRoomTypes.STRINGS.ROOMS.CRITERIA.NUCLEAR_REACTOR.NAME", "Research Reactor", "研究用原子炉", "연구용 원자로", "Исследовательский реактор"),
+	("MoreRoomTypes.STRINGS.ROOMS.CRITERIA.NUCLEAR_REACTOR.DESCRIPTION", "At least one Research Reactor.", "研究用原子炉が1つ以上。", "연구용 원자로가 1개 이상.", "Хотя бы один исследовательский реактор."),
+	("MoreRoomTypes.STRINGS.ROOMS.CRITERIA.STEAM_TURBINE.NAME", "Steam Turbine", "蒸気タービン", "증기 터빈", "Паровая турбина"),
+	("MoreRoomTypes.STRINGS.ROOMS.CRITERIA.STEAM_TURBINE.DESCRIPTION", "At least one Steam Turbine.", "蒸気タービンが1つ以上。", "증기 터빈이 1개 이상.", "Хотя бы одна паровая турбина."),
+	("MoreRoomTypes.STRINGS.ROOMS.EFFECTS.MUSEUM.NAME", "Art Museum", "美術館", "미술관", "Художественный музей"),
+	("MoreRoomTypes.STRINGS.ROOMS.EFFECTS.MUSEUM.DESCRIPTION", "Visited Art Museum", "美術館を訪れた", "미술관을 방문함", "Посетил художественный музей"),
+	("MoreRoomTypes.STRINGS.ROOMS.EFFECTS.MUSEUMSPACE.NAME", "Space Museum", "宇宙博物館", "우주 박물관", "Космический музей"),
+	("MoreRoomTypes.STRINGS.ROOMS.EFFECTS.MUSEUMSPACE.DESCRIPTION", "Visited Space Museum", "宇宙博物館を訪れた", "우주 박물관을 방문함", "Посетил космический музей"),
+	("MoreRoomTypes.STRINGS.ROOMS.EFFECTS.GRAVE_GOOD.NAME", "Graveyard Serenity", "墓地の安らぎ", "묘지의 평온", "Кладбищенское спокойствие"),
+	("MoreRoomTypes.STRINGS.ROOMS.EFFECTS.GRAVE_GOOD.DESCRIPTION",
+	 "This Duplicant has accepted their inevitable fate and is ready to embrace it.",
+	 "この複製人間は避けられない運命を受け入れ、向き合う準備ができています。",
+	 "이 복제인간은 피할 수 없는 운명을 받아들이고 맞이할 준비가 되었습니다.",
+	 "Этот дубликант принял неизбежную судьбу и готов встретить её."),
+	("MoreRoomTypes.STRINGS.ROOMS.EFFECTS.GRAVE_BAD.NAME", "Graveyard Dread", "墓地の恐怖", "묘지의 공포", "Кладбищенский ужас"),
+	("MoreRoomTypes.STRINGS.ROOMS.EFFECTS.GRAVE_BAD.DESCRIPTION",
+	 "This Duplicant feels cold claws of Death crawling up their spine.",
+	 "この複製人間は死の冷たい爪が背筋を這うのを感じています。",
+	 "이 복제인간은 죽음의 차가운 발톱이 등골을 타고 오르는 것을 느낍니다.",
+	 "Этот дубликант чувствует холодные когти Смерти на спине."),
+	("MoreRoomTypes.STRINGS.ROOMS.EFFECTS.HALLWAY.NAME", "Hallway Transit", "通路移動", "복도 이동", "Проход по коридору"),
+	("MoreRoomTypes.STRINGS.ROOMS.EFFECTS.HALLWAY.DESCRIPTION", "This Duplicant is moving through a Hallway.", "この複製人間は通路を移動しています。", "이 복제인간은 복도를 지나고 있습니다.", "Этот дубликант идёт по коридору."),
+	("MoreRoomTypes.STRINGS.ROOMS.EFFECTS.PRIVATEBATHROOM.NAME", "Private Bathroom", "個室トイレ", "개인 화장실", "Личная уборная"),
+	("MoreRoomTypes.STRINGS.ROOMS.EFFECTS.PRIVATEBATHROOM.DESCRIPTION", "This Duplicant used a Private Bathroom.", "この複製人間は個室トイレを使いました。", "이 복제인간은 개인 화장실을 썼습니다.", "Этот дубликант воспользовался личной уборной."),
+	("MoreRoomTypes.STRINGS.ROOMS.EFFECTS.PRIVATEBATHROOM.SHOWER", "Shower time: -20%", "シャワー時間: -20%", "샤워 시간: -20%", "Время душа: -20%"),
+]
+
+MODS = [
+	("CustomChineseFonts", "CustomChineseFonts", CUSTOM),
+	("DuplicantPortraits", "DuplicantPortraits", DUPES),
+	("ModListPreviews", "ModListPreviews", PREVIEWS),
+	("DrywallTileSkins", "DrywallTileSkins", DRYWALL),
+	("OnDemandProduction", "StockProduction", STOCK),
+	("ThermalInfoCards", "ThermalInfoCards", THERMAL),
+	("MoreRoomTypes", "MoreRoomTypes", ROOMS),
+]
+
+LANGS = (("ja", 2), ("ko", 3), ("ru", 4))
+
+def main():
+	for folder, project, rows in MODS:
+		for lang, idx in LANGS:
+			entries = [(r[0], r[1], r[idx]) for r in rows]
+			write_po(ROOT / folder / "translations" / f"{lang}.po", project, lang, entries)
+
+if __name__ == "__main__":
+	main()

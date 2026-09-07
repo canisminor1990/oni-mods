@@ -1,0 +1,130 @@
+msgid ""
+msgstr ""
+"Project-Id-Version: DrywallTileSkins\n"
+"Language: ru\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Application: Oxygen Not Included\n"
+"POT Version: 2.0\n"
+
+msgctxt "DrywallTileSkins.STRINGS.DRYWALL_TILE_SKINS.FACADE_DESC"
+msgid "Applies this tile's interior cell to Drywall, without tile borders."
+msgstr "Наносит внутреннюю клетку этой плитки на гипсокартон без рамки."
+
+msgctxt "DrywallTileSkins.STRINGS.DRYWALL_TILE_SKINS.CUSTOM_DESC"
+msgid "Custom Drywall wallpaper. Repeats the interior cell only."
+msgstr "Свои обои для гипсокартона. Повторяется только внутренняя клетка."
+
+msgctxt "DrywallTileSkins.STRINGS.DRYWALL_TILE_SKINS.BUILTIN_DESC"
+msgid "Built-in cartoon wallpaper in the vanilla Drywall print style."
+msgstr "Встроенные мультяшные обои в стиле обычного гипсокартона."
+
+msgctxt "DrywallTileSkins.STRINGS.DRYWALL_TILE_SKINS.GROUP_BUILTIN"
+msgid "Cartoon Prints"
+msgstr "Мультяшные обои"
+
+msgctxt "DrywallTileSkins.STRINGS.DRYWALL_TILE_SKINS.GROUP_STAINED_GLASS"
+msgid "Stained Glass"
+msgstr "Витраж"
+
+msgctxt "DrywallTileSkins.STRINGS.DRYWALL_TILE_SKINS.GROUP_CUSTOM"
+msgid "Custom Prints"
+msgstr "Свои обои"
+
+msgctxt "DrywallTileSkins.STRINGS.DRYWALL_TILE_SKINS.SETTINGS_BUTTON"
+msgid "Settings"
+msgstr "Настройки"
+
+msgctxt "DrywallTileSkins.STRINGS.DRYWALL_TILE_SKINS.SETTINGS_TITLE"
+msgid "Drywall Tile Skins"
+msgstr "Облицовка гипсокартона"
+
+msgctxt "DrywallTileSkins.STRINGS.DRYWALL_TILE_SKINS.SETTINGS_HINT"
+msgid "Choose which tile types to load as Drywall wallpapers. Restart the game to apply."
+msgstr "Выберите типы плитки для обоев гипсокартона. Перезапустите игру."
+
+msgctxt "DrywallTileSkins.STRINGS.DRYWALL_TILE_SKINS.SETTINGS_ALL_ON"
+msgid "Enable All"
+msgstr "Включить все"
+
+msgctxt "DrywallTileSkins.STRINGS.DRYWALL_TILE_SKINS.SETTINGS_ALL_OFF"
+msgid "Disable All"
+msgstr "Выключить все"
+
+msgctxt "DrywallTileSkins.STRINGS.DRYWALL_TILE_SKINS.SETTINGS_CLOSE"
+msgid "Close"
+msgstr "Закрыть"
+
+msgctxt "DrywallTileSkins.STRINGS.DRYWALL_TILE_SKINS.BUILTIN.PASTEL_DOTS"
+msgid "Pastel Dots"
+msgstr "Пастельные точки"
+
+msgctxt "DrywallTileSkins.STRINGS.DRYWALL_TILE_SKINS.BUILTIN.CITRUS_SLICES"
+msgid "Citrus Slices"
+msgstr "Дольки цитруса"
+
+msgctxt "DrywallTileSkins.STRINGS.DRYWALL_TILE_SKINS.BUILTIN.COLONY_STARS"
+msgid "Colony Stars"
+msgstr "Звёзды колонии"
+
+msgctxt "DrywallTileSkins.STRINGS.DRYWALL_TILE_SKINS.BUILTIN.MUSH_CAPS"
+msgid "Mushroom Caps"
+msgstr "Шляпки грибов"
+
+msgctxt "DrywallTileSkins.STRINGS.DRYWALL_TILE_SKINS.BUILTIN.RAIN_DROPS"
+msgid "Raindrops"
+msgstr "Капли дождя"
+
+msgctxt "DrywallTileSkins.STRINGS.DRYWALL_TILE_SKINS.BUILTIN.PUFFY_CLOUDS"
+msgid "Puffy Clouds"
+msgstr "Пушистые облака"
+
+msgctxt "DrywallTileSkins.STRINGS.DRYWALL_TILE_SKINS.BUILTIN.LEAF_SCATTER"
+msgid "Scattered Leaves"
+msgstr "Опавшие листья"
+
+msgctxt "DrywallTileSkins.STRINGS.DRYWALL_TILE_SKINS.BUILTIN.HONEYCOMB"
+msgid "Honeycomb"
+msgstr "Соты"
+
+msgctxt "DrywallTileSkins.STRINGS.DRYWALL_TILE_SKINS.BUILTIN.WAVY_SEA"
+msgid "Wavy Sea"
+msgstr "Волнистое море"
+
+msgctxt "DrywallTileSkins.STRINGS.DRYWALL_TILE_SKINS.BUILTIN.CANDY_HEARTS"
+msgid "Candy Hearts"
+msgstr "Конфетные сердца"
+
+msgctxt "DrywallTileSkins.STRINGS.DRYWALL_TILE_SKINS.BUILTIN.CARTOON_BRICKS"
+msgid "Cartoon Bricks"
+msgstr "Мультяшный кирпич"
+
+msgctxt "DrywallTileSkins.STRINGS.DRYWALL_TILE_SKINS.BUILTIN.PLUS_GRID"
+msgid "Plus Grid"
+msgstr "Решётка плюсов"
+
+msgctxt "DrywallTileSkins.STRINGS.DRYWALL_TILE_SKINS.BUILTIN.LITTLE_FISH"
+msgid "Little Fish"
+msgstr "Рыбки"
+
+msgctxt "DrywallTileSkins.STRINGS.DRYWALL_TILE_SKINS.BUILTIN.TINY_FLOWERS"
+msgid "Tiny Flowers"
+msgstr "Цветочки"
+
+msgctxt "DrywallTileSkins.STRINGS.DRYWALL_TILE_SKINS.BUILTIN.AQUA_BUBBLES"
+msgid "Aqua Bubbles"
+msgstr "Водяные пузыри"
+
+msgctxt "DrywallTileSkins.STRINGS.DRYWALL_TILE_SKINS.BUILTIN.SOFT_CHECKERS"
+msgid "Soft Checkers"
+msgstr "Мягкая клетка"
+
+msgctxt "DrywallTileSkins.STRINGS.DRYWALL_TILE_SKINS.BUILTIN.LITTLE_SUNS"
+msgid "Little Suns"
+msgstr "Солнышки"
+
+msgctxt "DrywallTileSkins.STRINGS.DRYWALL_TILE_SKINS.BUILTIN.CANDY_DIAMONDS"
+msgid "Candy Diamonds"
+msgstr "Конфетные ромбы"
+

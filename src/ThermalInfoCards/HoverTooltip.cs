@@ -8,8 +8,8 @@ namespace ThermalInfoCards
 {
 	internal sealed class HoverTooltip
 	{
-		internal const string ExportHeatEnergy = "DarrenLee.ThermalInfoCards.HeatEnergy";
-		internal const string ExportThermalMass = "DarrenLee.ThermalInfoCards.ThermalMass";
+		internal const string ExportHeatEnergy = "CanisMinor.ThermalInfoCards.HeatEnergy";
+		internal const string ExportThermalMass = "CanisMinor.ThermalInfoCards.ThermalMass";
 
 		private const string AllTempsFormat = "{0} / {1} / {2}";
 		private const string TempFormat = "{0:##0.#}{1}";

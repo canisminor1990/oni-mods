@@ -45,7 +45,7 @@ Current stack (match existing `src` mods):
 ## New or existing mod
 
 1. Clone layout from `src\CustomChineseFonts` or `src\DrywallTileSkins` (smallest vs feature-rich).
-2. `staticID` in `mod.yaml` like `DarrenLee.<PascalName>`.
+2. `staticID` in `mod.yaml` like `CanisMinor.<PascalName>`.
 3. `mod_info.yaml`: `supportedContent: ALL`, `APIVersion: 2`, `minimumSupportedBuild: 736649` (or current game build from Player.log `U59-…`).
 4. Entry:
 
@@ -87,14 +87,20 @@ Startup (typical): first `Localization.Initialize` (may be **before** DLL load) 
 
 ## I18n (this player)
 
-Vanilla UI can be Chinese while `Localization.GetCurrentLanguageCode()` is `"en"`. Loading only `en.po` leaves mod text in English. Always treat Chinese OS / CJK vanilla strings as “load `zh.po`”.
+Vanilla UI can be Chinese while `Localization.GetCurrentLanguageCode()` is `"en"`. Loading only `en.po` leaves mod text in English. Always treat Chinese OS / CJK vanilla strings as “load `zh.po`”. Japanese / Korean / Russian use `ja.po` / `ko.po` / `ru.po`.
+
+Shared loader: `src/Shared/LocalePo.cs`, compiled into every mod via `src/Directory.Build.props`. Do **not** ILMerge or ship a second DLL. Each mod:
+
+```csharp
+CanisMinor.Shared.LocalePo.Register(typeof(STRINGS), Mod.ContentPath, Mod.LogPrefix);
+```
 
 Required:
 
 - `STRINGS` nested class with `LocString` fields (English msgid).
-- `translations\zh.po` with `msgctxt "Namespace.STRINGS...."` matching `RegisterForTranslation`.
-- Hook `Localization.Initialize` Postfix: `RegisterForTranslation` → load `.po` → `OverloadStrings` → `CreateLocStringKeys`.
-- Locale list: `GetLocale().Code`, `GetCurrentLanguageCode()`, aliases (`schinese` → `zh`), **plus** `Application.systemLanguage` in `{Chinese, ChineseSimplified, ChineseTraditional}`, **plus** CJK in a vanilla `Strings.TryGet` if needed.
+- `translations\<code>.po` with `msgctxt "Namespace.STRINGS...."` matching `RegisterForTranslation` (`zh`, `ja`, `ko`, `ru`, …).
+- Hook `Localization.Initialize` Postfix → `LocalePo.Register`.
+- Locale list lives in `LocalePo`: `GetLocale().Code`, `GetCurrentLanguageCode()`, aliases (`schinese` → `zh`, `japanese` → `ja`, …), `Application.systemLanguage`, plus Hangul / kana / Cyrillic / CJK hints from vanilla UI strings.
 - Log folder, codes, and whether a `.po` loaded. `codes=en` + Chinese UI = bug.
 
 `PermitResource.Name` / `Description` and `BuildingFacades.Add(..., LocString, LocString)` **snapshot strings**. Load `.po` before `Collect` / `facades.Add`. Prefer resolving `STRINGS.*` at register time, not a stored English `string` from collect time.

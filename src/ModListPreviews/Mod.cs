@@ -7,7 +7,7 @@ namespace ModListPreviews
 	public class Mod : UserMod2
 	{
 		public const string LogPrefix = "[ModListPreviews] ";
-		public const string StaticId = "DarrenLee.ModListPreviews";
+		public const string StaticId = "CanisMinor.ModListPreviews";
 
 		public static Harmony HarmonyInstance;
 		public static string ContentPath;

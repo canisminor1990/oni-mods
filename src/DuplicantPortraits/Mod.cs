@@ -7,7 +7,7 @@ namespace DuplicantPortraits
 	public class Mod : UserMod2
 	{
 		public const string LogPrefix = "[DuplicantPortraits] ";
-		public const string StaticId = "DarrenLee.DuplicantPortraits";
+		public const string StaticId = "CanisMinor.DuplicantPortraits";
 		public const string StagePrefix = "DPP_Canvas_";
 		public const string KanimSuffix = "_kanim";
 

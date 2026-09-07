@@ -8,7 +8,7 @@ namespace MoreRoomTypes
 		{
 			public class AUTHOR
 			{
-				public static LocString NAME = "DarrenLee";
+				public static LocString NAME = "CanisMinor";
 			}
 		}
 

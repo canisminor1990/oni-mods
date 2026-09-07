@@ -12,8 +12,8 @@ msgstr ""
 
 #. MoreRoomTypes.STRINGS.TRANSLATION.AUTHOR.NAME
 msgctxt "MoreRoomTypes.STRINGS.TRANSLATION.AUTHOR.NAME"
-msgid "DarrenLee"
-msgstr "DarrenLee"
+msgid "CanisMinor"
+msgstr "CanisMinor"
 
 #. MoreRoomTypes.STRINGS.SETTINGS.BUTTON
 msgctxt "MoreRoomTypes.STRINGS.SETTINGS.BUTTON"

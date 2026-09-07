@@ -282,7 +282,7 @@ namespace DrywallTileSkins
 					if (!(indexObj is int index) || index < 0 || index >= mods.Count)
 						continue;
 					KMod.Mod mod = mods[index];
-					if (mod == null || mod.staticID != "DarrenLee.DrywallTileSkins")
+					if (mod == null || mod.staticID != Mod.StaticId)
 						continue;
 
 					RectTransform rt = AccessTools.Field(row.GetType(), "rect_transform")?.GetValue(row) as RectTransform;

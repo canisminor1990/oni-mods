@@ -42,5 +42,12 @@ python ref/oni-api/scan_dll.py BuildingFacades
 | `roomdetails.cs` | `RoomDetails.EFFECT` / `EFFECTS` overlay hover |
 | `roomtypes.cs` / `Database.RoomTypes.decompiled.cs` | vanilla room registration |
 | `codex_rooms.cs` | `CodexEntryGenerator.GenerateRoomsEntries` + room details (effects from `GetRoomEffectsString` only) |
+| `ComplexFabricator.decompiled.cs` | recipe queue, `QUEUE_INFINITE`, `SetRecipeQueueCount` |
+| `ComplexFabricatorSideScreen.decompiled.cs` | fabricator recipe list / queue labels |
+| `SelectedRecipeQueueScreen.decompiled.cs` | +1 / count / Forever controls |
+| `WorldInventory.decompiled.cs` | `GetAmount` / `GetTotalAmount` (resource overlay totals) |
+| `ComplexRecipe.decompiled.cs` | ingredients / results |
+| `AllResourcesScreen.decompiled.cs` | mass vs kcal vs quantity formatting |
+| `KNumberInputField.decompiled.cs` / `KInputField.decompiled.cs` | queue count field |
 
 `MISSING …` headers mean that dump pass did not find the type; search another file or rescan the DLL.

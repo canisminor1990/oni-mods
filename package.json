@@ -45,6 +45,9 @@
       "workshopTitle": "More Room Types",
       "steamId": "3797339501"
     },
+    "OnDemandProduction": {
+      "workshopTitle": "按需生产"
+    },
     "ThermalInfoCards": {
       "steamId": "3797325396",
       "workshopTitle": "Thermal Info Cards"

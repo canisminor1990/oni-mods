@@ -7,7 +7,7 @@ namespace ThermalInfoCards
 	public class Mod : UserMod2
 	{
 		public const string LogPrefix = "[ThermalInfoCards] ";
-		public const string StaticId = "DarrenLee.ThermalInfoCards";
+		public const string StaticId = "CanisMinor.ThermalInfoCards";
 
 		public static Harmony HarmonyInstance;
 		public static string ContentPath;

@@ -9,6 +9,7 @@ GitHub: https://github.com/canisminor1990/oni-mods (one repo, all mods). Steam a
 | Role | Path |
 |------|------|
 | Source | `src/<ModName>/` |
+| Shared i18n | `src/Shared/LocalePo.cs` (compiled into each mod DLL, not a separate mod) |
 | Game-loaded build | `local/<ModName>/` (csproj `OutputPath`, gitignored) |
 | Scripts / commands | `package.json`, `scripts/` |
 | Game API dumps | `ref/oni-api/` (`INDEX.md`) |
@@ -52,7 +53,8 @@ Watt Toolkit (`Server: WattToolkit`) intercepts Steam HTTPS here: Node `fetch` T
 ## Defaults
 
 - `UserMod2` + `netstandard2.1` + `HarmonyLib` + `APIVersion: 2`
-- Chinese UI; `GetCurrentLanguageCode()` is often `en` — still load `translations/zh.po`
+- `staticID`: `CanisMinor.<PascalName>` (Steam vanity `canisminor`)
+- Chinese UI; `GetCurrentLanguageCode()` is often `en` — `LocalePo` still loads `translations/zh.po` (also `ja`/`ko`/`ru`)
 - No new building / custom picker if vanilla Drywall blueprints suffice
 
 ## After code changes

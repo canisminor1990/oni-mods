@@ -1,0 +1,482 @@
+msgid ""
+msgstr ""
+"Project-Id-Version: MoreRoomTypes\n"
+"Language: ja\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Application: Oxygen Not Included\n"
+"POT Version: 2.0\n"
+
+msgctxt "MoreRoomTypes.STRINGS.TRANSLATION.AUTHOR.NAME"
+msgid "CanisMinor"
+msgstr "CanisMinor"
+
+msgctxt "MoreRoomTypes.STRINGS.SETTINGS.BUTTON"
+msgid "Settings"
+msgstr "設定"
+
+msgctxt "MoreRoomTypes.STRINGS.SETTINGS.TITLE"
+msgid "More Room Types"
+msgstr "追加の部屋"
+
+msgctxt "MoreRoomTypes.STRINGS.SETTINGS.HINT"
+msgid "Enable or disable each extra room type. Fully quit Oxygen Not Included after changing these, then launch again."
+msgstr "追加の部屋種類を個別にオン／オフできます。変更後はゲームを完全に終了してから再起動してください。"
+
+msgctxt "MoreRoomTypes.STRINGS.SETTINGS.ALL_ON"
+msgid "Enable all"
+msgstr "すべて有効"
+
+msgctxt "MoreRoomTypes.STRINGS.SETTINGS.ALL_OFF"
+msgid "Disable all"
+msgstr "すべて無効"
+
+msgctxt "MoreRoomTypes.STRINGS.ROOMS.TYPES.GRAVEYARD.NAME"
+msgid "Graveyard"
+msgstr "墓地"
+
+msgctxt "MoreRoomTypes.STRINGS.ROOMS.TYPES.GRAVEYARD.DESCRIPTION"
+msgid ""
+"It makes Duplicants happy to think that they are still alive.\n"
+"\n"
+"Visiting a Graveyard will raise or lower Duplicants' Stress."
+msgstr ""
+"まだ生きていると思えると複製人間は嬉しくなります。\n"
+"\n"
+"墓地を訪れると複製人間のストレスが上がるか下がります。"
+
+msgctxt "MoreRoomTypes.STRINGS.ROOMS.TYPES.GRAVEYARD.EFFECT"
+msgid "- Stress bonus"
+msgstr "- ストレス補正"
+
+msgctxt "MoreRoomTypes.STRINGS.ROOMS.TYPES.GRAVEYARD.TOOLTIP"
+msgid "Visiting a Graveyard will raise or lower Duplicants' Stress"
+msgstr "墓地を訪れると複製人間のストレスが上がるか下がります"
+
+msgctxt "MoreRoomTypes.STRINGS.ROOMS.TYPES.GYMROOM.NAME"
+msgid "Gym Room"
+msgstr "ジム"
+
+msgctxt "MoreRoomTypes.STRINGS.ROOMS.TYPES.GYMROOM.DESCRIPTION"
+msgid ""
+"Professional equipment lets Duplicants exercise more efficiently.\n"
+"\n"
+"Working a Manual Generator in a Gym Room improves Athletics training."
+msgstr ""
+"専門器具で複製人間は効率よく鍛えられます。\n"
+"\n"
+"ジムの人力発電機を使うと運動スキルの訓練が早くなります。"
+
+msgctxt "MoreRoomTypes.STRINGS.ROOMS.TYPES.GYMROOM.EFFECT"
+msgid "- Athletics training bonus"
+msgstr "- 運動訓練ボーナス"
+
+msgctxt "MoreRoomTypes.STRINGS.ROOMS.TYPES.GYMROOM.TOOLTIP"
+msgid "Working a Manual Generator in a Gym Room improves Athletics training"
+msgstr "ジムの人力発電機を使うと運動スキルの訓練が早くなります"
+
+msgctxt "MoreRoomTypes.STRINGS.ROOMS.TYPES.MUSEUM.NAME"
+msgid "Art Museum"
+msgstr "美術館"
+
+msgctxt "MoreRoomTypes.STRINGS.ROOMS.TYPES.MUSEUM.DESCRIPTION"
+msgid ""
+"It used to be a storehouse, before Meep confused Pedestal content with art.\n"
+"\n"
+"Visiting an Art Museum will improve Duplicants' Morale."
+msgstr ""
+"かつては倉庫でした。ミープが台座の中身を芸術と勘違いするまでは。\n"
+"\n"
+"美術館を訪れると複製人間の士気が上がります。"
+
+msgctxt "MoreRoomTypes.STRINGS.ROOMS.TYPES.MUSEUM.EFFECT"
+msgid "- Morale bonus"
+msgstr "- 士気ボーナス"
+
+msgctxt "MoreRoomTypes.STRINGS.ROOMS.TYPES.MUSEUM.TOOLTIP"
+msgid "Visiting an Art Museum will improve Duplicants' Morale"
+msgstr "美術館を訪れると複製人間の士気が上がります"
+
+msgctxt "MoreRoomTypes.STRINGS.ROOMS.TYPES.MUSEUMSPACE.NAME"
+msgid "Space Museum"
+msgstr "宇宙博物館"
+
+msgctxt "MoreRoomTypes.STRINGS.ROOMS.TYPES.MUSEUMSPACE.DESCRIPTION"
+msgid ""
+"Perfect for storing Ancient Knowledge on the pedestals.\n"
+"\n"
+"Visiting a Space Museum will improve Duplicants' Morale."
+msgstr ""
+"古代の知識を台座に並べるのに最適です。\n"
+"\n"
+"宇宙博物館を訪れると複製人間の士気が上がります。"
+
+msgctxt "MoreRoomTypes.STRINGS.ROOMS.TYPES.MUSEUMSPACE.EFFECT"
+msgid "- Morale bonus"
+msgstr "- 士気ボーナス"
+
+msgctxt "MoreRoomTypes.STRINGS.ROOMS.TYPES.MUSEUMSPACE.TOOLTIP"
+msgid "Visiting a Space Museum will improve Duplicants' Morale"
+msgstr "宇宙博物館を訪れると複製人間の士気が上がります"
+
+msgctxt "MoreRoomTypes.STRINGS.ROOMS.TYPES.PRIVATEBATHROOM.NAME"
+msgid "Private Bathroom"
+msgstr "個室トイレ"
+
+msgctxt "MoreRoomTypes.STRINGS.ROOMS.TYPES.PRIVATEBATHROOM.DESCRIPTION"
+msgid ""
+"Finally, a place to truly be alone with one's thoughts.\n"
+"\n"
+"Using a Private Bathroom will greatly improve Duplicants' Morale.\n"
+"Showers in this room finish faster."
+msgstr ""
+"ようやく、一人で考えるための場所です。\n"
+"\n"
+"個室トイレを使うと複製人間の士気が大きく上がります。\n"
+"この部屋のシャワーは早く終わります。"
+
+msgctxt "MoreRoomTypes.STRINGS.ROOMS.TYPES.PRIVATEBATHROOM.EFFECT"
+msgid "- Morale bonus"
+msgstr "- 士気ボーナス"
+
+msgctxt "MoreRoomTypes.STRINGS.ROOMS.TYPES.PRIVATEBATHROOM.TOOLTIP"
+msgid "Using a Private Bathroom will greatly improve Duplicants' Morale"
+msgstr "個室トイレを使うと複製人間の士気が大きく上がります"
+
+msgctxt "MoreRoomTypes.STRINGS.ROOMS.TYPES.WAREHOUSE.NAME"
+msgid "Warehouse"
+msgstr "倉庫"
+
+msgctxt "MoreRoomTypes.STRINGS.ROOMS.TYPES.WAREHOUSE.DESCRIPTION"
+msgid ""
+"An enclosed space for keeping supplies in order.\n"
+"\n"
+"A Warehouse does not change storage capacity."
+msgstr ""
+"物資を整理して置くための閉じた空間です。\n"
+"\n"
+"倉庫は収納量を変えません。"
+
+msgctxt "MoreRoomTypes.STRINGS.ROOMS.TYPES.WAREHOUSE.EFFECT"
+msgid "- No effect"
+msgstr "- 効果なし"
+
+msgctxt "MoreRoomTypes.STRINGS.ROOMS.TYPES.WAREHOUSE.TOOLTIP"
+msgid "A Warehouse does not change storage capacity"
+msgstr "倉庫は収納量を変えません"
+
+msgctxt "MoreRoomTypes.STRINGS.ROOMS.TYPES.BATTERYROOM.NAME"
+msgid "Battery Room"
+msgstr "バッテリー室"
+
+msgctxt "MoreRoomTypes.STRINGS.ROOMS.TYPES.BATTERYROOM.DESCRIPTION"
+msgid ""
+"A dedicated space for stored power.\n"
+"\n"
+"Batteries in a Battery Room lose charge more slowly."
+msgstr ""
+"蓄電のための専用空間です。\n"
+"\n"
+"バッテリー室の電池は放電が遅くなります。"
+
+msgctxt "MoreRoomTypes.STRINGS.ROOMS.TYPES.BATTERYROOM.EFFECT"
+msgid "- Reduced battery leakage"
+msgstr "- 電池の漏電減少"
+
+msgctxt "MoreRoomTypes.STRINGS.ROOMS.TYPES.BATTERYROOM.TOOLTIP"
+msgid "Batteries in a Battery Room lose charge more slowly"
+msgstr "バッテリー室の電池は放電が遅くなります"
+
+msgctxt "MoreRoomTypes.STRINGS.ROOMS.TYPES.WASTEROOM.NAME"
+msgid "Waste Processing Room"
+msgstr "廃棄物処理室"
+
+msgctxt "MoreRoomTypes.STRINGS.ROOMS.TYPES.WASTEROOM.DESCRIPTION"
+msgid ""
+"Where refuse is put back to work.\n"
+"\n"
+"Compost, Sludge Presses and Fertilizer Synthesizers in a Waste Processing Room function more efficiently."
+msgstr ""
+"ごみを再び役立てる場所です。\n"
+"\n"
+"廃棄物処理室のコンポスト、汚泥プレス、肥料合成機は効率が上がります。"
+
+msgctxt "MoreRoomTypes.STRINGS.ROOMS.TYPES.WASTEROOM.EFFECT"
+msgid "- Efficiency bonus"
+msgstr "- 効率ボーナス"
+
+msgctxt "MoreRoomTypes.STRINGS.ROOMS.TYPES.WASTEROOM.TOOLTIP"
+msgid "Compost, Sludge Presses and Fertilizer Synthesizers in a Waste Processing Room function more efficiently"
+msgstr "廃棄物処理室のコンポスト、汚泥プレス、肥料合成機は効率が上がります"
+
+msgctxt "MoreRoomTypes.STRINGS.ROOMS.TYPES.WATERROOM.NAME"
+msgid "Water Treatment Room"
+msgstr "水処理室"
+
+msgctxt "MoreRoomTypes.STRINGS.ROOMS.TYPES.WATERROOM.DESCRIPTION"
+msgid ""
+"Where dirty water gets a second chance.\n"
+"\n"
+"Water Sieves and Desalinators in a Water Treatment Room function more efficiently."
+msgstr ""
+"汚れた水に再チャンスを与える場所です。\n"
+"\n"
+"水処理室の浄水器と淡水化装置は効率が上がります。"
+
+msgctxt "MoreRoomTypes.STRINGS.ROOMS.TYPES.WATERROOM.EFFECT"
+msgid "- Efficiency bonus"
+msgstr "- 効率ボーナス"
+
+msgctxt "MoreRoomTypes.STRINGS.ROOMS.TYPES.WATERROOM.TOOLTIP"
+msgid "Water Sieves and Desalinators in a Water Treatment Room function more efficiently"
+msgstr "水処理室の浄水器と淡水化装置は効率が上がります"
+
+msgctxt "MoreRoomTypes.STRINGS.ROOMS.TYPES.HALLWAY.NAME"
+msgid "Hallway"
+msgstr "通路"
+
+msgctxt "MoreRoomTypes.STRINGS.ROOMS.TYPES.HALLWAY.DESCRIPTION"
+msgid ""
+"A transit shaft for moving between floors.\n"
+"\n"
+"Duplicants in a Hallway gain Athletics."
+msgstr ""
+"階を行き来するための縦の通路です。\n"
+"\n"
+"通路にいる複製人間は運動が上がります。"
+
+msgctxt "MoreRoomTypes.STRINGS.ROOMS.TYPES.HALLWAY.EFFECT"
+msgid "- Athletics bonus"
+msgstr "- 運動ボーナス"
+
+msgctxt "MoreRoomTypes.STRINGS.ROOMS.TYPES.HALLWAY.TOOLTIP"
+msgid "Duplicants in a Hallway gain Athletics"
+msgstr "通路にいる複製人間は運動が上がります"
+
+msgctxt "MoreRoomTypes.STRINGS.ROOMS.TYPES.NUCLEARPLANT.NAME"
+msgid "Nuclear Power Plant"
+msgstr "原子力発電所"
+
+msgctxt "MoreRoomTypes.STRINGS.ROOMS.TYPES.NUCLEARPLANT.DESCRIPTION"
+msgid ""
+"The perfect place for Duplicants to flex their Electrical Engineering skills.\n"
+"\n"
+"Heavy-duty generators built within a Nuclear Power Plant can be tuned up using microchips from power control stations to improve their <link=\"POWER\">Power</link> production."
+msgstr ""
+"複製人間が電気工学を発揮するのに最適な場所です。\n"
+"\n"
+"原子力発電所に建てた大型発電機は、電力制御ステーションのマイクロチップで調整して<link=\"POWER\">電力</link>生産を上げられます。"
+
+msgctxt "MoreRoomTypes.STRINGS.ROOMS.TYPES.NUCLEARPLANT.EFFECT"
+msgid "- Enables <link=\"POWERSTATIONTOOLS\">Microchip</link> tune-ups on heavy-duty generators"
+msgstr "- 大型発電機に<link=\"POWERSTATIONTOOLS\">マイクロチップ</link>調整が可能"
+
+msgctxt "MoreRoomTypes.STRINGS.ROOMS.TYPES.NUCLEARPLANT.TOOLTIP"
+msgid "Heavy-duty generators built in a Nuclear Power Plant can be tuned up using microchips from Power Control Stations to improve their Power production"
+msgstr "原子力発電所に建てた大型発電機は、電力制御ステーションのマイクロチップで調整して電力生産を上げられます"
+
+msgctxt "MoreRoomTypes.STRINGS.ROOMS.CRITERIA.GRAVE.NAME"
+msgid "Tasteful Memorial"
+msgstr "上品な記念碑"
+
+msgctxt "MoreRoomTypes.STRINGS.ROOMS.CRITERIA.GRAVE.DESCRIPTION"
+msgid "At least one Tasteful Memorial"
+msgstr "上品な記念碑が1つ以上"
+
+msgctxt "MoreRoomTypes.STRINGS.ROOMS.CRITERIA.MANUALGENERATOR.NAME"
+msgid "Manual Generator"
+msgstr "人力発電機"
+
+msgctxt "MoreRoomTypes.STRINGS.ROOMS.CRITERIA.MANUALGENERATOR.DESCRIPTION"
+msgid "At least one Manual Generator"
+msgstr "人力発電機が1つ以上"
+
+msgctxt "MoreRoomTypes.STRINGS.ROOMS.CRITERIA.WATERCOOLER.NAME"
+msgid "Water Cooler"
+msgstr "ウォータークーラー"
+
+msgctxt "MoreRoomTypes.STRINGS.ROOMS.CRITERIA.WATERCOOLER.DESCRIPTION"
+msgid "At least one Water Cooler"
+msgstr "ウォータークーラーが1つ以上"
+
+msgctxt "MoreRoomTypes.STRINGS.ROOMS.CRITERIA.PEDESTAL.NAME"
+msgid "Pedestal"
+msgstr "台座"
+
+msgctxt "MoreRoomTypes.STRINGS.ROOMS.CRITERIA.PEDESTAL.DESCRIPTION"
+msgid "At least one Pedestal"
+msgstr "台座が1つ以上"
+
+msgctxt "MoreRoomTypes.STRINGS.ROOMS.CRITERIA.MASTERPIECES.NAME"
+msgid "{0} Masterpieces"
+msgstr "傑作 {0} 点"
+
+msgctxt "MoreRoomTypes.STRINGS.ROOMS.CRITERIA.MASTERPIECES.DESCRIPTION"
+msgid "At least {0} Masterpieces."
+msgstr "傑作が少なくとも {0} 点。"
+
+msgctxt "MoreRoomTypes.STRINGS.ROOMS.CRITERIA.ARTIIFACTS.NAME"
+msgid "{0} Unique Artifacts"
+msgstr "ユニーク遺物 {0} 点"
+
+msgctxt "MoreRoomTypes.STRINGS.ROOMS.CRITERIA.ARTIIFACTS.DESCRIPTION"
+msgid "At least {0} unique Artifacts."
+msgstr "ユニーク遺物が少なくとも {0} 点。"
+
+msgctxt "MoreRoomTypes.STRINGS.ROOMS.CRITERIA.FLUSHTOILET_ONE.NAME"
+msgid "Exactly one Flush Toilet"
+msgstr "水洗トイレちょうど1つ"
+
+msgctxt "MoreRoomTypes.STRINGS.ROOMS.CRITERIA.FLUSHTOILET_ONE.DESCRIPTION"
+msgid "The room must contain exactly one Flush Toilet."
+msgstr "部屋には水洗トイレがちょうど1つ必要です。"
+
+msgctxt "MoreRoomTypes.STRINGS.ROOMS.CRITERIA.SINK_ONE.NAME"
+msgid "Exactly one Sink"
+msgstr "洗面台ちょうど1つ"
+
+msgctxt "MoreRoomTypes.STRINGS.ROOMS.CRITERIA.SINK_ONE.DESCRIPTION"
+msgid "The room must contain exactly one Sink."
+msgstr "部屋には洗面台がちょうど1つ必要です。"
+
+msgctxt "MoreRoomTypes.STRINGS.ROOMS.CRITERIA.SHOWER_ONE.NAME"
+msgid "Exactly one Shower"
+msgstr "シャワーちょうど1つ"
+
+msgctxt "MoreRoomTypes.STRINGS.ROOMS.CRITERIA.SHOWER_ONE.DESCRIPTION"
+msgid "The room must contain exactly one Shower."
+msgstr "部屋にはシャワーがちょうど1つ必要です。"
+
+msgctxt "MoreRoomTypes.STRINGS.ROOMS.CRITERIA.STORAGE_BUILDINGS.NAME"
+msgid "4 Storage Buildings"
+msgstr "収納建物 4つ"
+
+msgctxt "MoreRoomTypes.STRINGS.ROOMS.CRITERIA.STORAGE_BUILDINGS.DESCRIPTION"
+msgid "At least 4 storage buildings."
+msgstr "収納建物が少なくとも 4 つ。"
+
+msgctxt "MoreRoomTypes.STRINGS.ROOMS.CRITERIA.BATTERIES.NAME"
+msgid "4 Batteries"
+msgstr "電池 4つ"
+
+msgctxt "MoreRoomTypes.STRINGS.ROOMS.CRITERIA.BATTERIES.DESCRIPTION"
+msgid "At least 4 batteries. Rocket battery modules count."
+msgstr "電池が少なくとも 4 つ。ロケット電池モジュールも数えます。"
+
+msgctxt "MoreRoomTypes.STRINGS.ROOMS.CRITERIA.NO_EXTRA_INDUSTRIAL.NAME"
+msgid "No extra industrial machinery"
+msgstr "余分な産業機械なし"
+
+msgctxt "MoreRoomTypes.STRINGS.ROOMS.CRITERIA.NO_EXTRA_INDUSTRIAL.DESCRIPTION"
+msgid "No industrial machinery except batteries, rocket battery modules, and power transformers."
+msgstr "電池、ロケット電池モジュール、変圧器以外の産業機械は置けません。"
+
+msgctxt "MoreRoomTypes.STRINGS.ROOMS.CRITERIA.COMPOST.NAME"
+msgid "Compost"
+msgstr "コンポスト"
+
+msgctxt "MoreRoomTypes.STRINGS.ROOMS.CRITERIA.COMPOST.DESCRIPTION"
+msgid "At least one Compost."
+msgstr "コンポストが1つ以上。"
+
+msgctxt "MoreRoomTypes.STRINGS.ROOMS.CRITERIA.WASTE_PROCESSOR.NAME"
+msgid "Waste Processor"
+msgstr "廃棄物処理装置"
+
+msgctxt "MoreRoomTypes.STRINGS.ROOMS.CRITERIA.WASTE_PROCESSOR.DESCRIPTION"
+msgid "A Sludge Press or Fertilizer Synthesizer."
+msgstr "汚泥プレスまたは肥料合成機。"
+
+msgctxt "MoreRoomTypes.STRINGS.ROOMS.CRITERIA.WATER_TREATMENT.NAME"
+msgid "Water Treatment"
+msgstr "水処理装置"
+
+msgctxt "MoreRoomTypes.STRINGS.ROOMS.CRITERIA.WATER_TREATMENT.DESCRIPTION"
+msgid "A Water Sieve or Desalinator."
+msgstr "浄水器または淡水化装置。"
+
+msgctxt "MoreRoomTypes.STRINGS.ROOMS.CRITERIA.LADDER.NAME"
+msgid "Ladder"
+msgstr "はしご"
+
+msgctxt "MoreRoomTypes.STRINGS.ROOMS.CRITERIA.LADDER.DESCRIPTION"
+msgid "At least one Ladder."
+msgstr "はしごが1つ以上。"
+
+msgctxt "MoreRoomTypes.STRINGS.ROOMS.CRITERIA.FIRE_POLE.NAME"
+msgid "Fire Pole"
+msgstr "滑り棒"
+
+msgctxt "MoreRoomTypes.STRINGS.ROOMS.CRITERIA.FIRE_POLE.DESCRIPTION"
+msgid "At least one Fire Pole."
+msgstr "滑り棒が1つ以上。"
+
+msgctxt "MoreRoomTypes.STRINGS.ROOMS.CRITERIA.NUCLEAR_REACTOR.NAME"
+msgid "Research Reactor"
+msgstr "研究用原子炉"
+
+msgctxt "MoreRoomTypes.STRINGS.ROOMS.CRITERIA.NUCLEAR_REACTOR.DESCRIPTION"
+msgid "At least one Research Reactor."
+msgstr "研究用原子炉が1つ以上。"
+
+msgctxt "MoreRoomTypes.STRINGS.ROOMS.CRITERIA.STEAM_TURBINE.NAME"
+msgid "Steam Turbine"
+msgstr "蒸気タービン"
+
+msgctxt "MoreRoomTypes.STRINGS.ROOMS.CRITERIA.STEAM_TURBINE.DESCRIPTION"
+msgid "At least one Steam Turbine."
+msgstr "蒸気タービンが1つ以上。"
+
+msgctxt "MoreRoomTypes.STRINGS.ROOMS.EFFECTS.MUSEUM.NAME"
+msgid "Art Museum"
+msgstr "美術館"
+
+msgctxt "MoreRoomTypes.STRINGS.ROOMS.EFFECTS.MUSEUM.DESCRIPTION"
+msgid "Visited Art Museum"
+msgstr "美術館を訪れた"
+
+msgctxt "MoreRoomTypes.STRINGS.ROOMS.EFFECTS.MUSEUMSPACE.NAME"
+msgid "Space Museum"
+msgstr "宇宙博物館"
+
+msgctxt "MoreRoomTypes.STRINGS.ROOMS.EFFECTS.MUSEUMSPACE.DESCRIPTION"
+msgid "Visited Space Museum"
+msgstr "宇宙博物館を訪れた"
+
+msgctxt "MoreRoomTypes.STRINGS.ROOMS.EFFECTS.GRAVE_GOOD.NAME"
+msgid "Graveyard Serenity"
+msgstr "墓地の安らぎ"
+
+msgctxt "MoreRoomTypes.STRINGS.ROOMS.EFFECTS.GRAVE_GOOD.DESCRIPTION"
+msgid "This Duplicant has accepted their inevitable fate and is ready to embrace it."
+msgstr "この複製人間は避けられない運命を受け入れ、向き合う準備ができています。"
+
+msgctxt "MoreRoomTypes.STRINGS.ROOMS.EFFECTS.GRAVE_BAD.NAME"
+msgid "Graveyard Dread"
+msgstr "墓地の恐怖"
+
+msgctxt "MoreRoomTypes.STRINGS.ROOMS.EFFECTS.GRAVE_BAD.DESCRIPTION"
+msgid "This Duplicant feels cold claws of Death crawling up their spine."
+msgstr "この複製人間は死の冷たい爪が背筋を這うのを感じています。"
+
+msgctxt "MoreRoomTypes.STRINGS.ROOMS.EFFECTS.HALLWAY.NAME"
+msgid "Hallway Transit"
+msgstr "通路移動"
+
+msgctxt "MoreRoomTypes.STRINGS.ROOMS.EFFECTS.HALLWAY.DESCRIPTION"
+msgid "This Duplicant is moving through a Hallway."
+msgstr "この複製人間は通路を移動しています。"
+
+msgctxt "MoreRoomTypes.STRINGS.ROOMS.EFFECTS.PRIVATEBATHROOM.NAME"
+msgid "Private Bathroom"
+msgstr "個室トイレ"
+
+msgctxt "MoreRoomTypes.STRINGS.ROOMS.EFFECTS.PRIVATEBATHROOM.DESCRIPTION"
+msgid "This Duplicant used a Private Bathroom."
+msgstr "この複製人間は個室トイレを使いました。"
+
+msgctxt "MoreRoomTypes.STRINGS.ROOMS.EFFECTS.PRIVATEBATHROOM.SHOWER"
+msgid "Shower time: -20%"
+msgstr "シャワー時間: -20%"
+

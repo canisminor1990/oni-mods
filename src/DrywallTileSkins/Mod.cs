@@ -9,6 +9,7 @@ namespace DrywallTileSkins
 	{
 		public const string FacadePrefix = "DTS_ExteriorWall_";
 		public const string NoBackwallTag = "BW_NoBackwall";
+		public const string StaticId = "CanisMinor.DrywallTileSkins";
 
 		public static Harmony HarmonyInstance;
 		public static byte[] WallsAnimBytes;

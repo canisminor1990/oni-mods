@@ -1,0 +1,482 @@
+msgid ""
+msgstr ""
+"Project-Id-Version: MoreRoomTypes\n"
+"Language: ru\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Application: Oxygen Not Included\n"
+"POT Version: 2.0\n"
+
+msgctxt "MoreRoomTypes.STRINGS.TRANSLATION.AUTHOR.NAME"
+msgid "CanisMinor"
+msgstr "CanisMinor"
+
+msgctxt "MoreRoomTypes.STRINGS.SETTINGS.BUTTON"
+msgid "Settings"
+msgstr "Настройки"
+
+msgctxt "MoreRoomTypes.STRINGS.SETTINGS.TITLE"
+msgid "More Room Types"
+msgstr "Больше типов комнат"
+
+msgctxt "MoreRoomTypes.STRINGS.SETTINGS.HINT"
+msgid "Enable or disable each extra room type. Fully quit Oxygen Not Included after changing these, then launch again."
+msgstr "Включайте или выключайте каждый доп. тип комнаты. После смены полностью закройте игру и запустите снова."
+
+msgctxt "MoreRoomTypes.STRINGS.SETTINGS.ALL_ON"
+msgid "Enable all"
+msgstr "Включить все"
+
+msgctxt "MoreRoomTypes.STRINGS.SETTINGS.ALL_OFF"
+msgid "Disable all"
+msgstr "Выключить все"
+
+msgctxt "MoreRoomTypes.STRINGS.ROOMS.TYPES.GRAVEYARD.NAME"
+msgid "Graveyard"
+msgstr "Кладбище"
+
+msgctxt "MoreRoomTypes.STRINGS.ROOMS.TYPES.GRAVEYARD.DESCRIPTION"
+msgid ""
+"It makes Duplicants happy to think that they are still alive.\n"
+"\n"
+"Visiting a Graveyard will raise or lower Duplicants' Stress."
+msgstr ""
+"Дубликантам приятно осознавать, что они ещё живы.\n"
+"\n"
+"Посещение кладбища повышает или снижает стресс."
+
+msgctxt "MoreRoomTypes.STRINGS.ROOMS.TYPES.GRAVEYARD.EFFECT"
+msgid "- Stress bonus"
+msgstr "- Бонус к стрессу"
+
+msgctxt "MoreRoomTypes.STRINGS.ROOMS.TYPES.GRAVEYARD.TOOLTIP"
+msgid "Visiting a Graveyard will raise or lower Duplicants' Stress"
+msgstr "Посещение кладбища повышает или снижает стресс"
+
+msgctxt "MoreRoomTypes.STRINGS.ROOMS.TYPES.GYMROOM.NAME"
+msgid "Gym Room"
+msgstr "Спортзал"
+
+msgctxt "MoreRoomTypes.STRINGS.ROOMS.TYPES.GYMROOM.DESCRIPTION"
+msgid ""
+"Professional equipment lets Duplicants exercise more efficiently.\n"
+"\n"
+"Working a Manual Generator in a Gym Room improves Athletics training."
+msgstr ""
+"Профессиональные тренажёры дают дубликантам эффективнее тренироваться.\n"
+"\n"
+"Работа на ручном генераторе в спортзале ускоряет тренировку атлетики."
+
+msgctxt "MoreRoomTypes.STRINGS.ROOMS.TYPES.GYMROOM.EFFECT"
+msgid "- Athletics training bonus"
+msgstr "- Бонус тренировки атлетики"
+
+msgctxt "MoreRoomTypes.STRINGS.ROOMS.TYPES.GYMROOM.TOOLTIP"
+msgid "Working a Manual Generator in a Gym Room improves Athletics training"
+msgstr "Ручной генератор в спортзале ускоряет тренировку атлетики"
+
+msgctxt "MoreRoomTypes.STRINGS.ROOMS.TYPES.MUSEUM.NAME"
+msgid "Art Museum"
+msgstr "Художественный музей"
+
+msgctxt "MoreRoomTypes.STRINGS.ROOMS.TYPES.MUSEUM.DESCRIPTION"
+msgid ""
+"It used to be a storehouse, before Meep confused Pedestal content with art.\n"
+"\n"
+"Visiting an Art Museum will improve Duplicants' Morale."
+msgstr ""
+"Раньше это был склад, пока Мип не принял содержимое пьедесталов за искусство.\n"
+"\n"
+"Посещение музея повышает мораль дубликантов."
+
+msgctxt "MoreRoomTypes.STRINGS.ROOMS.TYPES.MUSEUM.EFFECT"
+msgid "- Morale bonus"
+msgstr "- Бонус морали"
+
+msgctxt "MoreRoomTypes.STRINGS.ROOMS.TYPES.MUSEUM.TOOLTIP"
+msgid "Visiting an Art Museum will improve Duplicants' Morale"
+msgstr "Посещение музея повышает мораль"
+
+msgctxt "MoreRoomTypes.STRINGS.ROOMS.TYPES.MUSEUMSPACE.NAME"
+msgid "Space Museum"
+msgstr "Космический музей"
+
+msgctxt "MoreRoomTypes.STRINGS.ROOMS.TYPES.MUSEUMSPACE.DESCRIPTION"
+msgid ""
+"Perfect for storing Ancient Knowledge on the pedestals.\n"
+"\n"
+"Visiting a Space Museum will improve Duplicants' Morale."
+msgstr ""
+"Идеально, чтобы выставить древние знания на пьедесталах.\n"
+"\n"
+"Посещение космического музея повышает мораль."
+
+msgctxt "MoreRoomTypes.STRINGS.ROOMS.TYPES.MUSEUMSPACE.EFFECT"
+msgid "- Morale bonus"
+msgstr "- Бонус морали"
+
+msgctxt "MoreRoomTypes.STRINGS.ROOMS.TYPES.MUSEUMSPACE.TOOLTIP"
+msgid "Visiting a Space Museum will improve Duplicants' Morale"
+msgstr "Посещение космического музея повышает мораль"
+
+msgctxt "MoreRoomTypes.STRINGS.ROOMS.TYPES.PRIVATEBATHROOM.NAME"
+msgid "Private Bathroom"
+msgstr "Личная уборная"
+
+msgctxt "MoreRoomTypes.STRINGS.ROOMS.TYPES.PRIVATEBATHROOM.DESCRIPTION"
+msgid ""
+"Finally, a place to truly be alone with one's thoughts.\n"
+"\n"
+"Using a Private Bathroom will greatly improve Duplicants' Morale.\n"
+"Showers in this room finish faster."
+msgstr ""
+"Наконец, место побыть наедине с мыслями.\n"
+"\n"
+"Личная уборная сильно повышает мораль.\n"
+"Душ в этой комнате заканчивается быстрее."
+
+msgctxt "MoreRoomTypes.STRINGS.ROOMS.TYPES.PRIVATEBATHROOM.EFFECT"
+msgid "- Morale bonus"
+msgstr "- Бонус морали"
+
+msgctxt "MoreRoomTypes.STRINGS.ROOMS.TYPES.PRIVATEBATHROOM.TOOLTIP"
+msgid "Using a Private Bathroom will greatly improve Duplicants' Morale"
+msgstr "Личная уборная сильно повышает мораль"
+
+msgctxt "MoreRoomTypes.STRINGS.ROOMS.TYPES.WAREHOUSE.NAME"
+msgid "Warehouse"
+msgstr "Склад"
+
+msgctxt "MoreRoomTypes.STRINGS.ROOMS.TYPES.WAREHOUSE.DESCRIPTION"
+msgid ""
+"An enclosed space for keeping supplies in order.\n"
+"\n"
+"A Warehouse does not change storage capacity."
+msgstr ""
+"Закрытое место, чтобы держать припасы в порядке.\n"
+"\n"
+"Склад не меняет вместимость."
+
+msgctxt "MoreRoomTypes.STRINGS.ROOMS.TYPES.WAREHOUSE.EFFECT"
+msgid "- No effect"
+msgstr "- Нет эффекта"
+
+msgctxt "MoreRoomTypes.STRINGS.ROOMS.TYPES.WAREHOUSE.TOOLTIP"
+msgid "A Warehouse does not change storage capacity"
+msgstr "Склад не меняет вместимость"
+
+msgctxt "MoreRoomTypes.STRINGS.ROOMS.TYPES.BATTERYROOM.NAME"
+msgid "Battery Room"
+msgstr "Батарейная"
+
+msgctxt "MoreRoomTypes.STRINGS.ROOMS.TYPES.BATTERYROOM.DESCRIPTION"
+msgid ""
+"A dedicated space for stored power.\n"
+"\n"
+"Batteries in a Battery Room lose charge more slowly."
+msgstr ""
+"Отдельное место для запаса энергии.\n"
+"\n"
+"Батареи в батарейной разряжаются медленнее."
+
+msgctxt "MoreRoomTypes.STRINGS.ROOMS.TYPES.BATTERYROOM.EFFECT"
+msgid "- Reduced battery leakage"
+msgstr "- Меньше утечки заряда"
+
+msgctxt "MoreRoomTypes.STRINGS.ROOMS.TYPES.BATTERYROOM.TOOLTIP"
+msgid "Batteries in a Battery Room lose charge more slowly"
+msgstr "Батареи в батарейной разряжаются медленнее"
+
+msgctxt "MoreRoomTypes.STRINGS.ROOMS.TYPES.WASTEROOM.NAME"
+msgid "Waste Processing Room"
+msgstr "Переработка отходов"
+
+msgctxt "MoreRoomTypes.STRINGS.ROOMS.TYPES.WASTEROOM.DESCRIPTION"
+msgid ""
+"Where refuse is put back to work.\n"
+"\n"
+"Compost, Sludge Presses and Fertilizer Synthesizers in a Waste Processing Room function more efficiently."
+msgstr ""
+"Здесь отходы снова идут в дело.\n"
+"\n"
+"Компост, прессы ила и синтезаторы удобрений работают эффективнее."
+
+msgctxt "MoreRoomTypes.STRINGS.ROOMS.TYPES.WASTEROOM.EFFECT"
+msgid "- Efficiency bonus"
+msgstr "- Бонус эффективности"
+
+msgctxt "MoreRoomTypes.STRINGS.ROOMS.TYPES.WASTEROOM.TOOLTIP"
+msgid "Compost, Sludge Presses and Fertilizer Synthesizers in a Waste Processing Room function more efficiently"
+msgstr "Компост, прессы ила и синтезаторы удобрений работают эффективнее"
+
+msgctxt "MoreRoomTypes.STRINGS.ROOMS.TYPES.WATERROOM.NAME"
+msgid "Water Treatment Room"
+msgstr "Водоочистка"
+
+msgctxt "MoreRoomTypes.STRINGS.ROOMS.TYPES.WATERROOM.DESCRIPTION"
+msgid ""
+"Where dirty water gets a second chance.\n"
+"\n"
+"Water Sieves and Desalinators in a Water Treatment Room function more efficiently."
+msgstr ""
+"Грязной воде дают второй шанс.\n"
+"\n"
+"Фильтры и опреснители работают эффективнее."
+
+msgctxt "MoreRoomTypes.STRINGS.ROOMS.TYPES.WATERROOM.EFFECT"
+msgid "- Efficiency bonus"
+msgstr "- Бонус эффективности"
+
+msgctxt "MoreRoomTypes.STRINGS.ROOMS.TYPES.WATERROOM.TOOLTIP"
+msgid "Water Sieves and Desalinators in a Water Treatment Room function more efficiently"
+msgstr "Фильтры и опреснители работают эффективнее"
+
+msgctxt "MoreRoomTypes.STRINGS.ROOMS.TYPES.HALLWAY.NAME"
+msgid "Hallway"
+msgstr "Коридор"
+
+msgctxt "MoreRoomTypes.STRINGS.ROOMS.TYPES.HALLWAY.DESCRIPTION"
+msgid ""
+"A transit shaft for moving between floors.\n"
+"\n"
+"Duplicants in a Hallway gain Athletics."
+msgstr ""
+"Шахта для перемещения между этажами.\n"
+"\n"
+"Дубликанты в коридоре получают атлетику."
+
+msgctxt "MoreRoomTypes.STRINGS.ROOMS.TYPES.HALLWAY.EFFECT"
+msgid "- Athletics bonus"
+msgstr "- Бонус атлетики"
+
+msgctxt "MoreRoomTypes.STRINGS.ROOMS.TYPES.HALLWAY.TOOLTIP"
+msgid "Duplicants in a Hallway gain Athletics"
+msgstr "Дубликанты в коридоре получают атлетику"
+
+msgctxt "MoreRoomTypes.STRINGS.ROOMS.TYPES.NUCLEARPLANT.NAME"
+msgid "Nuclear Power Plant"
+msgstr "АЭС"
+
+msgctxt "MoreRoomTypes.STRINGS.ROOMS.TYPES.NUCLEARPLANT.DESCRIPTION"
+msgid ""
+"The perfect place for Duplicants to flex their Electrical Engineering skills.\n"
+"\n"
+"Heavy-duty generators built within a Nuclear Power Plant can be tuned up using microchips from power control stations to improve their <link=\"POWER\">Power</link> production."
+msgstr ""
+"Идеальное место показать электротехнику.\n"
+"\n"
+"Тяжёлые генераторы в АЭС можно настраивать микрочипами со станций контроля питания, чтобы повысить выработку <link=\"POWER\">энергии</link>."
+
+msgctxt "MoreRoomTypes.STRINGS.ROOMS.TYPES.NUCLEARPLANT.EFFECT"
+msgid "- Enables <link=\"POWERSTATIONTOOLS\">Microchip</link> tune-ups on heavy-duty generators"
+msgstr "- Позволяет настраивать тяжёлые генераторы <link=\"POWERSTATIONTOOLS\">микрочипами</link>"
+
+msgctxt "MoreRoomTypes.STRINGS.ROOMS.TYPES.NUCLEARPLANT.TOOLTIP"
+msgid "Heavy-duty generators built in a Nuclear Power Plant can be tuned up using microchips from Power Control Stations to improve their Power production"
+msgstr "Тяжёлые генераторы в АЭС можно настраивать микрочипами со станций контроля питания"
+
+msgctxt "MoreRoomTypes.STRINGS.ROOMS.CRITERIA.GRAVE.NAME"
+msgid "Tasteful Memorial"
+msgstr "Изящный мемориал"
+
+msgctxt "MoreRoomTypes.STRINGS.ROOMS.CRITERIA.GRAVE.DESCRIPTION"
+msgid "At least one Tasteful Memorial"
+msgstr "Хотя бы один изящный мемориал"
+
+msgctxt "MoreRoomTypes.STRINGS.ROOMS.CRITERIA.MANUALGENERATOR.NAME"
+msgid "Manual Generator"
+msgstr "Ручной генератор"
+
+msgctxt "MoreRoomTypes.STRINGS.ROOMS.CRITERIA.MANUALGENERATOR.DESCRIPTION"
+msgid "At least one Manual Generator"
+msgstr "Хотя бы один ручной генератор"
+
+msgctxt "MoreRoomTypes.STRINGS.ROOMS.CRITERIA.WATERCOOLER.NAME"
+msgid "Water Cooler"
+msgstr "Кулер"
+
+msgctxt "MoreRoomTypes.STRINGS.ROOMS.CRITERIA.WATERCOOLER.DESCRIPTION"
+msgid "At least one Water Cooler"
+msgstr "Хотя бы один кулер"
+
+msgctxt "MoreRoomTypes.STRINGS.ROOMS.CRITERIA.PEDESTAL.NAME"
+msgid "Pedestal"
+msgstr "Пьедестал"
+
+msgctxt "MoreRoomTypes.STRINGS.ROOMS.CRITERIA.PEDESTAL.DESCRIPTION"
+msgid "At least one Pedestal"
+msgstr "Хотя бы один пьедестал"
+
+msgctxt "MoreRoomTypes.STRINGS.ROOMS.CRITERIA.MASTERPIECES.NAME"
+msgid "{0} Masterpieces"
+msgstr "{0} шедевров"
+
+msgctxt "MoreRoomTypes.STRINGS.ROOMS.CRITERIA.MASTERPIECES.DESCRIPTION"
+msgid "At least {0} Masterpieces."
+msgstr "Не меньше {0} шедевров."
+
+msgctxt "MoreRoomTypes.STRINGS.ROOMS.CRITERIA.ARTIIFACTS.NAME"
+msgid "{0} Unique Artifacts"
+msgstr "{0} уникальных артефактов"
+
+msgctxt "MoreRoomTypes.STRINGS.ROOMS.CRITERIA.ARTIIFACTS.DESCRIPTION"
+msgid "At least {0} unique Artifacts."
+msgstr "Не меньше {0} уникальных артефактов."
+
+msgctxt "MoreRoomTypes.STRINGS.ROOMS.CRITERIA.FLUSHTOILET_ONE.NAME"
+msgid "Exactly one Flush Toilet"
+msgstr "Ровно один смывной туалет"
+
+msgctxt "MoreRoomTypes.STRINGS.ROOMS.CRITERIA.FLUSHTOILET_ONE.DESCRIPTION"
+msgid "The room must contain exactly one Flush Toilet."
+msgstr "В комнате должен быть ровно один смывной туалет."
+
+msgctxt "MoreRoomTypes.STRINGS.ROOMS.CRITERIA.SINK_ONE.NAME"
+msgid "Exactly one Sink"
+msgstr "Ровно одна раковина"
+
+msgctxt "MoreRoomTypes.STRINGS.ROOMS.CRITERIA.SINK_ONE.DESCRIPTION"
+msgid "The room must contain exactly one Sink."
+msgstr "В комнате должна быть ровно одна раковина."
+
+msgctxt "MoreRoomTypes.STRINGS.ROOMS.CRITERIA.SHOWER_ONE.NAME"
+msgid "Exactly one Shower"
+msgstr "Ровно один душ"
+
+msgctxt "MoreRoomTypes.STRINGS.ROOMS.CRITERIA.SHOWER_ONE.DESCRIPTION"
+msgid "The room must contain exactly one Shower."
+msgstr "В комнате должен быть ровно один душ."
+
+msgctxt "MoreRoomTypes.STRINGS.ROOMS.CRITERIA.STORAGE_BUILDINGS.NAME"
+msgid "4 Storage Buildings"
+msgstr "4 хранилища"
+
+msgctxt "MoreRoomTypes.STRINGS.ROOMS.CRITERIA.STORAGE_BUILDINGS.DESCRIPTION"
+msgid "At least 4 storage buildings."
+msgstr "Не меньше 4 хранилищ."
+
+msgctxt "MoreRoomTypes.STRINGS.ROOMS.CRITERIA.BATTERIES.NAME"
+msgid "4 Batteries"
+msgstr "4 батареи"
+
+msgctxt "MoreRoomTypes.STRINGS.ROOMS.CRITERIA.BATTERIES.DESCRIPTION"
+msgid "At least 4 batteries. Rocket battery modules count."
+msgstr "Не меньше 4 батарей. Ракетные модули считаются."
+
+msgctxt "MoreRoomTypes.STRINGS.ROOMS.CRITERIA.NO_EXTRA_INDUSTRIAL.NAME"
+msgid "No extra industrial machinery"
+msgstr "Без лишней промышленности"
+
+msgctxt "MoreRoomTypes.STRINGS.ROOMS.CRITERIA.NO_EXTRA_INDUSTRIAL.DESCRIPTION"
+msgid "No industrial machinery except batteries, rocket battery modules, and power transformers."
+msgstr "Кроме батарей, ракетных модулей и трансформаторов промышленности быть не должно."
+
+msgctxt "MoreRoomTypes.STRINGS.ROOMS.CRITERIA.COMPOST.NAME"
+msgid "Compost"
+msgstr "Компост"
+
+msgctxt "MoreRoomTypes.STRINGS.ROOMS.CRITERIA.COMPOST.DESCRIPTION"
+msgid "At least one Compost."
+msgstr "Хотя бы один компост."
+
+msgctxt "MoreRoomTypes.STRINGS.ROOMS.CRITERIA.WASTE_PROCESSOR.NAME"
+msgid "Waste Processor"
+msgstr "Переработчик отходов"
+
+msgctxt "MoreRoomTypes.STRINGS.ROOMS.CRITERIA.WASTE_PROCESSOR.DESCRIPTION"
+msgid "A Sludge Press or Fertilizer Synthesizer."
+msgstr "Пресс ила или синтезатор удобрений."
+
+msgctxt "MoreRoomTypes.STRINGS.ROOMS.CRITERIA.WATER_TREATMENT.NAME"
+msgid "Water Treatment"
+msgstr "Водоочистка"
+
+msgctxt "MoreRoomTypes.STRINGS.ROOMS.CRITERIA.WATER_TREATMENT.DESCRIPTION"
+msgid "A Water Sieve or Desalinator."
+msgstr "Фильтр воды или опреснитель."
+
+msgctxt "MoreRoomTypes.STRINGS.ROOMS.CRITERIA.LADDER.NAME"
+msgid "Ladder"
+msgstr "Лестница"
+
+msgctxt "MoreRoomTypes.STRINGS.ROOMS.CRITERIA.LADDER.DESCRIPTION"
+msgid "At least one Ladder."
+msgstr "Хотя бы одна лестница."
+
+msgctxt "MoreRoomTypes.STRINGS.ROOMS.CRITERIA.FIRE_POLE.NAME"
+msgid "Fire Pole"
+msgstr "Пожарный шест"
+
+msgctxt "MoreRoomTypes.STRINGS.ROOMS.CRITERIA.FIRE_POLE.DESCRIPTION"
+msgid "At least one Fire Pole."
+msgstr "Хотя бы один пожарный шест."
+
+msgctxt "MoreRoomTypes.STRINGS.ROOMS.CRITERIA.NUCLEAR_REACTOR.NAME"
+msgid "Research Reactor"
+msgstr "Исследовательский реактор"
+
+msgctxt "MoreRoomTypes.STRINGS.ROOMS.CRITERIA.NUCLEAR_REACTOR.DESCRIPTION"
+msgid "At least one Research Reactor."
+msgstr "Хотя бы один исследовательский реактор."
+
+msgctxt "MoreRoomTypes.STRINGS.ROOMS.CRITERIA.STEAM_TURBINE.NAME"
+msgid "Steam Turbine"
+msgstr "Паровая турбина"
+
+msgctxt "MoreRoomTypes.STRINGS.ROOMS.CRITERIA.STEAM_TURBINE.DESCRIPTION"
+msgid "At least one Steam Turbine."
+msgstr "Хотя бы одна паровая турбина."
+
+msgctxt "MoreRoomTypes.STRINGS.ROOMS.EFFECTS.MUSEUM.NAME"
+msgid "Art Museum"
+msgstr "Художественный музей"
+
+msgctxt "MoreRoomTypes.STRINGS.ROOMS.EFFECTS.MUSEUM.DESCRIPTION"
+msgid "Visited Art Museum"
+msgstr "Посетил художественный музей"
+
+msgctxt "MoreRoomTypes.STRINGS.ROOMS.EFFECTS.MUSEUMSPACE.NAME"
+msgid "Space Museum"
+msgstr "Космический музей"
+
+msgctxt "MoreRoomTypes.STRINGS.ROOMS.EFFECTS.MUSEUMSPACE.DESCRIPTION"
+msgid "Visited Space Museum"
+msgstr "Посетил космический музей"
+
+msgctxt "MoreRoomTypes.STRINGS.ROOMS.EFFECTS.GRAVE_GOOD.NAME"
+msgid "Graveyard Serenity"
+msgstr "Кладбищенское спокойствие"
+
+msgctxt "MoreRoomTypes.STRINGS.ROOMS.EFFECTS.GRAVE_GOOD.DESCRIPTION"
+msgid "This Duplicant has accepted their inevitable fate and is ready to embrace it."
+msgstr "Этот дубликант принял неизбежную судьбу и готов встретить её."
+
+msgctxt "MoreRoomTypes.STRINGS.ROOMS.EFFECTS.GRAVE_BAD.NAME"
+msgid "Graveyard Dread"
+msgstr "Кладбищенский ужас"
+
+msgctxt "MoreRoomTypes.STRINGS.ROOMS.EFFECTS.GRAVE_BAD.DESCRIPTION"
+msgid "This Duplicant feels cold claws of Death crawling up their spine."
+msgstr "Этот дубликант чувствует холодные когти Смерти на спине."
+
+msgctxt "MoreRoomTypes.STRINGS.ROOMS.EFFECTS.HALLWAY.NAME"
+msgid "Hallway Transit"
+msgstr "Проход по коридору"
+
+msgctxt "MoreRoomTypes.STRINGS.ROOMS.EFFECTS.HALLWAY.DESCRIPTION"
+msgid "This Duplicant is moving through a Hallway."
+msgstr "Этот дубликант идёт по коридору."
+
+msgctxt "MoreRoomTypes.STRINGS.ROOMS.EFFECTS.PRIVATEBATHROOM.NAME"
+msgid "Private Bathroom"
+msgstr "Личная уборная"
+
+msgctxt "MoreRoomTypes.STRINGS.ROOMS.EFFECTS.PRIVATEBATHROOM.DESCRIPTION"
+msgid "This Duplicant used a Private Bathroom."
+msgstr "Этот дубликант воспользовался личной уборной."
+
+msgctxt "MoreRoomTypes.STRINGS.ROOMS.EFFECTS.PRIVATEBATHROOM.SHOWER"
+msgid "Shower time: -20%"
+msgstr "Время душа: -20%"
+

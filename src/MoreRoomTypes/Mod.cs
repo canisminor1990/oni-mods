@@ -6,7 +6,7 @@ namespace MoreRoomTypes
 {
 	public class Mod : UserMod2
 	{
-		public const string StaticId = "DarrenLee.MoreRoomTypes";
+		public const string StaticId = "CanisMinor.MoreRoomTypes";
 
 		public static string Namespace { get; private set; }
 		public static Harmony HarmonyInstance;

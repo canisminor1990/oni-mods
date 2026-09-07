@@ -7,7 +7,7 @@ namespace CustomChineseFonts
 	public class Mod : UserMod2
 	{
 		public const string LogPrefix = "[CustomChineseFonts] ";
-		public const string StaticId = "DarrenLee.CustomChineseFonts";
+		public const string StaticId = "CanisMinor.CustomChineseFonts";
 
 		public static Harmony HarmonyInstance;
 		public static string ContentPath;

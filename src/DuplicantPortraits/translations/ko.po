@@ -1,0 +1,18 @@
+msgid ""
+msgstr ""
+"Project-Id-Version: DuplicantPortraits\n"
+"Language: ko\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Application: Oxygen Not Included\n"
+"POT Version: 2.0\n"
+
+msgctxt "DuplicantPortraits.STRINGS.DUPLICANT_PORTRAITS.STAGE_NAME"
+msgid "Portrait of {0}"
+msgstr "{0}의 초상"
+
+msgctxt "DuplicantPortraits.STRINGS.DUPLICANT_PORTRAITS.STAGE_DESC"
+msgid "A masterpiece portrait of {0}, painted on a Blank Canvas."
+msgstr "빈 캔버스에 그린 걸작: {0}의 초상."
+

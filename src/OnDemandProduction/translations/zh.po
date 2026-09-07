@@ -1,0 +1,48 @@
+msgid ""
+msgstr ""
+"Project-Id-Version: StockProduction\n"
+"POT-Creation-Date: \n"
+"PO-Revision-Date: \n"
+"Language-Team: \n"
+"Language: zh\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Application: Oxygen Not Included\n"
+"POT Version: 2.0\n"
+
+msgctxt "StockProduction.STRINGS.STOCK_PRODUCTION.MODE_ONCE"
+msgid "Once"
+msgstr "单次"
+
+msgctxt "StockProduction.STRINGS.STOCK_PRODUCTION.MODE_STOCK"
+msgid "Maintain"
+msgstr "维持"
+
+msgctxt "StockProduction.STRINGS.STOCK_PRODUCTION.MODE_FOREVER"
+msgid "Forever"
+msgstr "持续"
+
+msgctxt "StockProduction.STRINGS.STOCK_PRODUCTION.MODE_TOOLTIP"
+msgid "Click to cycle Once, Maintain, and Forever.\n\nMaintain pauses when this world's Resources list reaches the number, and starts again when it drops below."
+msgstr "点击切换：单次、维持、持续。\n\n维持模式下，当前小行星资源清单达到该数量就停，低于后再继续。"
+
+msgctxt "StockProduction.STRINGS.STOCK_PRODUCTION.TARGET_TOOLTIP"
+msgid "Pause when stock reaches this amount (same units as the Resources list)."
+msgstr "库存达到这个数量时暂停（单位与资源清单相同）。"
+
+msgctxt "StockProduction.STRINGS.STOCK_PRODUCTION.QUEUE_TOOLTIP"
+msgid "Maintain: {0}\nCurrent: {1}\n\nPauses when the colony has this many. Starts again when stock drops below."
+msgstr "维持：{0}\n当前：{1}\n\n够了先停，低于该数量后再继续。"
+
+msgctxt "StockProduction.STRINGS.STOCK_PRODUCTION.UNIT_KG"
+msgid "kg"
+msgstr "千克"
+
+msgctxt "StockProduction.STRINGS.STOCK_PRODUCTION.UNIT_T"
+msgid "t"
+msgstr "吨"
+
+msgctxt "StockProduction.STRINGS.STOCK_PRODUCTION.UNIT_TOOLTIP"
+msgid "Click to switch kilograms and tonnes.\n1 t = 1000 kg."
+msgstr "点击切换千克和吨。\n1 吨 = 1000 千克。"

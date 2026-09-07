@@ -1,0 +1,5 @@
+<Project>
+  <ItemGroup>
+    <Compile Include="$(MSBuildThisFileDirectory)Shared\LocalePo.cs" Link="Shared\LocalePo.cs" />
+  </ItemGroup>
+</Project>

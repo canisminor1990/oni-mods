@@ -1,0 +1,46 @@
+msgid ""
+msgstr ""
+"Project-Id-Version: ModListPreviews\n"
+"Language: ko\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Application: Oxygen Not Included\n"
+"POT Version: 2.0\n"
+
+msgctxt "ModListPreviews.STRINGS.UI.MODLISTPREVIEWS.SETTINGS_BUTTON"
+msgid "Settings"
+msgstr "설정"
+
+msgctxt "ModListPreviews.STRINGS.UI.MODLISTPREVIEWS.SETTINGS_TITLE"
+msgid "Mod List Previews"
+msgstr "모드 목록 커버"
+
+msgctxt "ModListPreviews.STRINGS.UI.MODLISTPREVIEWS.SETTINGS_HINT"
+msgid "Cover size and cache for the Mods list."
+msgstr "모드 목록 커버 크기와 캐시."
+
+msgctxt "ModListPreviews.STRINGS.UI.MODLISTPREVIEWS.SIZE_VALUE"
+msgid "{0} px"
+msgstr "{0} px"
+
+msgctxt "ModListPreviews.STRINGS.UI.MODLISTPREVIEWS.MINUS"
+msgid "−"
+msgstr "−"
+
+msgctxt "ModListPreviews.STRINGS.UI.MODLISTPREVIEWS.PLUS"
+msgid "+"
+msgstr "+"
+
+msgctxt "ModListPreviews.STRINGS.UI.MODLISTPREVIEWS.REFRESH_COVERS"
+msgid "Refresh covers"
+msgstr "커버 새로고침"
+
+msgctxt "ModListPreviews.STRINGS.UI.MODLISTPREVIEWS.REFRESH_HINT"
+msgid "Clear cached images and download workshop covers again."
+msgstr "캐시를 지우고 창작마당 커버를 다시 받습니다."
+
+msgctxt "ModListPreviews.STRINGS.UI.MODLISTPREVIEWS.REFRESH_STARTED"
+msgid "Refreshing covers..."
+msgstr "커버를 다시 받는 중…"
+
