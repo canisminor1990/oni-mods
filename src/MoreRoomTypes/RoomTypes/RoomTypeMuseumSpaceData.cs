@@ -1,0 +1,40 @@
+using System;
+using STRINGS;
+
+namespace MoreRoomTypes
+{
+	class RoomTypeMuseumSpaceData : RoomTypeAbstractData
+	{
+		public static readonly string RoomId = "SpaceMuseumRoom";
+		public static readonly string EffectId = "SpaceMuseumEffectId";
+
+		public RoomTypeMuseumSpaceData()
+		{
+			Id = RoomId;
+			Name = STRINGS.ROOMS.TYPES.MUSEUMSPACE.NAME;
+			Tooltip = STRINGS.ROOMS.TYPES.MUSEUMSPACE.TOOLTIP;
+			Effect = string.Format(STRINGS.ROOMS.TYPES.MUSEUMSPACE.EFFECT, MiscUtils.Percent(Settings.Instance.MuseumSpace.Bonus));
+			Catergory = CreateCategory();
+			ConstraintPrimary = RoomModdedConstraints.PEDESTAL;
+			ConstrantsAdditional = new RoomConstraints.Constraint[5]
+			{
+				RoomModdedConstraints.ARTIFACTS,
+				RoomConstraints.ORNAMENTDISPLAYED,
+				RoomConstraints.NO_INDUSTRIAL_MACHINERY,
+				RoomConstraints.MINIMUM_SIZE_32,
+				RoomConstraintTags.GetMaxSizeConstraint(Settings.Instance.MuseumSpace.MaxSize)
+			};
+			RoomDetails = new RoomDetails.Detail[2]
+			{
+				new RoomDetails.Detail(room => string.Format((string)ROOMS.DETAILS.SIZE.NAME, room.cavity.NumCells)),
+				new RoomDetails.Detail(room => string.Format((string)ROOMS.DETAILS.BUILDING_COUNT.NAME, room.buildings.Count))
+			};
+			Priority = 1;
+			Upgrades = null;
+			SingleAssignee = false;
+			PriorityUse = false;
+			Effects = null;
+			SortKey = SortingCounter.GetAndIncrement(SortingCounter.MuseumSortKey + 1);
+		}
+	}
+}

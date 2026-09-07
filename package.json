@@ -40,6 +40,13 @@
     "ModListPreviews": {
       "steamId": "3794018361",
       "workshopTitle": "Mod List Previews"
+    },
+    "MoreRoomTypes": {
+      "workshopTitle": "More Room Types"
+    },
+    "ThermalInfoCards": {
+      "steamId": "3797325396",
+      "workshopTitle": "Thermal Info Cards"
     }
   }
 }

@@ -1,0 +1,41 @@
+using UnityEngine;
+using Klei.AI;
+
+namespace MoreRoomTypes
+{
+	class GraveyardEffectTrigger : KMonoBehaviour
+	{
+		static readonly EventSystem.IntraObjectHandler<GraveyardEffectTrigger> TriggerRoomEffectsDelegate =
+			new EventSystem.IntraObjectHandler<GraveyardEffectTrigger>((component, data) => component.TriggerRoomEffects(data));
+
+		protected override void OnPrefabInit()
+		{
+			base.OnPrefabInit();
+			Subscribe<GraveyardEffectTrigger>(-832141045, TriggerRoomEffectsDelegate);
+		}
+
+		void TriggerRoomEffects(object data)
+		{
+			if (!RoomTypes_AllModded.IsInTheRoom(this, RoomTypeGraveyardData.RoomId))
+				return;
+
+			GameObject gameObject = (GameObject)data;
+			float duration = 600 * Settings.Instance.Graveyard.Bonus;
+			bool positive = false;
+			if (!GameClock.Instance.IsNighttime())
+				positive = new System.Random().Next() % 2 == 0;
+			float value = -0.016666667f * (positive ? 1 : -1);
+			string name = positive ? STRINGS.ROOMS.EFFECTS.GRAVE_GOOD.NAME : STRINGS.ROOMS.EFFECTS.GRAVE_BAD.NAME;
+			string description = positive ? STRINGS.ROOMS.EFFECTS.GRAVE_GOOD.DESCRIPTION : STRINGS.ROOMS.EFFECTS.GRAVE_BAD.DESCRIPTION;
+
+			Effects effects = gameObject.GetComponent<Effects>();
+			if (effects == null || effects.HasEffect(RoomTypeGraveyardData.EffectId))
+				return;
+
+			Effect effect = new Effect(RoomTypeGraveyardData.EffectId, name, description, duration, true, true, false);
+			effect.SelfModifiers = new System.Collections.Generic.List<AttributeModifier>();
+			effect.SelfModifiers.Add(new AttributeModifier("StressDelta", value, description: name));
+			effects.Add(effect, true);
+		}
+	}
+}

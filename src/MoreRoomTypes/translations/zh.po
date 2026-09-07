@@ -1,0 +1,472 @@
+msgid ""
+msgstr ""
+"Application: Oxygen Not IncludedPOT Version: 2.0\n"
+"Project-Id-Version: MoreRoomTypes\n"
+"POT-Creation-Date: \n"
+"PO-Revision-Date: \n"
+"Language-Team: \n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Language: zh\n"
+
+#. MoreRoomTypes.STRINGS.TRANSLATION.AUTHOR.NAME
+msgctxt "MoreRoomTypes.STRINGS.TRANSLATION.AUTHOR.NAME"
+msgid "DarrenLee"
+msgstr "DarrenLee"
+
+#. MoreRoomTypes.STRINGS.ROOMS.TYPES.GRAVEYARD.NAME
+msgctxt "MoreRoomTypes.STRINGS.ROOMS.TYPES.GRAVEYARD.NAME"
+msgid "Graveyard"
+msgstr "墓地"
+
+#. MoreRoomTypes.STRINGS.ROOMS.TYPES.GRAVEYARD.EFFECT
+msgctxt "MoreRoomTypes.STRINGS.ROOMS.TYPES.GRAVEYARD.EFFECT"
+msgid " - Stress: +10% or -10% for {0} cycle"
+msgstr " - 压力：+10% 或 -10%，持续 {0} 周期"
+
+#. MoreRoomTypes.STRINGS.ROOMS.TYPES.GRAVEYARD.TOOLTIP
+msgctxt "MoreRoomTypes.STRINGS.ROOMS.TYPES.GRAVEYARD.TOOLTIP"
+msgid "It makes duplicants happy to think that they are still alive."
+msgstr "让复制人感到活着真好。"
+
+#. MoreRoomTypes.STRINGS.ROOMS.TYPES.GYMROOM.NAME
+msgctxt "MoreRoomTypes.STRINGS.ROOMS.TYPES.GYMROOM.NAME"
+msgid "Gym Room"
+msgstr "健身房"
+
+#. MoreRoomTypes.STRINGS.ROOMS.TYPES.GYMROOM.EFFECT
+msgctxt "MoreRoomTypes.STRINGS.ROOMS.TYPES.GYMROOM.EFFECT"
+msgid " - Faster athletics increase by {0}"
+msgstr " - 运动技能增长加快 {0}"
+
+#. MoreRoomTypes.STRINGS.ROOMS.TYPES.GYMROOM.TOOLTIP
+msgctxt "MoreRoomTypes.STRINGS.ROOMS.TYPES.GYMROOM.TOOLTIP"
+msgid "Professional Gym Room allows duplicants to exercise more efficiently."
+msgstr "专业健身房让复制人更有效地锻炼。"
+
+#. MoreRoomTypes.STRINGS.ROOMS.TYPES.INDUSTRIAL.NAME
+msgctxt "MoreRoomTypes.STRINGS.ROOMS.TYPES.INDUSTRIAL.NAME"
+msgid "Industrial Room"
+msgstr "车间"
+
+#. MoreRoomTypes.STRINGS.ROOMS.TYPES.INDUSTRIAL.EFFECT
+msgctxt "MoreRoomTypes.STRINGS.ROOMS.TYPES.INDUSTRIAL.EFFECT"
+msgid " - (no additional effect)"
+msgstr " - （无额外效果）"
+
+#. MoreRoomTypes.STRINGS.ROOMS.TYPES.INDUSTRIAL.TOOLTIP
+msgctxt "MoreRoomTypes.STRINGS.ROOMS.TYPES.INDUSTRIAL.TOOLTIP"
+msgid "This room contains some noisy, greasy machinery."
+msgstr "这个房间里有一些嘈杂、油腻的机器。"
+
+#. MoreRoomTypes.STRINGS.ROOMS.TYPES.MUSEUM.NAME
+msgctxt "MoreRoomTypes.STRINGS.ROOMS.TYPES.MUSEUM.NAME"
+msgid "Art Museum"
+msgstr "艺术博物馆"
+
+#. MoreRoomTypes.STRINGS.ROOMS.TYPES.MUSEUM.EFFECT
+msgctxt "MoreRoomTypes.STRINGS.ROOMS.TYPES.MUSEUM.EFFECT"
+msgid " • <style=\"KKeyword\">Morale</style>: +{0} of duplicant's Creativity skill as morale (up to +10)"
+msgstr " • <style=\"KKeyword\">士气</style>：按复制人创造力的 {0} 给予士气（最高 +10）"
+
+#. MoreRoomTypes.STRINGS.ROOMS.TYPES.MUSEUM.TOOLTIP
+msgctxt "MoreRoomTypes.STRINGS.ROOMS.TYPES.MUSEUM.TOOLTIP"
+msgid "It used to be a storehouse, before Meep confused Pedestal content with art."
+msgstr "曾经不过是个仓库，直到米珀把基座上的东西认作艺术品。"
+
+#. MoreRoomTypes.STRINGS.ROOMS.TYPES.MUSEUMSPACE.NAME
+msgctxt "MoreRoomTypes.STRINGS.ROOMS.TYPES.MUSEUMSPACE.NAME"
+msgid "Space Museum"
+msgstr "太空博物馆"
+
+#. MoreRoomTypes.STRINGS.ROOMS.TYPES.MUSEUMSPACE.EFFECT
+msgctxt "MoreRoomTypes.STRINGS.ROOMS.TYPES.MUSEUMSPACE.EFFECT"
+msgid " • <style=\"KKeyword\">Morale</style>: \n\t + {0} of duplicant's Piloting skill as morale (up to +10)\n    After \"Cosmic Archaeology\" completion: \n\t additional +1 for each unique artifact (up to +5) \n\t additional +1 for each 2 more unique artifacts (up to +5)\n\t additional +1 for each 3 more unique artifacts (up to +5)"
+msgstr " • <style=\"KKeyword\">士气</style>：\n\t 按复制人驾驶技能的 {0} 给予士气（最高 +10）\n    完成「宇宙考古」后：\n\t 每件独特文物额外 +1（最高 +5）\n\t 之后每 2 件独特文物额外 +1（最高 +5）\n\t 之后每 3 件独特文物额外 +1（最高 +5）"
+
+#. MoreRoomTypes.STRINGS.ROOMS.TYPES.MUSEUMSPACE.TOOLTIP
+msgctxt "MoreRoomTypes.STRINGS.ROOMS.TYPES.MUSEUMSPACE.TOOLTIP"
+msgid "Perfect for storing Ancient Knowledge on the pedestals."
+msgstr "很适合把远古知识摆上基座。"
+
+#. MoreRoomTypes.STRINGS.ROOMS.CRITERIA.GRAVE.NAME
+msgctxt "MoreRoomTypes.STRINGS.ROOMS.CRITERIA.GRAVE.NAME"
+msgid "Tasteful Memorial"
+msgstr "雅致的纪念碑"
+
+#. MoreRoomTypes.STRINGS.ROOMS.CRITERIA.GRAVE.DESCRIPTION
+msgctxt "MoreRoomTypes.STRINGS.ROOMS.CRITERIA.GRAVE.DESCRIPTION"
+msgid "At least one Tasteful Memorial"
+msgstr "至少一个雅致的纪念碑"
+
+#. MoreRoomTypes.STRINGS.ROOMS.CRITERIA.MANUALGENERATOR.NAME
+msgctxt "MoreRoomTypes.STRINGS.ROOMS.CRITERIA.MANUALGENERATOR.NAME"
+msgid "Manual Generator"
+msgstr "人力发电机"
+
+#. MoreRoomTypes.STRINGS.ROOMS.CRITERIA.MANUALGENERATOR.DESCRIPTION
+msgctxt "MoreRoomTypes.STRINGS.ROOMS.CRITERIA.MANUALGENERATOR.DESCRIPTION"
+msgid "At least one Manual Generator"
+msgstr "至少一个人力发电机"
+
+#. MoreRoomTypes.STRINGS.ROOMS.CRITERIA.WATERCOOLER.NAME
+msgctxt "MoreRoomTypes.STRINGS.ROOMS.CRITERIA.WATERCOOLER.NAME"
+msgid "Water Cooler"
+msgstr "饮水机"
+
+#. MoreRoomTypes.STRINGS.ROOMS.CRITERIA.WATERCOOLER.DESCRIPTION
+msgctxt "MoreRoomTypes.STRINGS.ROOMS.CRITERIA.WATERCOOLER.DESCRIPTION"
+msgid "At least one Water Cooler"
+msgstr "至少一个饮水机"
+
+#. MoreRoomTypes.STRINGS.ROOMS.CRITERIA.INDUSTRIAL.NAME
+msgctxt "MoreRoomTypes.STRINGS.ROOMS.CRITERIA.INDUSTRIAL.NAME"
+msgid "Industrial Machinery"
+msgstr "工业器械"
+
+#. MoreRoomTypes.STRINGS.ROOMS.CRITERIA.INDUSTRIAL.DESCRIPTION
+msgctxt "MoreRoomTypes.STRINGS.ROOMS.CRITERIA.INDUSTRIAL.DESCRIPTION"
+msgid "At least one Industrial Machinery building"
+msgstr "至少一个工业器械"
+
+#. MoreRoomTypes.STRINGS.ROOMS.CRITERIA.PEDESTAL.NAME
+msgctxt "MoreRoomTypes.STRINGS.ROOMS.CRITERIA.PEDESTAL.NAME"
+msgid "Pedestal"
+msgstr "基座"
+
+#. MoreRoomTypes.STRINGS.ROOMS.CRITERIA.PEDESTAL.DESCRIPTION
+msgctxt "MoreRoomTypes.STRINGS.ROOMS.CRITERIA.PEDESTAL.DESCRIPTION"
+msgid "At least one Pedestal"
+msgstr "至少一个基座"
+
+#. MoreRoomTypes.STRINGS.ROOMS.CRITERIA.MASTERPIECES.NAME
+msgctxt "MoreRoomTypes.STRINGS.ROOMS.CRITERIA.MASTERPIECES.NAME"
+msgid "{0} Masterpieces"
+msgstr "{0} 幅杰作"
+
+#. MoreRoomTypes.STRINGS.ROOMS.CRITERIA.MASTERPIECES.DESCRIPTION
+msgctxt "MoreRoomTypes.STRINGS.ROOMS.CRITERIA.MASTERPIECES.DESCRIPTION"
+msgid "At least {0} Masterpieces."
+msgstr "至少 {0} 幅杰作。"
+
+#. MoreRoomTypes.STRINGS.ROOMS.CRITERIA.ARTIIFACTS.NAME
+msgctxt "MoreRoomTypes.STRINGS.ROOMS.CRITERIA.ARTIIFACTS.NAME"
+msgid "{0} Unique Artifacts"
+msgstr "{0} 件独特文物"
+
+#. MoreRoomTypes.STRINGS.ROOMS.CRITERIA.ARTIIFACTS.DESCRIPTION
+msgctxt "MoreRoomTypes.STRINGS.ROOMS.CRITERIA.ARTIIFACTS.DESCRIPTION"
+msgid "At least {0} unique Artifacts."
+msgstr "至少 {0} 件独特文物。"
+
+#. MoreRoomTypes.STRINGS.ROOMS.EFFECTS.MUSEUM.NAME
+msgctxt "MoreRoomTypes.STRINGS.ROOMS.EFFECTS.MUSEUM.NAME"
+msgid "Art Museum"
+msgstr "艺术博物馆"
+
+#. MoreRoomTypes.STRINGS.ROOMS.EFFECTS.MUSEUM.DESCRIPTION
+msgctxt "MoreRoomTypes.STRINGS.ROOMS.EFFECTS.MUSEUM.DESCRIPTION"
+msgid "Visited Art Museum"
+msgstr "参观了艺术博物馆"
+
+#. MoreRoomTypes.STRINGS.ROOMS.EFFECTS.MUSEUMSPACE.NAME
+msgctxt "MoreRoomTypes.STRINGS.ROOMS.EFFECTS.MUSEUMSPACE.NAME"
+msgid "Space Museum"
+msgstr "太空博物馆"
+
+#. MoreRoomTypes.STRINGS.ROOMS.EFFECTS.MUSEUMSPACE.DESCRIPTION
+msgctxt "MoreRoomTypes.STRINGS.ROOMS.EFFECTS.MUSEUMSPACE.DESCRIPTION"
+msgid "Visited Space Museum"
+msgstr "参观了太空博物馆"
+
+#. MoreRoomTypes.STRINGS.ROOMS.EFFECTS.GRAVE_GOOD.NAME
+msgctxt "MoreRoomTypes.STRINGS.ROOMS.EFFECTS.GRAVE_GOOD.NAME"
+msgid "Graveyard Serenity"
+msgstr "墓地安宁"
+
+#. MoreRoomTypes.STRINGS.ROOMS.EFFECTS.GRAVE_GOOD.DESCRIPTION
+msgctxt "MoreRoomTypes.STRINGS.ROOMS.EFFECTS.GRAVE_GOOD.DESCRIPTION"
+msgid "This Duplicant has accepted their inevitable fate and is ready to embrace it."
+msgstr "这名复制人已经接受不可避免的命运，并准备好面对它。"
+
+#. MoreRoomTypes.STRINGS.ROOMS.EFFECTS.GRAVE_BAD.NAME
+msgctxt "MoreRoomTypes.STRINGS.ROOMS.EFFECTS.GRAVE_BAD.NAME"
+msgid "Graveyard Dread"
+msgstr "墓地恐惧"
+
+#. MoreRoomTypes.STRINGS.ROOMS.EFFECTS.GRAVE_BAD.DESCRIPTION
+msgctxt "MoreRoomTypes.STRINGS.ROOMS.EFFECTS.GRAVE_BAD.DESCRIPTION"
+msgid "This Duplicant feels cold claws of Death crawling up their spine."
+msgstr "这名复制人感到死神冰冷的爪子爬上了脊背。"
+
+#. MoreRoomTypes.STRINGS.ROOMS.TYPES.PRIVATEBATHROOM.NAME
+msgctxt "MoreRoomTypes.STRINGS.ROOMS.TYPES.PRIVATEBATHROOM.NAME"
+msgid "Private Bathroom"
+msgstr "私人卫生间"
+
+#. MoreRoomTypes.STRINGS.ROOMS.TYPES.PRIVATEBATHROOM.EFFECT
+msgctxt "MoreRoomTypes.STRINGS.ROOMS.TYPES.PRIVATEBATHROOM.EFFECT"
+msgid " • Same morale bonus as a Washroom\n • Showers take 20% less time"
+msgstr " • 与官方卫生间相同的士气加成\n • 淋浴时间缩短 20%"
+
+#. MoreRoomTypes.STRINGS.ROOMS.TYPES.PRIVATEBATHROOM.TOOLTIP
+msgctxt "MoreRoomTypes.STRINGS.ROOMS.TYPES.PRIVATEBATHROOM.TOOLTIP"
+msgid "Exactly one flush toilet, one sink, and one shower, with decor and a finished back wall."
+msgstr "恰好 1 个抽水马桶、1 个洗手池与 1 个淋浴间，需要装饰与后墙。"
+
+#. MoreRoomTypes.STRINGS.ROOMS.TYPES.WAREHOUSE.NAME
+msgctxt "MoreRoomTypes.STRINGS.ROOMS.TYPES.WAREHOUSE.NAME"
+msgid "Warehouse"
+msgstr "仓库"
+
+#. MoreRoomTypes.STRINGS.ROOMS.TYPES.WAREHOUSE.EFFECT
+msgctxt "MoreRoomTypes.STRINGS.ROOMS.TYPES.WAREHOUSE.EFFECT"
+msgid " - Organized storage area"
+msgstr " - 整理过的储物区"
+
+#. MoreRoomTypes.STRINGS.ROOMS.TYPES.WAREHOUSE.TOOLTIP
+msgctxt "MoreRoomTypes.STRINGS.ROOMS.TYPES.WAREHOUSE.TOOLTIP"
+msgid "Requires at least 4 storage buildings."
+msgstr "至少需要 4 个储物建筑。"
+
+#. MoreRoomTypes.STRINGS.ROOMS.TYPES.BATTERYROOM.NAME
+msgctxt "MoreRoomTypes.STRINGS.ROOMS.TYPES.BATTERYROOM.NAME"
+msgid "Battery Room"
+msgstr "储能室"
+
+#. MoreRoomTypes.STRINGS.ROOMS.TYPES.BATTERYROOM.EFFECT
+msgctxt "MoreRoomTypes.STRINGS.ROOMS.TYPES.BATTERYROOM.EFFECT"
+msgid " - Batteries lose charge more slowly"
+msgstr " - 电池自放电更慢"
+
+#. MoreRoomTypes.STRINGS.ROOMS.TYPES.BATTERYROOM.TOOLTIP
+msgctxt "MoreRoomTypes.STRINGS.ROOMS.TYPES.BATTERYROOM.TOOLTIP"
+msgid "Requires at least 8 batteries. Rocket battery modules count."
+msgstr "至少需要 8 个电池。火箭电池仓也算。"
+
+#. MoreRoomTypes.STRINGS.ROOMS.TYPES.OXYGENROOM.NAME
+msgctxt "MoreRoomTypes.STRINGS.ROOMS.TYPES.OXYGENROOM.NAME"
+msgid "Oxygen Room"
+msgstr "制氧室"
+
+#. MoreRoomTypes.STRINGS.ROOMS.TYPES.OXYGENROOM.EFFECT
+msgctxt "MoreRoomTypes.STRINGS.ROOMS.TYPES.OXYGENROOM.EFFECT"
+msgid " - Equipment in this room runs 10% more efficiently"
+msgstr " - 室内设备效率提升 10%"
+
+#. MoreRoomTypes.STRINGS.ROOMS.TYPES.OXYGENROOM.TOOLTIP
+msgctxt "MoreRoomTypes.STRINGS.ROOMS.TYPES.OXYGENROOM.TOOLTIP"
+msgid "Requires an oxygen producer and a gas pump."
+msgstr "需要制氧设备与气泵。"
+
+#. MoreRoomTypes.STRINGS.ROOMS.TYPES.WASTEROOM.NAME
+msgctxt "MoreRoomTypes.STRINGS.ROOMS.TYPES.WASTEROOM.NAME"
+msgid "Waste Processing Room"
+msgstr "废料处理间"
+
+#. MoreRoomTypes.STRINGS.ROOMS.TYPES.WASTEROOM.EFFECT
+msgctxt "MoreRoomTypes.STRINGS.ROOMS.TYPES.WASTEROOM.EFFECT"
+msgid " - Equipment in this room runs 10% more efficiently"
+msgstr " - 室内设备效率提升 10%"
+
+#. MoreRoomTypes.STRINGS.ROOMS.TYPES.WASTEROOM.TOOLTIP
+msgctxt "MoreRoomTypes.STRINGS.ROOMS.TYPES.WASTEROOM.TOOLTIP"
+msgid "Requires Compost plus a Sludge Press or Fertilizer Synthesizer."
+msgstr "需要堆肥堆，以及泥浆压榨器或肥料合成器。"
+
+#. MoreRoomTypes.STRINGS.ROOMS.TYPES.WATERROOM.NAME
+msgctxt "MoreRoomTypes.STRINGS.ROOMS.TYPES.WATERROOM.NAME"
+msgid "Water Treatment Room"
+msgstr "水处理间"
+
+#. MoreRoomTypes.STRINGS.ROOMS.TYPES.WATERROOM.EFFECT
+msgctxt "MoreRoomTypes.STRINGS.ROOMS.TYPES.WATERROOM.EFFECT"
+msgid " - Equipment in this room runs 10% more efficiently"
+msgstr " - 室内设备效率提升 10%"
+
+#. MoreRoomTypes.STRINGS.ROOMS.TYPES.WATERROOM.TOOLTIP
+msgctxt "MoreRoomTypes.STRINGS.ROOMS.TYPES.WATERROOM.TOOLTIP"
+msgid "Requires a Water Sieve or Desalinator."
+msgstr "需要净水器或脱盐器。"
+
+#. MoreRoomTypes.STRINGS.ROOMS.TYPES.HALLWAY.NAME
+msgctxt "MoreRoomTypes.STRINGS.ROOMS.TYPES.HALLWAY.NAME"
+msgid "Hallway"
+msgstr "走廊"
+
+#. MoreRoomTypes.STRINGS.ROOMS.TYPES.HALLWAY.EFFECT
+msgctxt "MoreRoomTypes.STRINGS.ROOMS.TYPES.HALLWAY.EFFECT"
+msgid " - Athletics bonus while inside"
+msgstr " - 在走廊内获得运动加成"
+
+#. MoreRoomTypes.STRINGS.ROOMS.TYPES.HALLWAY.TOOLTIP
+msgctxt "MoreRoomTypes.STRINGS.ROOMS.TYPES.HALLWAY.TOOLTIP"
+msgid "A transit shaft with a Ladder and a Fire Pole."
+msgstr "同一封闭空间内同时有梯子和消防滑杆。"
+
+#. MoreRoomTypes.STRINGS.ROOMS.TYPES.NUCLEARPLANT.NAME
+msgctxt "MoreRoomTypes.STRINGS.ROOMS.TYPES.NUCLEARPLANT.NAME"
+msgid "Nuclear Power Plant"
+msgstr "核电站"
+
+#. MoreRoomTypes.STRINGS.ROOMS.TYPES.NUCLEARPLANT.EFFECT
+msgctxt "MoreRoomTypes.STRINGS.ROOMS.TYPES.NUCLEARPLANT.EFFECT"
+msgid " - Same bonus as a Power Plant: microchip tune-ups on generators"
+msgstr " - 与官方发电厂相同：可用微芯片调校发电机"
+
+#. MoreRoomTypes.STRINGS.ROOMS.TYPES.NUCLEARPLANT.TOOLTIP
+msgctxt "MoreRoomTypes.STRINGS.ROOMS.TYPES.NUCLEARPLANT.TOOLTIP"
+msgid "Requires a Research Reactor and a Steam Turbine."
+msgstr "需要研究反应堆与蒸汽涡轮机。"
+
+#. MoreRoomTypes.STRINGS.ROOMS.CRITERIA.FLUSHTOILET_ONE.NAME
+msgctxt "MoreRoomTypes.STRINGS.ROOMS.CRITERIA.FLUSHTOILET_ONE.NAME"
+msgid "Exactly one Flush Toilet"
+msgstr "恰好 1 个抽水马桶"
+
+#. MoreRoomTypes.STRINGS.ROOMS.CRITERIA.FLUSHTOILET_ONE.DESCRIPTION
+msgctxt "MoreRoomTypes.STRINGS.ROOMS.CRITERIA.FLUSHTOILET_ONE.DESCRIPTION"
+msgid "The room must contain exactly one Flush Toilet."
+msgstr "房间内必须恰好有 1 个抽水马桶。"
+
+#. MoreRoomTypes.STRINGS.ROOMS.CRITERIA.SINK_ONE.NAME
+msgctxt "MoreRoomTypes.STRINGS.ROOMS.CRITERIA.SINK_ONE.NAME"
+msgid "Exactly one Sink"
+msgstr "恰好 1 个洗手池"
+
+#. MoreRoomTypes.STRINGS.ROOMS.CRITERIA.SINK_ONE.DESCRIPTION
+msgctxt "MoreRoomTypes.STRINGS.ROOMS.CRITERIA.SINK_ONE.DESCRIPTION"
+msgid "The room must contain exactly one Sink."
+msgstr "房间内必须恰好有 1 个洗手池。"
+
+#. MoreRoomTypes.STRINGS.ROOMS.CRITERIA.SHOWER_ONE.NAME
+msgctxt "MoreRoomTypes.STRINGS.ROOMS.CRITERIA.SHOWER_ONE.NAME"
+msgid "Exactly one Shower"
+msgstr "恰好 1 个淋浴间"
+
+#. MoreRoomTypes.STRINGS.ROOMS.CRITERIA.SHOWER_ONE.DESCRIPTION
+msgctxt "MoreRoomTypes.STRINGS.ROOMS.CRITERIA.SHOWER_ONE.DESCRIPTION"
+msgid "The room must contain exactly one Shower."
+msgstr "房间内必须恰好有 1 个淋浴间。"
+
+#. MoreRoomTypes.STRINGS.ROOMS.CRITERIA.STORAGE_BUILDINGS.NAME
+msgctxt "MoreRoomTypes.STRINGS.ROOMS.CRITERIA.STORAGE_BUILDINGS.NAME"
+msgid "4 Storage Buildings"
+msgstr "4 个储物建筑"
+
+#. MoreRoomTypes.STRINGS.ROOMS.CRITERIA.STORAGE_BUILDINGS.DESCRIPTION
+msgctxt "MoreRoomTypes.STRINGS.ROOMS.CRITERIA.STORAGE_BUILDINGS.DESCRIPTION"
+msgid "At least 4 storage buildings."
+msgstr "至少 4 个储物建筑。"
+
+#. MoreRoomTypes.STRINGS.ROOMS.CRITERIA.BATTERIES.NAME
+msgctxt "MoreRoomTypes.STRINGS.ROOMS.CRITERIA.BATTERIES.NAME"
+msgid "8 Batteries"
+msgstr "8 个电池"
+
+#. MoreRoomTypes.STRINGS.ROOMS.CRITERIA.BATTERIES.DESCRIPTION
+msgctxt "MoreRoomTypes.STRINGS.ROOMS.CRITERIA.BATTERIES.DESCRIPTION"
+msgid "At least 8 batteries. Rocket battery modules count."
+msgstr "至少 8 个电池。火箭电池仓也算。"
+
+#. MoreRoomTypes.STRINGS.ROOMS.CRITERIA.OXYGEN_PRODUCER.NAME
+msgctxt "MoreRoomTypes.STRINGS.ROOMS.CRITERIA.OXYGEN_PRODUCER.NAME"
+msgid "Oxygen Producer"
+msgstr "制氧设备"
+
+#. MoreRoomTypes.STRINGS.ROOMS.CRITERIA.OXYGEN_PRODUCER.DESCRIPTION
+msgctxt "MoreRoomTypes.STRINGS.ROOMS.CRITERIA.OXYGEN_PRODUCER.DESCRIPTION"
+msgid "At least one oxygen-producing building."
+msgstr "至少一台制氧建筑。"
+
+#. MoreRoomTypes.STRINGS.ROOMS.CRITERIA.GAS_PUMP.NAME
+msgctxt "MoreRoomTypes.STRINGS.ROOMS.CRITERIA.GAS_PUMP.NAME"
+msgid "Gas Pump"
+msgstr "气泵"
+
+#. MoreRoomTypes.STRINGS.ROOMS.CRITERIA.GAS_PUMP.DESCRIPTION
+msgctxt "MoreRoomTypes.STRINGS.ROOMS.CRITERIA.GAS_PUMP.DESCRIPTION"
+msgid "At least one Gas Pump."
+msgstr "至少一台气泵。"
+
+#. MoreRoomTypes.STRINGS.ROOMS.CRITERIA.COMPOST.NAME
+msgctxt "MoreRoomTypes.STRINGS.ROOMS.CRITERIA.COMPOST.NAME"
+msgid "Compost"
+msgstr "堆肥堆"
+
+#. MoreRoomTypes.STRINGS.ROOMS.CRITERIA.COMPOST.DESCRIPTION
+msgctxt "MoreRoomTypes.STRINGS.ROOMS.CRITERIA.COMPOST.DESCRIPTION"
+msgid "At least one Compost."
+msgstr "至少一个堆肥堆。"
+
+#. MoreRoomTypes.STRINGS.ROOMS.CRITERIA.WASTE_PROCESSOR.NAME
+msgctxt "MoreRoomTypes.STRINGS.ROOMS.CRITERIA.WASTE_PROCESSOR.NAME"
+msgid "Waste Processor"
+msgstr "废料处理设备"
+
+#. MoreRoomTypes.STRINGS.ROOMS.CRITERIA.WASTE_PROCESSOR.DESCRIPTION
+msgctxt "MoreRoomTypes.STRINGS.ROOMS.CRITERIA.WASTE_PROCESSOR.DESCRIPTION"
+msgid "A Sludge Press or Fertilizer Synthesizer."
+msgstr "泥浆压榨器或肥料合成器。"
+
+#. MoreRoomTypes.STRINGS.ROOMS.CRITERIA.WATER_TREATMENT.NAME
+msgctxt "MoreRoomTypes.STRINGS.ROOMS.CRITERIA.WATER_TREATMENT.NAME"
+msgid "Water Treatment"
+msgstr "水处理设备"
+
+#. MoreRoomTypes.STRINGS.ROOMS.CRITERIA.WATER_TREATMENT.DESCRIPTION
+msgctxt "MoreRoomTypes.STRINGS.ROOMS.CRITERIA.WATER_TREATMENT.DESCRIPTION"
+msgid "A Water Sieve or Desalinator."
+msgstr "净水器或脱盐器。"
+
+#. MoreRoomTypes.STRINGS.ROOMS.CRITERIA.LADDER.NAME
+msgctxt "MoreRoomTypes.STRINGS.ROOMS.CRITERIA.LADDER.NAME"
+msgid "Ladder"
+msgstr "梯子"
+
+#. MoreRoomTypes.STRINGS.ROOMS.CRITERIA.LADDER.DESCRIPTION
+msgctxt "MoreRoomTypes.STRINGS.ROOMS.CRITERIA.LADDER.DESCRIPTION"
+msgid "At least one Ladder."
+msgstr "至少一架梯子。"
+
+#. MoreRoomTypes.STRINGS.ROOMS.CRITERIA.FIRE_POLE.NAME
+msgctxt "MoreRoomTypes.STRINGS.ROOMS.CRITERIA.FIRE_POLE.NAME"
+msgid "Fire Pole"
+msgstr "消防滑杆"
+
+#. MoreRoomTypes.STRINGS.ROOMS.CRITERIA.FIRE_POLE.DESCRIPTION
+msgctxt "MoreRoomTypes.STRINGS.ROOMS.CRITERIA.FIRE_POLE.DESCRIPTION"
+msgid "At least one Fire Pole."
+msgstr "至少一根消防滑杆。"
+
+#. MoreRoomTypes.STRINGS.ROOMS.CRITERIA.NUCLEAR_REACTOR.NAME
+msgctxt "MoreRoomTypes.STRINGS.ROOMS.CRITERIA.NUCLEAR_REACTOR.NAME"
+msgid "Research Reactor"
+msgstr "研究反应堆"
+
+#. MoreRoomTypes.STRINGS.ROOMS.CRITERIA.NUCLEAR_REACTOR.DESCRIPTION
+msgctxt "MoreRoomTypes.STRINGS.ROOMS.CRITERIA.NUCLEAR_REACTOR.DESCRIPTION"
+msgid "At least one Research Reactor."
+msgstr "至少一座研究反应堆。"
+
+#. MoreRoomTypes.STRINGS.ROOMS.CRITERIA.STEAM_TURBINE.NAME
+msgctxt "MoreRoomTypes.STRINGS.ROOMS.CRITERIA.STEAM_TURBINE.NAME"
+msgid "Steam Turbine"
+msgstr "蒸汽涡轮机"
+
+#. MoreRoomTypes.STRINGS.ROOMS.CRITERIA.STEAM_TURBINE.DESCRIPTION
+msgctxt "MoreRoomTypes.STRINGS.ROOMS.CRITERIA.STEAM_TURBINE.DESCRIPTION"
+msgid "At least one Steam Turbine."
+msgstr "至少一台蒸汽涡轮机。"
+
+#. MoreRoomTypes.STRINGS.ROOMS.EFFECTS.HALLWAY.NAME
+msgctxt "MoreRoomTypes.STRINGS.ROOMS.EFFECTS.HALLWAY.NAME"
+msgid "Hallway Transit"
+msgstr "走廊通行"
+
+#. MoreRoomTypes.STRINGS.ROOMS.EFFECTS.HALLWAY.DESCRIPTION
+msgctxt "MoreRoomTypes.STRINGS.ROOMS.EFFECTS.HALLWAY.DESCRIPTION"
+msgid "This Duplicant is moving through a Hallway."
+msgstr "这名复制人正在走廊中移动。"
+
