@@ -161,36 +161,10 @@ namespace ModListPreviews
 
 		private static Transform GetRefTransform(HierarchyReferences refs, string name)
 		{
-			if (refs == null)
+			if (refs == null || !refs.HasReference(name))
 				return null;
-			try
-			{
-				RectTransform rt = refs.GetReference<RectTransform>(name);
-				if (rt != null)
-					return rt;
-			}
-			catch
-			{
-			}
-			try
-			{
-				MultiToggle toggle = refs.GetReference<MultiToggle>(name);
-				if (toggle != null)
-					return toggle.transform;
-			}
-			catch
-			{
-			}
-			try
-			{
-				LocText title = refs.GetReference<LocText>(name);
-				if (title != null)
-					return title.transform;
-			}
-			catch
-			{
-			}
-			return null;
+			Component comp = refs.GetReference(name);
+			return comp != null ? comp.transform : null;
 		}
 
 		private static GameObject CreateFrame(Transform parent)

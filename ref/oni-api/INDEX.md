@@ -38,5 +38,6 @@ python ref/oni-api/scan_dll.py BuildingFacades
 | `kmodmanager.cs` | `KMod.Manager.Sanitize` unsubscribes `!is_subscribed` |
 | `kmodmod.cs` | `KMod.Mod.is_subscribed` is not persisted |
 | `modsscreen.cs` | `ModsScreen.OnActivate` calls `Sanitize` then `BuildDisplay` |
+| `hierarchyreferences.cs` | `HierarchyReferences.GetReference<T>` logs `LogError` on type mismatch (does not throw); untyped `GetReference(name)` returns `Component` |
 
 `MISSING …` headers mean that dump pass did not find the type; search another file or rescan the DLL.
