@@ -6,6 +6,8 @@ Inspired by RimWorld's "until you have X" bills. Vanilla Oxygen Not Included onl
 
 ![ALL DLC](https://raw.githubusercontent.com/canisminor1990/oni-mods/refs/heads/master/compatibility.png)
 
+Steam Workshop: [按需生产](https://steamcommunity.com/sharedfiles/filedetails/?id=3797420331) · [Description.txt](Description.txt) (BBCode)
+
 ### Features
 
 - On any production building with a recipe queue, click the mode button next to the count.
