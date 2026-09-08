@@ -4,8 +4,6 @@ Adds extra colony room types. This standalone mod is built with thanks on pether
 
 ![ALL DLC](https://raw.githubusercontent.com/canisminor1990/oni-mods/refs/heads/master/compatibility.png)
 
-Steam Workshop: [More Room Types](https://steamcommunity.com/sharedfiles/filedetails/?id=3797339501) · [Description.txt](Description.txt) (BBCode)
-
 ### New rooms
 
 - **Private Bathroom**: exactly one flush toilet, one sink, and one shower, with decor and a finished back wall (12–32 tiles). Using a Private Bathroom will greatly improve Duplicants' Morale. Showers in this room finish faster.
