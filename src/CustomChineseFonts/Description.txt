@@ -4,7 +4,7 @@ Replaces the Simplified Chinese UI fonts. Body text defaults to HarmonyOS Sans S
 
 This mod uses HarmonyOS Sans Fonts.
 
-[img]https://raw.githubusercontent.com/Sgt-Imalas/Sgt_Imalas-Oni-Mods/refs/heads/master/Compat_All.png[/img]
+[img]https://raw.githubusercontent.com/canisminor1990/oni-mods/refs/heads/master/compatibility.png[/img]
 
 [h3]Features[/h3]
 
@@ -48,7 +48,7 @@ This mod uses HarmonyOS Sans Fonts.
 
 也可以放入自己的 TTF / OTF。
 
-[img]https://raw.githubusercontent.com/Sgt-Imalas/Sgt_Imalas-Oni-Mods/refs/heads/master/Compat_All.png[/img]
+[img]https://raw.githubusercontent.com/canisminor1990/oni-mods/refs/heads/master/compatibility.png[/img]
 
 [h3]功能[/h3]
 

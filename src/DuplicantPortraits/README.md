@@ -4,7 +4,7 @@ Adds a masterpiece portrait of every duplicant personality to the vanilla 2x2 Bl
 
 This is only a cosmetic mod, gameplay is unaffected.
 
-![ALL DLC](https://raw.githubusercontent.com/Sgt-Imalas/Sgt_Imalas-Oni-Mods/refs/heads/master/Compat_All.png)
+![ALL DLC](https://raw.githubusercontent.com/canisminor1990/oni-mods/refs/heads/master/compatibility.png)
 
 Steam Workshop: [Duplicant Portraits](https://steamcommunity.com/sharedfiles/filedetails/?id=3794390677) · [Description.txt](Description.txt) (BBCode)
 
@@ -37,7 +37,7 @@ Decor matches vanilla masterpiece paintings. The portrait is the built-in person
 
 仅装饰，不影响玩法。不新增建筑。
 
-![ALL DLC](https://raw.githubusercontent.com/Sgt-Imalas/Sgt_Imalas-Oni-Mods/refs/heads/master/Compat_All.png)
+![ALL DLC](https://raw.githubusercontent.com/canisminor1990/oni-mods/refs/heads/master/compatibility.png)
 
 ### 功能
 

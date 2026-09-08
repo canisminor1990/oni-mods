@@ -2,7 +2,7 @@
 
 Shows thermal conductivity, thermal mass, heat energy, and phase-change temperatures on hover and in the build menu. Hover cards can stack matching objects and sum thermal mass and heat energy. Peter Han's [url=https://steamcommunity.com/sharedfiles/filedetails/?id=1983504552]Thermal Tooltips[/url] and Aze's [url=https://steamcommunity.com/sharedfiles/filedetails/?id=1960947963]Better Info Cards[/url] conflict when both are enabled; this remake exists to combine both features so you do not need either original or PLib.
 
-[img]https://raw.githubusercontent.com/Sgt-Imalas/Sgt_Imalas-Oni-Mods/refs/heads/master/Compat_All.png[/img]
+[img]https://raw.githubusercontent.com/canisminor1990/oni-mods/refs/heads/master/compatibility.png[/img]
 
 [h3]Features[/h3]
 
@@ -50,7 +50,7 @@ Many thanks to Peter Han for [url=https://github.com/peterhaneve/ONIMods]Thermal
 
 [i]原版 [url=https://steamcommunity.com/sharedfiles/filedetails/?id=1983504552]Thermal Tooltips[/url] 与 [url=https://steamcommunity.com/sharedfiles/filedetails/?id=1960947963]Better Info Cards[/url] 互相冲突、无法同时启用。本模组把两者合并，在悬浮提示和建造菜单里显示热导率、热容、热量和相变温度；相同物体的卡片会合并并合计热容/热量。用语按[url=https://oxygennotincluded.wiki.gg/zh/wiki/%E8%AE%A1%E9%87%8F%E5%8D%95%E4%BD%8D#%E7%83%AD%E9%87%8F]计量单位 · 热量[/url]。独立制作，无需原版或 PLib。[/i]
 
-[img]https://raw.githubusercontent.com/Sgt-Imalas/Sgt_Imalas-Oni-Mods/refs/heads/master/Compat_All.png[/img]
+[img]https://raw.githubusercontent.com/canisminor1990/oni-mods/refs/heads/master/compatibility.png[/img]
 
 [h3]功能[/h3]
 

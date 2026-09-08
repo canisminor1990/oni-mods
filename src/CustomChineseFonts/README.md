@@ -4,7 +4,7 @@ Replaces the Simplified Chinese UI fonts. Body text defaults to HarmonyOS Sans S
 
 This mod uses HarmonyOS Sans Fonts.
 
-![ALL DLC](https://raw.githubusercontent.com/Sgt-Imalas/Sgt_Imalas-Oni-Mods/refs/heads/master/Compat_All.png)
+![ALL DLC](https://raw.githubusercontent.com/canisminor1990/oni-mods/refs/heads/master/compatibility.png)
 
 Steam Workshop: [自定义中文字体](https://steamcommunity.com/sharedfiles/filedetails/?id=3794395157) · [Description.txt](Description.txt) (BBCode)
 
@@ -42,7 +42,7 @@ Steam Workshop: [自定义中文字体](https://steamcommunity.com/sharedfiles/f
 
 也可以放入自己的 TTF / OTF。
 
-![ALL DLC](https://raw.githubusercontent.com/Sgt-Imalas/Sgt_Imalas-Oni-Mods/refs/heads/master/Compat_All.png)
+![ALL DLC](https://raw.githubusercontent.com/canisminor1990/oni-mods/refs/heads/master/compatibility.png)
 
 ### 功能
 

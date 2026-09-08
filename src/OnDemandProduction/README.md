@@ -4,7 +4,7 @@ Adds a third production mode to every production building. Click the Forever but
 
 Inspired by RimWorld's "until you have X" bills. Vanilla Oxygen Not Included only lets a building finish a set count or run forever, so there is no way to hold a stock of meals, refined metal, or suits. The usual workaround is a Smart Storage Bin on automation: when the bin is full, the circuit disables the building. This mod puts that "keep this many" behavior on the production button itself.
 
-![ALL DLC](https://raw.githubusercontent.com/Sgt-Imalas/Sgt_Imalas-Oni-Mods/refs/heads/master/Compat_All.png)
+![ALL DLC](https://raw.githubusercontent.com/canisminor1990/oni-mods/refs/heads/master/compatibility.png)
 
 ### Features
 
@@ -30,7 +30,7 @@ Inspired by RimWorld's "until you have X" bills. Vanilla Oxygen Not Included onl
 
 灵感来自 RimWorld 的「维持库存有 X 个」。原版缺氧的生产设备只能做完指定数量，或一直做下去，没有「维持这么多」——想囤一点食物、精炼金属或装备，往往会感到困惑。以前要维持库存，只能给智能储存箱接电路：箱子满了就断电停工，少了再开机。这个模组把同样的逻辑直接放进原来的模式按钮里。
 
-![ALL DLC](https://raw.githubusercontent.com/Sgt-Imalas/Sgt_Imalas-Oni-Mods/refs/heads/master/Compat_All.png)
+![ALL DLC](https://raw.githubusercontent.com/canisminor1990/oni-mods/refs/heads/master/compatibility.png)
 
 ### 功能
 

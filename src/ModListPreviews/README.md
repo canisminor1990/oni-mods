@@ -2,7 +2,7 @@
 
 Shows Steam Workshop cover thumbnails in the in-game Mods list. Local and Dev mods use `preview.png` / `preview.jpg` if present.
 
-![ALL DLC](https://raw.githubusercontent.com/Sgt-Imalas/Sgt_Imalas-Oni-Mods/refs/heads/master/Compat_All.png)
+![ALL DLC](https://raw.githubusercontent.com/canisminor1990/oni-mods/refs/heads/master/compatibility.png)
 
 Steam Workshop: [Mod List Previews](https://steamcommunity.com/sharedfiles/filedetails/?id=3794018361) · [Description.txt](Description.txt) (BBCode)
 
@@ -41,7 +41,7 @@ Fully quit the game after enabling or updating this mod. Covers may take a secon
 
 *在游戏内模组列表中显示创意工坊封面。本地和 Dev 模组如果有 preview.png 也会显示。*
 
-![ALL DLC](https://raw.githubusercontent.com/Sgt-Imalas/Sgt_Imalas-Oni-Mods/refs/heads/master/Compat_All.png)
+![ALL DLC](https://raw.githubusercontent.com/canisminor1990/oni-mods/refs/heads/master/compatibility.png)
 
 ### 功能
 

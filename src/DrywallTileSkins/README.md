@@ -4,7 +4,7 @@ Turns loaded tile textures into blueprint skins for vanilla Drywall. Only the in
 
 This is only a cosmetic mod, gameplay is unaffected.
 
-![ALL DLC](https://raw.githubusercontent.com/Sgt-Imalas/Sgt_Imalas-Oni-Mods/refs/heads/master/Compat_All.png)
+![ALL DLC](https://raw.githubusercontent.com/canisminor1990/oni-mods/refs/heads/master/compatibility.png)
 
 Steam Workshop: [Drywall Tile Skins](https://steamcommunity.com/sharedfiles/filedetails/?id=3794025758) · [Description.txt](Description.txt) (BBCode)
 
@@ -56,7 +56,7 @@ The number of skins depends on which tile mods you have enabled. If the list is 
 
 仅装饰，不影响玩法。不新增建筑。
 
-![ALL DLC](https://raw.githubusercontent.com/Sgt-Imalas/Sgt_Imalas-Oni-Mods/refs/heads/master/Compat_All.png)
+![ALL DLC](https://raw.githubusercontent.com/canisminor1990/oni-mods/refs/heads/master/compatibility.png)
 
 ### 功能
 

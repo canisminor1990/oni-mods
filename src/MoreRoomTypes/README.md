@@ -2,7 +2,7 @@
 
 Adds extra colony room types. This standalone mod is built with thanks on pether.pg's [Rooms Expanded](https://steamcommunity.com/sharedfiles/filedetails/?id=2348079481); you do not need to subscribe to the original.
 
-![ALL DLC](https://raw.githubusercontent.com/Sgt-Imalas/Sgt_Imalas-Oni-Mods/refs/heads/master/Compat_All.png)
+![ALL DLC](https://raw.githubusercontent.com/canisminor1990/oni-mods/refs/heads/master/compatibility.png)
 
 Steam Workshop: [More Room Types](https://steamcommunity.com/sharedfiles/filedetails/?id=3797339501) · [Description.txt](Description.txt) (BBCode)
 
@@ -47,7 +47,7 @@ Many thanks to pether.pg for releasing [Rooms Expanded](https://steamcommunity.c
 
 *感谢 pether.pg 的 [Rooms Expanded](https://steamcommunity.com/sharedfiles/filedetails/?id=2348079481)。本模组在其基础上独立制作，无需订阅原版即可使用。*
 
-![ALL DLC](https://raw.githubusercontent.com/Sgt-Imalas/Sgt_Imalas-Oni-Mods/refs/heads/master/Compat_All.png)
+![ALL DLC](https://raw.githubusercontent.com/canisminor1990/oni-mods/refs/heads/master/compatibility.png)
 
 ### 新增房间
 
