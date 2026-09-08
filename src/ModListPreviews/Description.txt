@@ -4,6 +4,12 @@ Shows Steam Workshop cover thumbnails in the in-game Mods list. Local and Dev mo
 
 [img]https://raw.githubusercontent.com/canisminor1990/oni-mods/refs/heads/master/compatibility.png[/img]
 
+[h3]Languages[/h3]
+
+UI text covers English, Chinese, Japanese, and Korean.
+
+[img]https://raw.githubusercontent.com/canisminor1990/oni-mods/refs/heads/master/i18n.png[/img]
+
 [h3]Features[/h3]
 
 [list]
@@ -48,6 +54,12 @@ Fully quit the game after enabling or updating this mod. Covers may take a secon
 [i]在游戏内模组列表中显示创意工坊封面。本地和 Dev 模组如果有 preview.png 也会显示。[/i]
 
 [img]https://raw.githubusercontent.com/canisminor1990/oni-mods/refs/heads/master/compatibility.png[/img]
+
+[h3]语言[/h3]
+
+界面文本覆盖英语、中文、日语和韩语。
+
+[img]https://raw.githubusercontent.com/canisminor1990/oni-mods/refs/heads/master/i18n.png[/img]
 
 [h3]功能[/h3]
 

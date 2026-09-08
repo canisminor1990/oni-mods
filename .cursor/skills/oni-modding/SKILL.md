@@ -143,6 +143,12 @@ Plain English pitch.
 
 [img]https://raw.githubusercontent.com/canisminor1990/oni-mods/refs/heads/master/compatibility.png[/img]
 
+[h3]Languages[/h3]
+
+UI text covers English, Chinese, Japanese, and Korean.
+
+[img]https://raw.githubusercontent.com/canisminor1990/oni-mods/refs/heads/master/i18n.png[/img]
+
 [h3]Features[/h3]
 [list]
 [*]…
@@ -158,15 +164,21 @@ Plain English pitch.
 
 [img]https://raw.githubusercontent.com/canisminor1990/oni-mods/refs/heads/master/compatibility.png[/img]
 
+[h3]语言[/h3]
+
+界面文本覆盖英语、中文、日语和韩语。
+
+[img]https://raw.githubusercontent.com/canisminor1990/oni-mods/refs/heads/master/i18n.png[/img]
+
 [h3]功能[/h3]
 [list]
 [*]…
 [/list]
 ```
 
-English first, then `[hr][/hr]`, then Chinese. Both languages must include the `compatibility.png` `[img]`. Use `[h1]` / `[h3]` only (no `[h2]`). Chinese pitch is `[i]…[/i]`; English pitch is plain text. `[b]`, `[i]` (also for paths), `[list]` / `[olist]` with `[*]`, `[code]`, `[url=https://…]label[/url]`. Numbered how-tos are `[olist]`. JSON or literal square brackets go in `[code]` or `[noparse]`. Player copy never mentions updating a DLL, hot reload, `local/`, or rebuild — those stay in AGENTS.md / this skill. Restart text is OK only for a player action that actually needs a full quit.
+English first, then `[hr][/hr]`, then Chinese. Both languages must include the `compatibility.png` `[img]`. Localized mods also include `i18n.png` (skip Custom Chinese Fonts). Use `[h1]` / `[h3]` only (no `[h2]`). Chinese pitch is `[i]…[/i]`; English pitch is plain text. `[b]`, `[i]` (also for paths), `[list]` / `[olist]` with `[*]`, `[code]`, `[url=https://…]label[/url]`. Numbered how-tos are `[olist]`. JSON or literal square brackets go in `[code]` or `[noparse]`. Player copy never mentions updating a DLL, hot reload, `local/`, or rebuild — those stay in AGENTS.md / this skill. Restart text is OK only for a player action that actually needs a full quit.
 
-`Description.txt` is generated BBCode. Do not write Markdown into it. Skip `[table]`, `[color]`, `[size]`, `[spoiler]`, `[previewyoutube]`. `README.md` uses Markdown for the same facts, plus `![ALL DLC](compatibility.png url)` and a Steam Workshop line.
+`Description.txt` is generated BBCode. Do not write Markdown into it. Skip `[table]`, `[color]`, `[size]`, `[spoiler]`, `[previewyoutube]`. `README.md` uses Markdown for the same facts, plus `![ALL DLC](compatibility.png url)`, `![Languages](i18n.png url)` when localized, and a Steam Workshop line.
 
 Details: [reference.md](reference.md).
 

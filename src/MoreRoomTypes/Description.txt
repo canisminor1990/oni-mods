@@ -4,6 +4,12 @@ Adds extra colony room types. This standalone mod is built with thanks on pether
 
 [img]https://raw.githubusercontent.com/canisminor1990/oni-mods/refs/heads/master/compatibility.png[/img]
 
+[h3]Languages[/h3]
+
+UI text covers English, Chinese, Japanese, and Korean.
+
+[img]https://raw.githubusercontent.com/canisminor1990/oni-mods/refs/heads/master/i18n.png[/img]
+
 [h3]New rooms[/h3]
 
 [list]
@@ -54,6 +60,12 @@ Many thanks to pether.pg for releasing [url=https://steamcommunity.com/sharedfil
 [i]感谢 pether.pg 的 [url=https://steamcommunity.com/sharedfiles/filedetails/?id=2348079481]Rooms Expanded[/url]。本模组在其基础上独立制作，无需订阅原版即可使用。[/i]
 
 [img]https://raw.githubusercontent.com/canisminor1990/oni-mods/refs/heads/master/compatibility.png[/img]
+
+[h3]语言[/h3]
+
+界面文本覆盖英语、中文、日语和韩语。
+
+[img]https://raw.githubusercontent.com/canisminor1990/oni-mods/refs/heads/master/i18n.png[/img]
 
 [h3]新增房间[/h3]
 

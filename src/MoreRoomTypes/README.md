@@ -4,6 +4,12 @@ Adds extra colony room types. This standalone mod is built with thanks on pether
 
 ![ALL DLC](https://raw.githubusercontent.com/canisminor1990/oni-mods/refs/heads/master/compatibility.png)
 
+### Languages
+
+UI text covers English, Chinese, Japanese, and Korean.
+
+![Languages](https://raw.githubusercontent.com/canisminor1990/oni-mods/refs/heads/master/i18n.png)
+
 ### New rooms
 
 - **Private Bathroom**: exactly one flush toilet, one sink, and one shower, with decor and a finished back wall (12–32 tiles). Using a Private Bathroom will greatly improve Duplicants' Morale. Showers in this room finish faster.
@@ -46,6 +52,12 @@ Many thanks to pether.pg for releasing [Rooms Expanded](https://steamcommunity.c
 *感谢 pether.pg 的 [Rooms Expanded](https://steamcommunity.com/sharedfiles/filedetails/?id=2348079481)。本模组在其基础上独立制作，无需订阅原版即可使用。*
 
 ![ALL DLC](https://raw.githubusercontent.com/canisminor1990/oni-mods/refs/heads/master/compatibility.png)
+
+### 语言
+
+界面文本覆盖英语、中文、日语和韩语。
+
+![Languages](https://raw.githubusercontent.com/canisminor1990/oni-mods/refs/heads/master/i18n.png)
 
 ### 新增房间
 

@@ -8,6 +8,12 @@ Inspired by RimWorld's "until you have X" bills. Vanilla Oxygen Not Included onl
 
 Steam Workshop: [按需生产](https://steamcommunity.com/sharedfiles/filedetails/?id=3797420331) · [Description.txt](Description.txt) (BBCode)
 
+### Languages
+
+UI text covers English, Chinese, Japanese, and Korean.
+
+![Languages](https://raw.githubusercontent.com/canisminor1990/oni-mods/refs/heads/master/i18n.png)
+
 ### Features
 
 - On any production building with a recipe queue, click the mode button next to the count.
@@ -33,6 +39,12 @@ Steam Workshop: [按需生产](https://steamcommunity.com/sharedfiles/filedetail
 灵感来自 RimWorld 的「维持库存有 X 个」。原版缺氧的生产设备只能做完指定数量，或一直做下去，没有「维持这么多」——想囤一点食物、精炼金属或装备，往往会感到困惑。以前要维持库存，只能给智能储存箱接电路：箱子满了就断电停工，少了再开机。这个模组把同样的逻辑直接放进原来的模式按钮里。
 
 ![ALL DLC](https://raw.githubusercontent.com/canisminor1990/oni-mods/refs/heads/master/compatibility.png)
+
+### 语言
+
+界面文本覆盖英语、中文、日语和韩语。
+
+![Languages](https://raw.githubusercontent.com/canisminor1990/oni-mods/refs/heads/master/i18n.png)
 
 ### 功能
 

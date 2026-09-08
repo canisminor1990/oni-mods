@@ -8,6 +8,12 @@ This is only a cosmetic mod, gameplay is unaffected.
 
 Steam Workshop: [Drywall Tile Skins](https://steamcommunity.com/sharedfiles/filedetails/?id=3794025758) · [Description.txt](Description.txt) (BBCode)
 
+### Languages
+
+UI text covers English, Chinese, Japanese, and Korean.
+
+![Languages](https://raw.githubusercontent.com/canisminor1990/oni-mods/refs/heads/master/i18n.png)
+
 ### Features
 
 - No new building. Skins use vanilla Drywall and the built-in blueprint picker.
@@ -57,6 +63,12 @@ The number of skins depends on which tile mods you have enabled. If the list is 
 仅装饰，不影响玩法。不新增建筑。
 
 ![ALL DLC](https://raw.githubusercontent.com/canisminor1990/oni-mods/refs/heads/master/compatibility.png)
+
+### 语言
+
+界面文本覆盖英语、中文、日语和韩语。
+
+![Languages](https://raw.githubusercontent.com/canisminor1990/oni-mods/refs/heads/master/i18n.png)
 
 ### 功能
 

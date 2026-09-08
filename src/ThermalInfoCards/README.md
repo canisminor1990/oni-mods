@@ -6,6 +6,12 @@ Shows thermal conductivity, thermal mass, heat energy, and phase-change temperat
 
 Steam Workshop: [Thermal Info Cards](https://steamcommunity.com/sharedfiles/filedetails/?id=3797325396) · [Description.txt](Description.txt) (BBCode)
 
+### Languages
+
+UI text covers English, Chinese, Japanese, and Korean.
+
+![Languages](https://raw.githubusercontent.com/canisminor1990/oni-mods/refs/heads/master/i18n.png)
+
 ### Features
 
 - Hovering a building, debris, or tile shows temperature, thermal conductivity, thermal mass, and heat energy.
@@ -45,6 +51,12 @@ Many thanks to Peter Han for [Thermal Tooltips](https://github.com/peterhaneve/O
 *原版 [Thermal Tooltips](https://steamcommunity.com/sharedfiles/filedetails/?id=1983504552) 与 [Better Info Cards](https://steamcommunity.com/sharedfiles/filedetails/?id=1960947963) 互相冲突、无法同时启用。本模组把两者合并，在悬浮提示和建造菜单里显示热导率、热容、热量和相变温度；相同物体的卡片会合并并合计热容/热量。用语按[计量单位 · 热量](https://oxygennotincluded.wiki.gg/zh/wiki/%E8%AE%A1%E9%87%8F%E5%8D%95%E4%BD%8D#%E7%83%AD%E9%87%8F)。独立制作，无需原版或 PLib。*
 
 ![ALL DLC](https://raw.githubusercontent.com/canisminor1990/oni-mods/refs/heads/master/compatibility.png)
+
+### 语言
+
+界面文本覆盖英语、中文、日语和韩语。
+
+![Languages](https://raw.githubusercontent.com/canisminor1990/oni-mods/refs/heads/master/i18n.png)
 
 ### 功能
 

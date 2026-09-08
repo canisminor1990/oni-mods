@@ -6,6 +6,12 @@ Shows Steam Workshop cover thumbnails in the in-game Mods list. Local and Dev mo
 
 Steam Workshop: [Mod List Previews](https://steamcommunity.com/sharedfiles/filedetails/?id=3794018361) · [Description.txt](Description.txt) (BBCode)
 
+### Languages
+
+UI text covers English, Chinese, Japanese, and Korean.
+
+![Languages](https://raw.githubusercontent.com/canisminor1990/oni-mods/refs/heads/master/i18n.png)
+
 ### Features
 
 - Adds a cover thumbnail on the left of each row. A placeholder is shown when no image is available.
@@ -42,6 +48,12 @@ Fully quit the game after enabling or updating this mod. Covers may take a secon
 *在游戏内模组列表中显示创意工坊封面。本地和 Dev 模组如果有 preview.png 也会显示。*
 
 ![ALL DLC](https://raw.githubusercontent.com/canisminor1990/oni-mods/refs/heads/master/compatibility.png)
+
+### 语言
+
+界面文本覆盖英语、中文、日语和韩语。
+
+![Languages](https://raw.githubusercontent.com/canisminor1990/oni-mods/refs/heads/master/i18n.png)
 
 ### 功能
 
