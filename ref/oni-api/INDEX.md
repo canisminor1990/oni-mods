@@ -49,5 +49,9 @@ python ref/oni-api/scan_dll.py BuildingFacades
 | `ComplexRecipe.decompiled.cs` | ingredients / results |
 | `AllResourcesScreen.decompiled.cs` | mass vs kcal vs quantity formatting |
 | `KNumberInputField.decompiled.cs` / `KInputField.decompiled.cs` | queue count field |
+| `loading.cs` | startup path: `Global.Awake`, `KMod.Content`, `Assets.OnPrefabInit` |
+| `LaunchInitializer.decompiled.cs` | first scene; instantiates `SpawnPrefabs` (Global / Assets) |
+| `LoadingOverlay.decompiled.cs` | save-load modal (`UI.FRONTEND.LOADING`), not the Klei splash |
+| `SceneInitializer.decompiled.cs` / `SceneInitializerLoader.decompiled.cs` | frontend prefab instantiate |
 
 `MISSING …` headers mean that dump pass did not find the type; search another file or rescan the DLL.
