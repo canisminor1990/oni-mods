@@ -84,7 +84,7 @@ namespace StockProduction
 				}
 				if (count > 0)
 				{
-					controller.SetTarget(recipe.id, count);
+					controller.SetTarget(recipe.id, StockRecipeUi.DisplayToStored(__instance, recipe, count));
 					return false;
 				}
 				return true;
@@ -206,7 +206,7 @@ namespace StockProduction
 			int current = StockInventory.GetCount(fabricator, recipe);
 			tip.SetSimpleTooltip(string.Format(
 				STRINGS.STOCK_PRODUCTION.QUEUE_TOOLTIP,
-				StockInventory.Format(fabricator, recipe, target),
+				StockRecipeUi.FormatQueueCount(recipe, target),
 				StockInventory.Format(fabricator, recipe, current)));
 		}
 

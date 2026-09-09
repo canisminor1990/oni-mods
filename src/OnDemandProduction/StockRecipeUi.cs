@@ -20,10 +20,21 @@ namespace StockProduction
 		private const int KgPerTon = 1000;
 		private const int DigitMax = 99;
 
+		private static SelectedRecipeQueueScreen installedScreen;
+
+		public static int DisplayToStored(ComplexFabricator fabricator, ComplexRecipe recipe, int digits)
+		{
+			digits = Mathf.Clamp(digits, 1, DigitMax);
+			if (recipe == null || !StockInventory.UsesMass(recipe))
+				return digits;
+			return ShowingTons(fabricator, recipe) ? digits * KgPerTon : digits;
+		}
+
 		public static void Install(SelectedRecipeQueueScreen screen)
 		{
 			if (screen == null || screen.InfiniteButton == null || screen.QueueCount == null)
 				return;
+			installedScreen = screen;
 			if (screen.GetComponent<StockRecipeUiState>() != null)
 				return;
 
@@ -104,7 +115,7 @@ namespace StockProduction
 		public static string FormatQueueCount(ComplexRecipe recipe, int target)
 		{
 			if (StockInventory.UsesMass(recipe) && target >= KgPerTon)
-				return DisplayAmount(target, true) + STRINGS.STOCK_PRODUCTION.UNIT_T;
+				return DisplayAmount(target, true) + "t";
 			return target.ToString();
 		}
 
@@ -209,9 +220,25 @@ namespace StockProduction
 				SetSimpleTooltip(state.unitButton, STRINGS.STOCK_PRODUCTION.UNIT_TOOLTIP);
 		}
 
+		private static bool ShowingTons(ComplexFabricator fabricator, ComplexRecipe recipe)
+		{
+			if (recipe == null || !StockInventory.UsesMass(recipe))
+				return false;
+			StockRecipeController controller = fabricator != null
+				? fabricator.GetComponent<StockRecipeController>()
+				: null;
+			int target = controller != null ? controller.GetTarget(recipe.id) : 0;
+			StockRecipeUiState state = installedScreen != null
+				? installedScreen.GetComponent<StockRecipeUiState>()
+				: null;
+			if (state != null)
+				return UseTons(state, recipe.id, target);
+			return target > DigitMax;
+		}
+
 		private static bool UseTons(StockRecipeUiState state, string recipeId, int targetKg)
 		{
-			if (state.useTons.TryGetValue(recipeId, out bool stored))
+			if (state != null && state.useTons.TryGetValue(recipeId, out bool stored))
 				return stored;
 			return targetKg > DigitMax;
 		}
@@ -329,11 +356,8 @@ namespace StockProduction
 			if (controller == null || recipe == null || !controller.IsEnabled(recipe.id))
 				return;
 
-			StockRecipeUiState state = screen.GetComponent<StockRecipeUiState>();
-			int digits = Mathf.Clamp(Mathf.RoundToInt(screen.QueueCount.currentValue), 1, DigitMax);
-			bool tons = state != null && StockInventory.UsesMass(recipe)
-				&& UseTons(state, recipe.id, controller.GetTarget(recipe.id));
-			controller.SetTarget(recipe.id, tons ? digits * KgPerTon : digits);
+			int digits = Mathf.RoundToInt(screen.QueueCount.currentValue);
+			controller.SetTarget(recipe.id, DisplayToStored(fabricator, recipe, digits));
 			RefreshAfterChange(screen);
 		}
 
