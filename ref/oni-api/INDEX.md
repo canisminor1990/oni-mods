@@ -49,6 +49,12 @@ python ref/oni-api/scan_dll.py BuildingFacades
 | `ComplexRecipe.decompiled.cs` | ingredients / results |
 | `AllResourcesScreen.decompiled.cs` | mass vs kcal vs quantity formatting |
 | `KNumberInputField.decompiled.cs` / `KInputField.decompiled.cs` | queue count field |
+| `FertilizerMakerConfig.decompiled.cs` | fertilizer synthesizer is ElementConverter, no recipe queue |
+| `SideScreenContent.decompiled.cs` | `IsValidForTarget` / `SetTarget` / `GetTitle` / sort order |
+| `DetailsScreen.sidescreens.cs` | `SideScreenRef` + Config-tab instantiate in `Refresh` |
+| `TinkerStation.decompiled.cs` | power-control + farm-station tools; `alwaysTinker` / `ToolsRequested` |
+| `farmstationconfig.cs` | Farm Station is TinkerStation; `TINKER_TOOLS` = FarmStationTools |
+| `Compost.decompiled.cs` | Compost is ElementConverter → Dirt; Operational SM |
 | `loading.cs` | startup path: `Global.Awake`, `KMod.Content`, `Assets.OnPrefabInit` |
 | `LaunchInitializer.decompiled.cs` | first scene; instantiates `SpawnPrefabs` (Global / Assets) |
 | `LoadingOverlay.decompiled.cs` | save-load modal (`UI.FRONTEND.LOADING`), not the Klei splash |

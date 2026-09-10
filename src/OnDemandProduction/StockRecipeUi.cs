@@ -34,6 +34,8 @@ namespace StockProduction
 		{
 			if (screen == null || screen.InfiniteButton == null || screen.QueueCount == null)
 				return;
+			if (screen.GetComponentInParent<BuildingStockSideScreen>() != null)
+				return;
 			installedScreen = screen;
 			if (screen.GetComponent<StockRecipeUiState>() != null)
 				return;
@@ -129,7 +131,7 @@ namespace StockProduction
 			return Mathf.Clamp(tonsValue, 1, DigitMax);
 		}
 
-		private static bool IsFieldEditing(KNumberInputField field)
+		internal static bool IsFieldEditing(KNumberInputField field)
 		{
 			return field != null && field.field != null && field.field.isFocused;
 		}
@@ -269,7 +271,7 @@ namespace StockProduction
 			SetSimpleTooltip(button.gameObject, STRINGS.STOCK_PRODUCTION.MODE_TOOLTIP);
 		}
 
-		private static void SetSimpleTooltip(GameObject go, string text)
+		internal static void SetSimpleTooltip(GameObject go, string text)
 		{
 			if (go == null)
 				return;
@@ -279,7 +281,7 @@ namespace StockProduction
 			tip.SetSimpleTooltip(text);
 		}
 
-		private static void FitLabel(LocText label)
+		internal static void FitLabel(LocText label)
 		{
 			if (label == null)
 				return;

@@ -17,6 +17,7 @@ namespace StockProduction
 			HarmonyInstance = harmony;
 			ContentPath = path;
 			base.OnLoad(harmony);
+			ModSettings.EnsureLoaded();
 			Debug.Log(LogPrefix + "loaded, content=" + ContentPath);
 		}
 	}

@@ -22,6 +22,22 @@ UI text covers English, Chinese, Japanese, and Korean.
 [*]Totals come from the same world inventory as the resource overlay (reachable items on this asteroid or rocket, not the whole cluster).
 [*]Materials use mass, suits and similar items use count — the same units as the Resources list. Food is counted by stored mass, which is one kilogram per item for most meals.
 [*]Copy Building Settings copies Maintain.
+[*]Buildings with no recipe list use the same count field, unit button, and mode button: Fertilizer Synthesizer, Compost, Power Control Station, and Farm Station. Fertilizer and dirt can switch kg and t (1 t = 1000 kg); microchips and farm kits are a count. Power Control Station and Farm Station cycle Auto and Maintain (vanilla Auto: craft only when a generator or plant needs the tool).
+[/list]
+
+[h3]Settings[/h3]
+
+[list]
+[*]Open the Mods list, then click Settings on this mod.
+[*][b]Extra buildings[/b] (on by default): one switch for Fertilizer Synthesizer, Compost, Power Control Station, and Farm Station. Off keeps those four vanilla. Recipe-queue buildings are unchanged.
+[/list]
+
+[h3]Update (1.1.0)[/h3]
+
+[list]
+[*]Fertilizer Synthesizer, Compost, Power Control Station, and Farm Station now use the same Maintain controls as recipe-queue buildings.
+[*]Power Control Station and Farm Station cycle Auto and Maintain (vanilla Auto: craft only when a generator or plant needs the tool).
+[*]Mods list Settings adds one Extra buildings switch, on by default. Turn it off to keep those four vanilla.
 [/list]
 
 [h3]Feedback & Source[/h3]
@@ -58,6 +74,22 @@ UI text covers English, Chinese, Japanese, and Korean.
 [*]数量来自原版资源统计（复制人能拿到的、本世界库存），不是整个星群。
 [*]材料按质量、装备等按个数，单位与资源清单一致。食物按储存质量计，大部分食物一件是 1 千克。
 [*]复制建筑设置会一并复制维持。
+[*]没有配方清单的建筑也用同一套数量框、单位按钮和模式按钮：肥料合成器、堆肥、电力控制站、农业站。肥料和泥土可以切换千克 / 吨（1 吨 = 1000 千克），微芯片和农业包按个。电力控制站和农业站只切换自动 / 维持（原版自动：只有发电机或植物需要时才做工具）。
+[/list]
+
+[h3]设置[/h3]
+
+[list]
+[*]打开模组列表，点击本模组的「设置」。
+[*][b]额外建筑[/b]（默认开）：一个总开关控制肥料合成器、堆肥、电力控制站、农业站。关掉后这四座保持原版。带配方队列的生产设备不受影响。
+[/list]
+
+[h3]更新（1.1.0）[/h3]
+
+[list]
+[*]肥料合成器、堆肥、电力控制站、农业站也用同一套维持库存操作。
+[*]电力控制站和农业站只切换自动 / 维持（原版自动：只有发电机或植物需要时才做工具）。
+[*]模组列表的设置里增加「额外建筑」总开关，默认打开。关掉后这四座保持原版。
 [/list]
 
 [h3]问题反馈与源码[/h3]

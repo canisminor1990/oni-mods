@@ -31,6 +31,74 @@ namespace StockProduction
 			}
 		}
 
+		[HarmonyPatch(typeof(FertilizerMakerConfig), nameof(FertilizerMakerConfig.DoPostConfigureComplete))]
+		public static class FertilizerMakerConfig_DoPostConfigureComplete_Patch
+		{
+			public static void Postfix(GameObject go)
+			{
+				go.AddOrGet<BuildingStockController>().Configure(BuildingStockController.Kind.Fertilizer);
+			}
+		}
+
+		[HarmonyPatch(typeof(PowerControlStationConfig), nameof(PowerControlStationConfig.DoPostConfigureComplete))]
+		public static class PowerControlStationConfig_DoPostConfigureComplete_Patch
+		{
+			public static void Postfix(GameObject go)
+			{
+				go.AddOrGet<BuildingStockController>().Configure(BuildingStockController.Kind.Microchip);
+			}
+		}
+
+		[HarmonyPatch(typeof(FarmStationConfig), nameof(FarmStationConfig.DoPostConfigureComplete))]
+		public static class FarmStationConfig_DoPostConfigureComplete_Patch
+		{
+			public static void Postfix(GameObject go)
+			{
+				go.AddOrGet<BuildingStockController>().Configure(BuildingStockController.Kind.FarmKit);
+			}
+		}
+
+		[HarmonyPatch(typeof(CompostConfig), nameof(CompostConfig.DoPostConfigureComplete))]
+		public static class CompostConfig_DoPostConfigureComplete_Patch
+		{
+			public static void Postfix(GameObject go)
+			{
+				go.AddOrGet<BuildingStockController>().Configure(BuildingStockController.Kind.Compost);
+			}
+		}
+
+		[HarmonyPatch(typeof(ModsScreen), "BuildDisplay")]
+		public static class ModsScreen_BuildDisplay_Patch
+		{
+			public static void Postfix(object __instance)
+			{
+				try
+				{
+					SettingsScreen.AddModButton(__instance);
+				}
+				catch (Exception ex)
+				{
+					Debug.LogWarning(Mod.LogPrefix + "ModsScreen button failed: " + ex.Message);
+				}
+			}
+		}
+
+		[HarmonyPatch(typeof(DetailsScreen), "OnPrefabInit")]
+		public static class DetailsScreen_OnPrefabInit_Patch
+		{
+			public static void Postfix(DetailsScreen __instance)
+			{
+				try
+				{
+					BuildingStockSideScreen.Register(__instance);
+				}
+				catch (Exception ex)
+				{
+					Debug.LogWarning(Mod.LogPrefix + "building stock side screen failed: " + ex);
+				}
+			}
+		}
+
 		[HarmonyPatch(typeof(ComplexFabricator), nameof(ComplexFabricator.Sim1000ms))]
 		public static class ComplexFabricator_Sim1000ms_Patch
 		{

@@ -14,15 +14,32 @@ namespace StockProduction
 
 		public static float GetAmount(ComplexFabricator fabricator, Tag tag)
 		{
-			WorldInventory inventory = GetInventory(fabricator);
+			return GetAmount((KMonoBehaviour)fabricator, tag);
+		}
+
+		public static float GetAmount(KMonoBehaviour building, Tag tag)
+		{
+			WorldInventory inventory = GetInventory(building);
 			if (inventory == null)
 				return 0f;
 			return inventory.GetTotalAmount(tag, false);
 		}
 
+		public static int GetCount(KMonoBehaviour building, Tag tag)
+		{
+			if (!tag.IsValid)
+				return 0;
+			return Mathf.FloorToInt(GetAmount(building, tag));
+		}
+
 		public static bool IsReady(ComplexFabricator fabricator)
 		{
-			WorldInventory inventory = GetInventory(fabricator);
+			return IsReady((KMonoBehaviour)fabricator);
+		}
+
+		public static bool IsReady(KMonoBehaviour building)
+		{
+			WorldInventory inventory = GetInventory(building);
 			return inventory != null && inventory.HasValidCount;
 		}
 
@@ -67,11 +84,11 @@ namespace StockProduction
 			return Mathf.Max(10, output);
 		}
 
-		private static WorldInventory GetInventory(ComplexFabricator fabricator)
+		private static WorldInventory GetInventory(KMonoBehaviour building)
 		{
-			if (fabricator == null)
+			if (building == null)
 				return null;
-			WorldContainer world = fabricator.GetMyWorld();
+			WorldContainer world = building.GetMyWorld();
 			if (world == null)
 				return null;
 			return world.worldInventory;

@@ -23,6 +23,22 @@ msgctxt "StockProduction.STRINGS.STOCK_PRODUCTION.MODE_FOREVER"
 msgid "Forever"
 msgstr "持续"
 
+msgctxt "StockProduction.STRINGS.STOCK_PRODUCTION.MODE_AUTO"
+msgid "Auto"
+msgstr "自动"
+
+msgctxt "StockProduction.STRINGS.STOCK_PRODUCTION.BUILDING_MODE_TOOLTIP"
+msgid "Click to cycle production mode.\n\nMaintain pauses when this world's Resources list reaches the number, and starts again when it drops below.\nThe Power Control Station and Farm Station cycle Auto and Maintain. Auto keeps vanilla behavior: craft a tool only when a generator or plant needs one."
+msgstr "点击切换生产模式。\n\n维持模式下，当前小行星资源清单达到该数量就停，低于后再继续。\n电力控制站和农业站只切换自动 / 维持。自动模式保持原版：只有发电机或植物需要时才做工具。"
+
+msgctxt "StockProduction.STRINGS.STOCK_PRODUCTION.SIDE_TITLE"
+msgid "On-Demand Production"
+msgstr "按需生产"
+
+msgctxt "StockProduction.STRINGS.STOCK_PRODUCTION.TARGET_SLIDER"
+msgid "Stock"
+msgstr "库存"
+
 msgctxt "StockProduction.STRINGS.STOCK_PRODUCTION.MODE_TOOLTIP"
 msgid "Click to cycle Once, Maintain, and Forever.\n\nMaintain pauses when this world's Resources list reaches the number, and starts again when it drops below."
 msgstr "点击切换：单次、维持、持续。\n\n维持模式下，当前小行星资源清单达到该数量就停，低于后再继续。"
@@ -46,3 +62,23 @@ msgstr "吨"
 msgctxt "StockProduction.STRINGS.STOCK_PRODUCTION.UNIT_TOOLTIP"
 msgid "Click to switch kilograms and tonnes.\n1 t = 1000 kg."
 msgstr "点击切换千克和吨。\n1 吨 = 1000 千克。"
+
+msgctxt "StockProduction.STRINGS.STOCK_PRODUCTION.SETTINGS_BUTTON"
+msgid "Settings"
+msgstr "设置"
+
+msgctxt "StockProduction.STRINGS.STOCK_PRODUCTION.SETTINGS_TITLE"
+msgid "On-Demand Production"
+msgstr "按需生产"
+
+msgctxt "StockProduction.STRINGS.STOCK_PRODUCTION.SETTINGS_HINT"
+msgid "Applies immediately. Recipe-queue buildings are not affected."
+msgstr "立即生效。带配方队列的生产设备不受影响。"
+
+msgctxt "StockProduction.STRINGS.STOCK_PRODUCTION.EXTRA_BUILDINGS"
+msgid "Extra buildings"
+msgstr "额外建筑"
+
+msgctxt "StockProduction.STRINGS.STOCK_PRODUCTION.EXTRA_BUILDINGS_TOOLTIP"
+msgid "On: Fertilizer Synthesizer, Compost, Power Control Station, and Farm Station get the same Maintain controls.\nOff: those four stay vanilla. Production buildings with a recipe queue are unchanged."
+msgstr "开：肥料合成器、堆肥、电力控制站、农业站也用同一套维持控件。\n关：这四座保持原版。带配方队列的生产设备不受影响。"
