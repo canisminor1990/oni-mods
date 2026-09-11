@@ -8,7 +8,7 @@ Adds extra colony room types. This standalone mod is built with thanks on pether
 
 UI text covers English, Chinese, Japanese, Korean, and Russian.
 
-[img]https://raw.githubusercontent.com/canisminor1990/oni-mods/refs/heads/master/i18n-5.png[/img]
+[img]https://raw.githubusercontent.com/canisminor1990/oni-mods/refs/heads/master/i18n.png[/img]
 
 [h3]New rooms[/h3]
 
@@ -65,7 +65,7 @@ Many thanks to pether.pg for releasing [url=https://steamcommunity.com/sharedfil
 
 界面文本覆盖英语、中文、日语、韩语和俄语。
 
-[img]https://raw.githubusercontent.com/canisminor1990/oni-mods/refs/heads/master/i18n-5.png[/img]
+[img]https://raw.githubusercontent.com/canisminor1990/oni-mods/refs/heads/master/i18n.png[/img]
 
 [h3]新增房间[/h3]
 

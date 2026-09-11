@@ -147,7 +147,7 @@ Plain English pitch.
 
 UI text covers English, Chinese, Japanese, Korean, and Russian.
 
-[img]https://raw.githubusercontent.com/canisminor1990/oni-mods/refs/heads/master/i18n-5.png[/img]
+[img]https://raw.githubusercontent.com/canisminor1990/oni-mods/refs/heads/master/i18n.png[/img]
 
 [h3]Features[/h3]
 [list]
@@ -168,7 +168,7 @@ UI text covers English, Chinese, Japanese, Korean, and Russian.
 
 界面文本覆盖英语、中文、日语、韩语和俄语。
 
-[img]https://raw.githubusercontent.com/canisminor1990/oni-mods/refs/heads/master/i18n-5.png[/img]
+[img]https://raw.githubusercontent.com/canisminor1990/oni-mods/refs/heads/master/i18n.png[/img]
 
 [h3]功能[/h3]
 [list]
@@ -176,9 +176,9 @@ UI text covers English, Chinese, Japanese, Korean, and Russian.
 [/list]
 ```
 
-English first, then `[hr][/hr]`, then Chinese. Both languages must include the `compatibility.png` `[img]`. Localized mods also include `i18n-5.png` (skip Custom Chinese Fonts). Use `[h1]` / `[h3]` only (no `[h2]`). Chinese pitch is `[i]…[/i]`; English pitch is plain text. `[b]`, `[i]` (also for paths), `[list]` / `[olist]` with `[*]`, `[code]`, `[url=https://…]label[/url]`. Numbered how-tos are `[olist]`. JSON or literal square brackets go in `[code]` or `[noparse]`. Player copy never mentions updating a DLL, hot reload, `local/`, or rebuild — those stay in AGENTS.md / this skill. Restart text is OK only for a player action that actually needs a full quit.
+English first, then `[hr][/hr]`, then Chinese. Both languages must include the `compatibility.png` `[img]`. Localized mods also include `i18n.png` (skip Custom Chinese Fonts). Use `[h1]` / `[h3]` only (no `[h2]`). Chinese pitch is `[i]…[/i]`; English pitch is plain text. `[b]`, `[i]` (also for paths), `[list]` / `[olist]` with `[*]`, `[code]`, `[url=https://…]label[/url]`. Numbered how-tos are `[olist]`. JSON or literal square brackets go in `[code]` or `[noparse]`. Player copy never mentions updating a DLL, hot reload, `local/`, or rebuild — those stay in AGENTS.md / this skill. Restart text is OK only for a player action that actually needs a full quit.
 
-`Description.txt` is generated BBCode. Do not write Markdown into it. Skip `[table]`, `[color]`, `[size]`, `[spoiler]`, `[previewyoutube]`. `README.md` uses Markdown for the same facts, plus `![ALL DLC](compatibility.png url)`, `![Languages](i18n-5.png url)` when localized, and a Steam Workshop line.
+`Description.txt` is generated BBCode. Do not write Markdown into it. Skip `[table]`, `[color]`, `[size]`, `[spoiler]`, `[previewyoutube]`. `README.md` uses Markdown for the same facts, plus `![ALL DLC](compatibility.png url)`, `![Languages](i18n.png url)` when localized, and a Steam Workshop line.
 
 Details: [reference.md](reference.md).
 

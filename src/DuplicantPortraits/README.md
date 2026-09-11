@@ -12,7 +12,7 @@ Steam Workshop: [Duplicant Portraits](https://steamcommunity.com/sharedfiles/fil
 
 UI text covers English, Chinese, Japanese, Korean, and Russian.
 
-![Languages](https://raw.githubusercontent.com/canisminor1990/oni-mods/refs/heads/master/i18n-5.png)
+![Languages](https://raw.githubusercontent.com/canisminor1990/oni-mods/refs/heads/master/i18n.png)
 
 ### Features
 
@@ -49,7 +49,7 @@ Decor matches vanilla masterpiece paintings. The portrait is the built-in person
 
 界面文本覆盖英语、中文、日语、韩语和俄语。
 
-![Languages](https://raw.githubusercontent.com/canisminor1990/oni-mods/refs/heads/master/i18n-5.png)
+![Languages](https://raw.githubusercontent.com/canisminor1990/oni-mods/refs/heads/master/i18n.png)
 
 ### 功能
 
