@@ -145,7 +145,7 @@ Plain English pitch.
 
 [h3]Languages[/h3]
 
-UI text covers English, Chinese, Japanese, and Korean.
+UI text covers English, Chinese, Japanese, Korean, and Russian.
 
 [img]https://raw.githubusercontent.com/canisminor1990/oni-mods/refs/heads/master/i18n.png[/img]
 
@@ -166,7 +166,7 @@ UI text covers English, Chinese, Japanese, and Korean.
 
 [h3]语言[/h3]
 
-界面文本覆盖英语、中文、日语和韩语。
+界面文本覆盖英语、中文、日语、韩语和俄语。
 
 [img]https://raw.githubusercontent.com/canisminor1990/oni-mods/refs/heads/master/i18n.png[/img]
 
